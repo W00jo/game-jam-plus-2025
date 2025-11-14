@@ -1,8 +1,8 @@
-# Game title
+# GameJamPlus 2025 - Co-op Split-Screen
 
 ## Overview
 
-Short description of the game and its genre.
+A 3D cooperative split-screen game for 2 players built in Godot 4.5. One player navigates the ground level to complete objectives and collect items, while the second player provides sniper cover from a top-down view. Work together to complete missions!
 
 ## Project structure
 
@@ -13,7 +13,10 @@ Short description of the game and its genre.
 
 ## How to run
 
-Create a `project` in Godot.
+1. Install Godot 4.3 or later (4.5 recommended)
+2. Open Godot and import this project
+3. Run the main scene: `scenes/main.tscn`
+4. See `docs/GAME_GUIDE.md` for detailed controls and gameplay instructions
 
 ## Naming conventions
 
