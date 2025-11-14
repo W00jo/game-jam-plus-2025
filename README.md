@@ -17,11 +17,13 @@ Create a `project` in Godot.
 
 ## Naming conventions
 
+### Godot
+
 These naming conventions follow the Godot Engine style. Breaking these will make your code clash with the built-in naming conventions, leading to inconsistent code. As a summary table:
 
 | Type | Convention | Example |
 | --- | --- | --- |
-| File names | snake_case | `yaml_parsed.gd` |
+| Folder and file names | snake_case | `yaml_parsed.gd` |
 | class_name | PascalCase | `class_name YAMLParser` |
 | Node names | PascalCase | `Camera3D`, `Player` |
 | Functions | snake_case | `func load_level():` |
@@ -30,6 +32,13 @@ These naming conventions follow the Godot Engine style. Breaking these will make
 | Constants | CONSTANT_CASE | `const MAX_SPEED = 200` |
 | enum names | PascalCase | `enum Element` |
 | enum members | CONSTANT_CASE | `{EARTH, WATER, AIR, FIRE}` |
+
+### Git
+
+1. Use `kebab-case`.
+2. Use prefix, as in `prefix/` to indicate purpose or the author.
+
+Examples: `jakub/player-movement` or `feature/player-movement`.
 
 ## Code order
 
