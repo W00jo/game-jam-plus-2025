@@ -35,6 +35,8 @@ These naming conventions follow the Godot Engine style. Breaking these will make
 
 ### Git
 
+Simple ruleset for naming branches in the project.
+
 1. Use `kebab-case`.
 2. Use prefix, as in `prefix/` to indicate purpose or the author.
 
