@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7j8wqxn3iy5r"]
+[gd_scene load_steps=14 format=3 uid="uid://c7j8wqxn3iy5r"]
 
 [ext_resource type="Script" path="res://scenes/scripts/ground_player.gd" id="1_ground_player"]
 [ext_resource type="Script" path="res://scenes/scripts/sniper_camera.gd" id="2_sniper_camera"]
 [ext_resource type="Script" path="res://scenes/scripts/objective.gd" id="3_objective"]
+[ext_resource type="Script" path="res://scenes/scripts/enemy.gd" id="4_enemy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.5
@@ -23,6 +24,14 @@ size = Vector3(1, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_objective"]
 size = Vector3(1, 1, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_enemy"]
+radius = 0.5
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_enemy"]
+radius = 0.5
+height = 1.5
 
 [node name="Main" type="Node3D"]
 
@@ -146,6 +155,34 @@ shape = SubResource("BoxShape3D_objective")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objectives/Item1"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("BoxMesh_objective")
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Enemy1" type="CharacterBody3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.75, 8)
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("4_enemy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/Enemy1"]
+shape = SubResource("CapsuleShape3D_enemy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Enemies/Enemy1"]
+mesh = SubResource("CapsuleMesh_enemy")
+skeleton = NodePath("../..")
+
+[node name="Enemy2" type="CharacterBody3D" parent="Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.75, -10)
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("4_enemy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemies/Enemy2"]
+shape = SubResource("CapsuleShape3D_enemy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Enemies/Enemy2"]
+mesh = SubResource("CapsuleMesh_enemy")
+skeleton = NodePath("../..")
 
 [node name="SplitScreenUI" type="Control" parent="."]
 layout_mode = 3
