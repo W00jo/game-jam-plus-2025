@@ -1,0 +1,254 @@
+[gd_scene load_steps=10 format=3 uid="uid://c7j8wqxn3iy5r"]
+
+[ext_resource type="Script" path="res://scenes/scripts/ground_player.gd" id="1_ground_player"]
+[ext_resource type="Script" path="res://scenes/scripts/sniper_camera.gd" id="2_sniper_camera"]
+[ext_resource type="Script" path="res://scenes/scripts/objective.gd" id="3_objective"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.5
+height = 2.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_player"]
+radius = 0.5
+height = 2.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_floor"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_floor"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_objective"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_objective"]
+size = Vector3(1, 1, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Floor"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Floor"]
+mesh = SubResource("BoxMesh_floor")
+
+[node name="Wall1" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall1"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall1"]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_floor")
+
+[node name="Wall2" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall2"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall2"]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_floor")
+
+[node name="Wall3" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 2.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall3"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_floor")
+
+[node name="Wall4" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 2.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall4"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall4"]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_floor")
+
+[node name="GroundPlayer" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera_path")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_ground_player")
+camera_path = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundPlayer"]
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GroundPlayer"]
+mesh = SubResource("CapsuleMesh_player")
+
+[node name="Camera3D" type="Camera3D" parent="GroundPlayer"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 2, 4)
+fov = 75.0
+
+[node name="SniperCamera" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
+fov = 75.0
+script = ExtResource("2_sniper_camera")
+follow_target = NodePath("../GroundPlayer")
+
+[node name="Objectives" type="Node3D" parent="."]
+
+[node name="Objective1" type="StaticBody3D" parent="Objectives"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, 5)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("3_objective")
+objective_id = "objective_1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objectives/Objective1"]
+shape = SubResource("BoxShape3D_objective")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objectives/Objective1"]
+mesh = SubResource("BoxMesh_objective")
+
+[node name="Objective2" type="StaticBody3D" parent="Objectives"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 10)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("3_objective")
+objective_id = "objective_2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objectives/Objective2"]
+shape = SubResource("BoxShape3D_objective")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objectives/Objective2"]
+mesh = SubResource("BoxMesh_objective")
+
+[node name="Item1" type="StaticBody3D" parent="Objectives"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.5, -5)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("3_objective")
+objective_id = "item_1"
+is_objective = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objectives/Item1"]
+shape = SubResource("BoxShape3D_objective")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objectives/Item1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_objective")
+
+[node name="SplitScreenUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="SplitScreenUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player1Viewport" type="SubViewportContainer" parent="SplitScreenUI/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SplitScreenUI/HSplitContainer/Player1Viewport"]
+handle_input_locally = false
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3DLink" type="RemoteTransform3D" parent="SplitScreenUI/HSplitContainer/Player1Viewport/SubViewport"]
+remote_path = NodePath("../../../../../../GroundPlayer/Camera3D")
+update_position = true
+update_rotation = true
+update_scale = false
+
+[node name="Label" type="Label" parent="SplitScreenUI/HSplitContainer/Player1Viewport"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Player 1 - Ground View"
+horizontal_alignment = 1
+
+[node name="Player2Viewport" type="SubViewportContainer" parent="SplitScreenUI/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SplitScreenUI/HSplitContainer/Player2Viewport"]
+handle_input_locally = false
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3DLink" type="RemoteTransform3D" parent="SplitScreenUI/HSplitContainer/Player2Viewport/SubViewport"]
+remote_path = NodePath("../../../../../../SniperCamera")
+update_position = true
+update_rotation = true
+update_scale = false
+
+[node name="Label" type="Label" parent="SplitScreenUI/HSplitContainer/Player2Viewport"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Player 2 - Sniper View"
+horizontal_alignment = 1
+
+[node name="Crosshair" type="Control" parent="SplitScreenUI/HSplitContainer/Player2Viewport"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CrosshairH" type="ColorRect" parent="SplitScreenUI/HSplitContainer/Player2Viewport/Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -1.0
+offset_right = 15.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="CrosshairV" type="ColorRect" parent="SplitScreenUI/HSplitContainer/Player2Viewport/Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -15.0
+offset_right = 1.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
