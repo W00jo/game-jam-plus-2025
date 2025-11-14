@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwullwuqebjtc"]
+[gd_scene load_steps=5 format=3 uid="uid://dwullwuqebjtc"]
 
 [ext_resource type="Script" uid="uid://bgtkr45u8u1mq" path="res://scenes/players/player.gd" id="1_plyga"]
+[ext_resource type="Script" uid="uid://c1pfpbykutyh1" path="res://scenes/players/camera_controller.gd" id="2_ldeu4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5iv5l"]
 
@@ -15,3 +16,12 @@ mesh = SubResource("CapsuleMesh_5iv5l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_plyga")
+
+[node name="CameraController" type="Node3D" parent="."]
+top_level = true
+script = ExtResource("2_ldeu4")
+
+[node name="Camera3D" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
+
+[node name="CameraControllerAnchor" type="Marker3D" parent="."]

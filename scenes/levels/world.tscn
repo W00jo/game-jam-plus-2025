@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy4q4lk1onlnd"]
+[gd_scene load_steps=7 format=3 uid="uid://dy4q4lk1onlnd"]
 
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player.tscn" id="1_tsias"]
 
@@ -15,6 +15,11 @@ sky = SubResource("Sky_tsias")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="QuadMesh" id="QuadMesh_tsias"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tsias"]
+data = PackedVector3Array(0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0)
+
 [node name="World" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -25,8 +30,18 @@ shadow_enabled = true
 environment = SubResource("Environment_7k8c1")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.4456296, 0)
 layers = 2
 size = Vector3(6, 0.002, 6)
 
 [node name="Player" parent="." instance=ExtResource("1_tsias")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(29.155, 0, 0, 0, -1.2744056e-06, 29.155, 0, -29.155, -1.2744056e-06, 0, -0.455, 0)
+mesh = SubResource("QuadMesh_tsias")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tsias")
