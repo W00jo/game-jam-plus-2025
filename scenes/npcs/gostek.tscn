@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://batnu0uma6vhk"]
+
+[ext_resource type="Script" uid="uid://bvj8u2clbnqfd" path="res://scenes/npcs/gostek.gd" id="1_nbysy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbysy"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4utac"]
+next_pass = SubResource("StandardMaterial3D_nbysy")
+albedo_color = Color(1, 0, 1, 1)
+stencil_mode = 1
+stencil_flags = 2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nbysy"]
+material = SubResource("StandardMaterial3D_4utac")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aar6o"]
+
+[node name="Gostek" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_nbysy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = SubResource("CapsuleMesh_nbysy")
+
+[node name="CollisionEnviroment" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_aar6o")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
