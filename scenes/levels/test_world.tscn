@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cumqe7y58oghi"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbjyutxna5ss5" path="res://assets/test world.res" id="1_8a5hx"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TestWorld" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.665865, -1.4255638, -6.533526)
+layers = 2
+mesh = ExtResource("1_8a5hx")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmrwwjnwxvabd"]
+
+[ext_resource type="Script" uid="uid://d3qmhprbodkt6" path="res://scenes/ui/hud.gd" id="1_0mwgc"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_0mwgc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 185.0
+offset_bottom = 40.0
+
+[node name="LootIndicator" type="RichTextLabel" parent="."]
+offset_right = 185.0
+offset_bottom = 40.0
+bbcode_enabled = true

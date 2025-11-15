@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://2gsvjmcov0xa"
-path="res://.godot/imported/mapka.glb-3daf786fa6f5d9b73fc7f9e690988eb3.scn"
+uid="uid://bxir1vlcrrirx"
+path="res://.godot/imported/head.glb-ece60f112287b3c4ec16545839dfa76b.scn"
 
 [deps]
 
-source_file="res://assets/mapka.glb"
-dest_files=["res://.godot/imported/mapka.glb-3daf786fa6f5d9b73fc7f9e690988eb3.scn"]
+source_file="res://assets/models/godot_head/head.glb"
+dest_files=["res://.godot/imported/head.glb-ece60f112287b3c4ec16545839dfa76b.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=0
+gltf/naming_version=2
 gltf/embedded_image_handling=1
