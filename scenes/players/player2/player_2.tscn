@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://8kdpemwib222"]
+[gd_scene load_steps=4 format=3 uid="uid://8kdpemwib222"]
 
 [ext_resource type="Script" uid="uid://dr3gyeesj80ac" path="res://scenes/players/player2/player_2.gd" id="1_wms8c"]
-[ext_resource type="Script" uid="uid://bb15mhqugdh7m" path="res://scenes/players/player2/camera_controller_2.gd" id="2_wms8c"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5iv5l"]
 
@@ -20,8 +19,6 @@ shape = SubResource("ConvexPolygonShape3D_plyga")
 
 [node name="CameraController" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11235762, -0.2508281)
-script = ExtResource("2_wms8c")
-sensitivity = null
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
