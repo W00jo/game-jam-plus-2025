@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://ct6bwd7da40mn"]
+[gd_scene load_steps=74 format=3 uid="uid://ct6bwd7da40mn"]
 
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_jw8yd"]
 [ext_resource type="Texture2D" uid="uid://8ibohbppec5j" path="res://assets/greybox_textures/greybox_light_grid.png" id="2_x2ch1"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b7dutupx0xu52" path="res://assets/greybox_textures/greybox_red_grid.png" id="6_j22gu"]
 [ext_resource type="PackedScene" uid="uid://b8fc2e8ajhwoi" path="res://assets/map.glb" id="7_sxxxr"]
 [ext_resource type="Texture2D" uid="uid://bkgc7r3a2tlq6" path="res://assets/greybox_textures/greybox_grey_grid.png" id="8_4x87c"]
+[ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="9_x2ch1"]
+[ext_resource type="PackedScene" uid="uid://bbf0uq1c5lhvs" path="res://assets/models/plyta.glb" id="10_2n176"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qubam"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -667,3 +669,33 @@ operation = 2
 radius = 0.978
 height = 11.437
 sides = 64
+
+[node name="Collectible" parent="." instance=ExtResource("9_x2ch1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.654451, 0.86966324, 52.87043)
+
+[node name="Collectible2" parent="." instance=ExtResource("9_x2ch1")]
+transform = Transform3D(-0.9987614, 0, 0.04975615, 0, 1, 0, -0.04975615, 0, -0.9987614, -5.073967, 0.75227875, 20.6272)
+
+[node name="Collectible3" parent="." instance=ExtResource("9_x2ch1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.33217, 0.9394526, 5.5006804)
+
+[node name="Collectible4" parent="." instance=ExtResource("9_x2ch1")]
+transform = Transform3D(-0.0020769536, 0, -0.99999785, 0, 1, 0, 0.99999785, 0, -0.0020769536, -9.470137, 0.75227875, -52.5882)
+
+[node name="Collectible5" parent="." instance=ExtResource("9_x2ch1")]
+transform = Transform3D(-0.06505497, 0, 0.9978817, 0, 1, 0, -0.9978817, 0, -0.06505497, 53.630596, 0.75227875, -0.25274754)
+
+[node name="Collectible6" parent="." instance=ExtResource("9_x2ch1")]
+transform = Transform3D(-0.99310124, 0, -0.1172601, 0, 1, 0, 0.1172601, 0, -0.99310124, 11.356631, 0.75227684, -19.431751)
+
+[node name="plyta" parent="." instance=ExtResource("10_2n176")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.941854, -0.37541008, 25.533709)
+
+[node name="plyta2" parent="." instance=ExtResource("10_2n176")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.14091, 0.023628235, 29.946503)
+
+[node name="plyta3" parent="." instance=ExtResource("10_2n176")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.295055, 0.023609161, -14.611502)
+
+[node name="plyta4" parent="." instance=ExtResource("10_2n176")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3351, 0.02362442, -44.48148)
