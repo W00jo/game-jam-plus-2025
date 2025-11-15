@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dh1oav2vavm78"
-path="res://.godot/imported/player_looter.glb-0b956be8e8f828f36083e0b72c4ceac2.scn"
+uid="uid://c1rxny3g8k5k"
+path="res://.godot/imported/play_looter.glb-13ba6b1904585ad0150c89feae8ccd1a.scn"
 
 [deps]
 
-source_file="res://assets/models/player_looter/player_looter.glb"
-dest_files=["res://.godot/imported/player_looter.glb-0b956be8e8f828f36083e0b72c4ceac2.scn"]
+source_file="res://assets/models/player_looter/play_looter.glb"
+dest_files=["res://.godot/imported/play_looter.glb-13ba6b1904585ad0150c89feae8ccd1a.scn"]
 
 [params]
 

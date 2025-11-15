@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwullwuqebjtc"]
+[gd_scene load_steps=5 format=3 uid="uid://dwullwuqebjtc"]
 
 [ext_resource type="Script" uid="uid://bgtkr45u8u1mq" path="res://scenes/players/player1/player.gd" id="1_plyga"]
+[ext_resource type="PackedScene" uid="uid://cp13doywfifr0" path="res://assets/models/player_shooter/player_shooter.glb" id="2_2tc2p"]
 [ext_resource type="PackedScene" uid="uid://bdts1fkmtbsew" path="res://scenes/ui/gun.tscn" id="3_2tc2p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x03nx"]
@@ -10,6 +11,8 @@ height = 1.7663574
 [node name="Player1" type="CharacterBody3D"]
 collision_mask = 7
 script = ExtResource("1_plyga")
+
+[node name="player_shooter" parent="." instance=ExtResource("2_2tc2p")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, -0.021789549, 0)
@@ -30,3 +33,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 target_position = Vector3(0, 0, -100)
 collision_mask = 4
 collide_with_areas = true
+
+[editable path="player_shooter"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bybaf0uw3rgob"
-path.s3tc="res://.godot/imported/player_looter_DefaultMaterial_Normal.png-19783e2e02ade956dce11c932c677335.s3tc.ctex"
+uid="uid://c7vcp5lvjva4f"
+path.s3tc="res://.godot/imported/play_looter_DefaultMaterial_Normal.png-ea2c498784c0e33ceb18fba0ed8c8361.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/player_looter/player_looter_DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/player_looter_DefaultMaterial_Normal.png-19783e2e02ade956dce11c932c677335.s3tc.ctex"]
+source_file="res://assets/models/player_looter/play_looter_DefaultMaterial_Normal.png"
+dest_files=["res://.godot/imported/play_looter_DefaultMaterial_Normal.png-ea2c498784c0e33ceb18fba0ed8c8361.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/models/player_looter/player_looter_DefaultMaterial_Normal.png"
+roughness/src_normal="res://assets/models/player_looter/play_looter_DefaultMaterial_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

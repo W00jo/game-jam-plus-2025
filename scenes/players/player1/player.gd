@@ -49,7 +49,7 @@ func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left_1", "move_right_1", "move_up_1", "move_down_1")
 	var direction := (camera_controller.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	model.rotation.y = camera_controller.rotation.y
+	#model.rotation.y = camera_controller.rotation.y
 	
 	if is_on_floor():
 		if direction:
@@ -81,9 +81,9 @@ func _physics_process(delta):
 		animation_player.play("Jump")
 	
 	# Shooting
-	if Input.is_action_pressed("shoot"):
-		if !gun_anim.is_playing():
-			gun
+	#if Input.is_action_pressed("shoot"):
+		#if !gun_anim.is_playing():
+			#gun
 	
 	move_and_slide()
 
