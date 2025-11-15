@@ -1,13 +1,13 @@
 [gd_scene load_steps=72 format=3 uid="uid://ct6bwd7da40mn"]
 
-[ext_resource type="PackedScene" uid="uid://b8fc2e8ajhwoi" path="res://assets/map.glb" id="1_d7ri5"]
-[ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_qubam"]
-[ext_resource type="Texture2D" uid="uid://8ibohbppec5j" path="res://assets/greybox_textures/greybox_light_grid.png" id="2_7scyt"]
-[ext_resource type="Texture2D" uid="uid://cbc31yfa4ewtw" path="res://assets/greybox_textures/greybox_teal_grid.png" id="3_768xk"]
-[ext_resource type="Texture2D" uid="uid://csannvkkvbe5g" path="res://assets/greybox_textures/greybox_purple_grid.png" id="4_uiudm"]
-[ext_resource type="Texture2D" uid="uid://b28jksn0oe2cx" path="res://assets/greybox_textures/greybox_yellow_grid.png" id="5_uxqa2"]
-[ext_resource type="Texture2D" uid="uid://b7dutupx0xu52" path="res://assets/greybox_textures/greybox_red_grid.png" id="6_5wcfd"]
-[ext_resource type="Texture2D" uid="uid://bkgc7r3a2tlq6" path="res://assets/greybox_textures/greybox_grey_grid.png" id="8_24st5"]
+[ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_jw8yd"]
+[ext_resource type="Texture2D" uid="uid://8ibohbppec5j" path="res://assets/greybox_textures/greybox_light_grid.png" id="2_x2ch1"]
+[ext_resource type="Texture2D" uid="uid://cbc31yfa4ewtw" path="res://assets/greybox_textures/greybox_teal_grid.png" id="3_2n176"]
+[ext_resource type="Texture2D" uid="uid://csannvkkvbe5g" path="res://assets/greybox_textures/greybox_purple_grid.png" id="4_74xmw"]
+[ext_resource type="Texture2D" uid="uid://b28jksn0oe2cx" path="res://assets/greybox_textures/greybox_yellow_grid.png" id="5_ni5vy"]
+[ext_resource type="Texture2D" uid="uid://b7dutupx0xu52" path="res://assets/greybox_textures/greybox_red_grid.png" id="6_j22gu"]
+[ext_resource type="PackedScene" uid="uid://b8fc2e8ajhwoi" path="res://assets/map.glb" id="7_sxxxr"]
+[ext_resource type="Texture2D" uid="uid://bkgc7r3a2tlq6" path="res://assets/greybox_textures/greybox_grey_grid.png" id="8_4x87c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qubam"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,186 +23,186 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7o7o"]
-albedo_texture = ExtResource("2_7scyt")
+albedo_texture = ExtResource("2_x2ch1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh3s4"]
-albedo_texture = ExtResource("3_768xk")
+albedo_texture = ExtResource("3_2n176")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0dvp"]
-albedo_texture = ExtResource("3_768xk")
+albedo_texture = ExtResource("3_2n176")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xeve3"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mao5o"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02aoi"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rd7ue"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ra8xk"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42d1u"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gs1dt"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbdug"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lende"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nv4sk"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpbyq"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kljtr"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yo0l"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr17a"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knpcq"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4vbb"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_phovj"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_we6rk"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhhap"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5nv8o"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_blgmk"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dtj5q"]
-albedo_texture = ExtResource("5_uxqa2")
+albedo_texture = ExtResource("5_ni5vy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dyil"]
-albedo_texture = ExtResource("5_uxqa2")
+albedo_texture = ExtResource("5_ni5vy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13wjj"]
-albedo_texture = ExtResource("5_uxqa2")
+albedo_texture = ExtResource("5_ni5vy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmm7g"]
-albedo_texture = ExtResource("5_uxqa2")
+albedo_texture = ExtResource("5_ni5vy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m73vx"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgg8t"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cjxe"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yq2to"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hmbq"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7wyqp"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnmjj"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwoor"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6u8s"]
-albedo_texture = ExtResource("6_5wcfd")
+albedo_texture = ExtResource("6_j22gu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igyse"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1v1l"]
-albedo_texture = ExtResource("6_5wcfd")
+albedo_texture = ExtResource("6_j22gu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6i457"]
-albedo_texture = ExtResource("6_5wcfd")
+albedo_texture = ExtResource("6_j22gu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cc77i"]
-albedo_texture = ExtResource("6_5wcfd")
+albedo_texture = ExtResource("6_j22gu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ciue4"]
-albedo_texture = ExtResource("6_5wcfd")
+albedo_texture = ExtResource("6_j22gu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vccqt"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjtbn"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvt46"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_727p2"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjvsm"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnh40"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lil3b"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7i57"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_legw1"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8s14e"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tf3nc"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fm5t"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1gf5"]
-albedo_texture = ExtResource("4_uiudm")
+albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hgso"]
-albedo_texture = ExtResource("8_24st5")
+albedo_texture = ExtResource("8_4x87c")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa8dt"]
-albedo_texture = ExtResource("2_7scyt")
+albedo_texture = ExtResource("2_x2ch1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l6yw7"]
-albedo_texture = ExtResource("8_24st5")
+albedo_texture = ExtResource("8_4x87c")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c71ge"]
-albedo_texture = ExtResource("6_5wcfd")
+albedo_texture = ExtResource("6_j22gu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3wvu"]
-albedo_texture = ExtResource("8_24st5")
+albedo_texture = ExtResource("8_4x87c")
 
-[node name="Node3D" type="Node3D"]
+[node name="TestMap" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -211,12 +211,13 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hd3w3")
 
-[node name="Player1" parent="." instance=ExtResource("1_qubam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.575466, 45.223186)
+[node name="Player1" parent="." instance=ExtResource("1_jw8yd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.575466, 42.661777)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7335911, 0, -0.3316784)
 material_override = SubResource("StandardMaterial3D_p7o7o")
+use_collision = true
 size = Vector3(155.40337, 0.17919922, 155.27754)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
@@ -475,6 +476,8 @@ size = Vector3(4.71396, 10.992157, 25.110056)
 [node name="CSGBox3D18" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73662734, 3.470008, 26.383698)
 material_override = SubResource("StandardMaterial3D_legw1")
+use_collision = true
+collision_layer = 2
 size = Vector3(5.546868, 12.184441, 24.89101)
 
 [node name="CSGBox3D36" type="CSGBox3D" parent="."]
@@ -497,7 +500,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.72053, 5.0392156, 8.122371
 material_override = SubResource("StandardMaterial3D_f1gf5")
 size = Vector3(3.5605083, 10.160003, 11.419029)
 
-[node name="ref" parent="." instance=ExtResource("1_d7ri5")]
+[node name="ref" parent="." instance=ExtResource("7_sxxxr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4136041, -0.2705822, 112.03205)
 visible = false
 

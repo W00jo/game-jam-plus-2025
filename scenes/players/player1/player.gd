@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var speed
-const WALK_SPEED = 5.0
+@export var WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
@@ -49,7 +49,7 @@ func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left_1", "move_right_1", "move_up_1", "move_down_1")
 	var direction := (camera_controller.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	#model.rotation.y = camera_controller.rotation.y
+	model.rotation.y = camera_controller.rotation.y
 	
 	if is_on_floor():
 		if direction:

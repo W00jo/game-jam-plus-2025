@@ -5,25 +5,25 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.1
-#Częstotliwość skakania głowy
+
+# Częstotliwość skakania głowy
 const BOB_FREQ = 2.0
-#Wysokość skoku głowy
+
+# Wysokość skoku głowy
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
-#fov
+# FOV
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
-# signal
+# Signal
 signal player_hit
 
 # Camera
 @onready var camera_controller: Node3D = $CameraController
 @onready var camera: Camera3D = $CameraController/Camera3D
 
-
-		
 func _physics_process(delta: float) -> void:
 	# Right stick look
 	var look_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
