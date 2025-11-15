@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cptqqfmhyrmah"]
+
+[ext_resource type="PackedScene" uid="uid://cp13doywfifr0" path="res://assets/models/player_shooter/player_shooter.glb" id="1_1c1yh"]
+
+[node name="player_shooter" instance=ExtResource("1_1c1yh")]

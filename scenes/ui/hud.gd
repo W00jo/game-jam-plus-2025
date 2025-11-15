@@ -61,3 +61,6 @@ func _on_enemy_hit():
 	crosshair_hit.visible = true
 	await get_tree().create_timer(0.05).timeout
 	crosshair_hit.visible = false
+
+func _on_player_2_player_hit() -> void:
+	pass # Replace with function body.

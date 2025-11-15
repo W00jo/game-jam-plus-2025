@@ -102,5 +102,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.757, 1.2, -4.916)
 [node name="Collectible2" parent="Collectibles" instance=ExtResource("3_lfyvx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9259977, 1.2, -4.916)
 
+[connection signal="player_hit" from="GridContainer/Viewport_container_player2/Viewport_player2/Player2" to="GridContainer/Viewport_container_player2/Viewport_player2/HUD" method="_on_player_2_player_hit"]
 [connection signal="body_entered" from="Collectibles/Collectible" to="GridContainer/Viewport_container_player2/Viewport_player2/HUD" method="_on_collectible_body_entered"]
 [connection signal="body_entered" from="Collectibles/Collectible2" to="GridContainer/Viewport_container_player2/Viewport_player2/HUD" method="_on_collectible_body_entered"]
