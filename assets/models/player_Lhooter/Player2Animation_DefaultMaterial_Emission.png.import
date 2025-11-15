@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbw2a6n65kxb1"
-path.s3tc="res://.godot/imported/Player2Animation_DefaultMaterial_Emission.png-20dabc1ab256aa9ee09309def6e70be5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Player2Animation_DefaultMaterial_Emission.png-017b2d4630275a17786869f2c23d89c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/player_2/Player2Animation_DefaultMaterial_Emission.png"
-dest_files=["res://.godot/imported/Player2Animation_DefaultMaterial_Emission.png-20dabc1ab256aa9ee09309def6e70be5.s3tc.ctex"]
+source_file="res://assets/models/player_Lhooter/Player2Animation_DefaultMaterial_Emission.png"
+dest_files=["res://.godot/imported/Player2Animation_DefaultMaterial_Emission.png-017b2d4630275a17786869f2c23d89c7.s3tc.ctex"]
 
 [params]
 

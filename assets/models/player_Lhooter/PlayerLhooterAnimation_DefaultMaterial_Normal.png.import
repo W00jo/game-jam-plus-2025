@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2jqp5bs7hl6c"
-path.s3tc="res://.godot/imported/PlayerAnimations_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-c1c18cb9f29b73050d31913b25b2b0d8.s3tc.ctex"
+uid="uid://cukj4stkthdru"
+path.s3tc="res://.godot/imported/PlayerLhooterAnimation_DefaultMaterial_Normal.png-0f42e2ee737c0e475f296f2f88e499f2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0be7c534f0a091102a83982bdd235f60"
+"md5": "05d043a777e8a0b7f5f225cd8e5cdfa2"
 }
 
 [deps]
 
-source_file="res://assets/models/player_lunner/PlayerAnimations_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/PlayerAnimations_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-c1c18cb9f29b73050d31913b25b2b0d8.s3tc.ctex"]
+source_file="res://assets/models/player_Lhooter/PlayerLhooterAnimation_DefaultMaterial_Normal.png"
+dest_files=["res://.godot/imported/PlayerLhooterAnimation_DefaultMaterial_Normal.png-0f42e2ee737c0e475f296f2f88e499f2.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/models/player_Lhooter/PlayerLhooterAnimation_DefaultMaterial_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

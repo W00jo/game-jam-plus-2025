@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n3f0k623kp48"
-path.s3tc="res://.godot/imported/Player2Animation_DefaultMaterial_BaseColor.1001.png-DefaultMaterial_Alpha.1001.png-398e3def313aaff6d094fbd8e9da87ab.s3tc.ctex"
+path.s3tc="res://.godot/imported/Player2Animation_DefaultMaterial_BaseColor.1001.png-DefaultMaterial_Alpha.1001.png-ece7e0915513036e1487626d2806da18.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/player_2/Player2Animation_DefaultMaterial_BaseColor.1001.png-DefaultMaterial_Alpha.1001.png"
-dest_files=["res://.godot/imported/Player2Animation_DefaultMaterial_BaseColor.1001.png-DefaultMaterial_Alpha.1001.png-398e3def313aaff6d094fbd8e9da87ab.s3tc.ctex"]
+source_file="res://assets/models/player_Lhooter/Player2Animation_DefaultMaterial_BaseColor.1001.png-DefaultMaterial_Alpha.1001.png"
+dest_files=["res://.godot/imported/Player2Animation_DefaultMaterial_BaseColor.1001.png-DefaultMaterial_Alpha.1001.png-ece7e0915513036e1487626d2806da18.s3tc.ctex"]
 
 [params]
 

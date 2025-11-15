@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2jqp5bs7hl6c"
-path.s3tc="res://.godot/imported/PlayerAnimations_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-c1c18cb9f29b73050d31913b25b2b0d8.s3tc.ctex"
+uid="uid://c75akii1fw8gr"
+path.s3tc="res://.godot/imported/PlayerLhooterAnimation_DefaultMaterial_Metallic.1001.png-DefaultMaterial_Roughness.1001.png-eebc3be668c48d4e2741bb363639664f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/player_lunner/PlayerAnimations_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/PlayerAnimations_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-c1c18cb9f29b73050d31913b25b2b0d8.s3tc.ctex"]
+source_file="res://assets/models/player_Lhooter/PlayerLhooterAnimation_DefaultMaterial_Metallic.1001.png-DefaultMaterial_Roughness.1001.png"
+dest_files=["res://.godot/imported/PlayerLhooterAnimation_DefaultMaterial_Metallic.1001.png-DefaultMaterial_Roughness.1001.png-eebc3be668c48d4e2741bb363639664f.s3tc.ctex"]
 
 [params]
 
