@@ -51,7 +51,7 @@ script = ExtResource("1_pgilc")
 
 [node name="CollisionMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.9791499, 0, 0, 0, 0.9640593, 0, 0, 0, 0.9791499, 0, 0, 0)
-layers = 5
+layers = 4
 mesh = SubResource("ArrayMesh_1pg6c")
 skeleton = NodePath("")
 
