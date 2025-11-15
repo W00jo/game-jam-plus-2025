@@ -22,6 +22,7 @@ func _ready():
 	match player_hud_type:
 		PlayerType.PLAYER_1:
 			crosshair.visible = true
+			crosshair_hit.visible = true
 			loot_indicator_panel.visible = false
 			
 			# Center the crosshair
@@ -47,8 +48,3 @@ func _on_collectible_body_entered(body: Node3D) -> void:
 
 func update_health(_value: float) -> void:
 	pass
-
-func _on_enemy_hit():
-	crosshair_hit.visible = true
-	await get_tree().create_timer(0.05).timeout
-	crosshair_hit.visible = false
