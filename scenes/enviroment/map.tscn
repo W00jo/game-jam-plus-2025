@@ -1,8 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci83j4afteijd"]
+[gd_scene load_steps=6 format=3 uid="uid://ct6bwd7da40mn"]
 
 [ext_resource type="PackedScene" uid="uid://b8fc2e8ajhwoi" path="res://assets/map.glb" id="1_d7ri5"]
+[ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_qubam"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qubam"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_xc3br"]
+sky_material = SubResource("ProceduralSkyMaterial_qubam")
+
+[sub_resource type="Environment" id="Environment_hd3w3"]
+background_mode = 2
+sky = SubResource("Sky_xc3br")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hd3w3")
+
+[node name="Player1" parent="." instance=ExtResource("1_qubam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.575466, 45.223186)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7335911, 0, -0.3316784)
@@ -236,12 +260,14 @@ size = Vector3(2.783537, 7.0867605, 12.562347)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.72053, 5.0392156, 8.122371)
 size = Vector3(3.5605083, 10.160003, 11.419029)
 
-[node name="map" parent="." instance=ExtResource("1_d7ri5")]
+[node name="ref" parent="." instance=ExtResource("1_d7ri5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4136041, -0.2705822, 112.03205)
 visible = false
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(78.495, 0, 0, 0, 2.494, 0, 0, 0, 78.495, -2.9342957, 14.727143, 1.1285667)
+use_collision = true
+collision_layer = 2
 radius = 0.978
 height = 11.437
 sides = 64

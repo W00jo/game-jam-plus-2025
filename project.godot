@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="GameJamPlus"
 
+[global_group]
+
+enemy="Non-player characters designed to hurt/damage the player(s)."
+
 [input]
 
 ui_left={
@@ -127,6 +131,14 @@ look_left_2={
 "deadzone": 0.2,
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":-1.0,"script":null)
 ]
+}
+shoot={
+"deadzone": 0.2,
+"events": []
+}
+aim={
+"deadzone": 0.2,
+"events": []
 }
 
 [layer_names]

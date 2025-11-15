@@ -1,15 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmrwwjnwxvabd"]
+[gd_scene load_steps=4 format=3 uid="uid://dmrwwjnwxvabd"]
 
 [ext_resource type="Script" uid="uid://d3qmhprbodkt6" path="res://scenes/ui/hud.gd" id="1_0mwgc"]
+[ext_resource type="Texture2D" uid="uid://5ex5gugrxf73" path="res://assets/ui/crosshair007.png" id="2_hqnrr"]
+[ext_resource type="Texture2D" uid="uid://bjugpblnob3dk" path="res://assets/ui/crosshair005.png" id="3_bo48s"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0mwgc")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Crosshair" type="TextureRect" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("2_hqnrr")
+
+[node name="CrosshairHit" type="TextureRect" parent="." groups=["enemy"]]
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_bo48s")
+
+[node name="LootIndicatorBackground" type="Panel" parent="."]
 offset_right = 185.0
 offset_bottom = 40.0
 
-[node name="LootIndicator" type="RichTextLabel" parent="."]
-offset_right = 185.0
-offset_bottom = 40.0
+[node name="LootIndicator" type="RichTextLabel" parent="LootIndicatorBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 bbcode_enabled = true
+text = "Loot: 0"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+visible = false
+offset_right = 4.0
+offset_bottom = 27.0

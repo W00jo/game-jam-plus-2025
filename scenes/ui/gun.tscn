@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdts1fkmtbsew"]
+
+[ext_resource type="Texture2D" uid="uid://bthb8ymtrxxph" path="res://assets/ui/muzzle_05.png" id="1_4jc36"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mauqa"]
+size = Vector3(0.2, 0.2, 1.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5lqom"]
+size = Vector2(1, 1)
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfxt0"]
+transparency = 1
+albedo_color = Color(1, 0.8039216, 0.08627451, 1)
+albedo_texture = ExtResource("1_4jc36")
+emission_enabled = true
+emission = Color(1, 0.7254902, 0, 1)
+emission_energy_multiplier = 1.5
+emission_texture = ExtResource("1_4jc36")
+
+[node name="Gun" type="Node3D"]
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.78049874)
+mesh = SubResource("BoxMesh_mauqa")
+
+[node name="MuzzleFlash" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, -0.011456549, 0.33526242)
+mesh = SubResource("PlaneMesh_5lqom")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_sfxt0")
+
+[node name="ShootingAnimation" type="AnimationPlayer" parent="."]

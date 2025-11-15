@@ -1,8 +1,11 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+
+# Camera
+@onready var aim_ray = $CameraController/RayCast3D
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,3 +27,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
+
+func _shoot_sniper():
+	if aim_ray.is_colliding():
+		if aim_ray.get_collider().is_in_group("enemy"):
+			aim_ray.get_collider().hit()

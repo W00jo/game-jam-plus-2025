@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwullwuqebjtc"]
+[gd_scene load_steps=6 format=3 uid="uid://dwullwuqebjtc"]
 
 [ext_resource type="Script" uid="uid://bgtkr45u8u1mq" path="res://scenes/players/player1/player.gd" id="1_plyga"]
 [ext_resource type="Script" uid="uid://c1pfpbykutyh1" path="res://scenes/players/player1/camera_controller.gd" id="2_ldeu4"]
+[ext_resource type="PackedScene" uid="uid://bdts1fkmtbsew" path="res://scenes/ui/gun.tscn" id="3_2tc2p"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5iv5l"]
 
@@ -24,3 +25,12 @@ script = ExtResource("2_ldeu4")
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
+
+[node name="Gun" parent="CameraController" instance=ExtResource("3_2tc2p")]
+transform = Transform3D(1, 0, 0, 0, -0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0.3, 0, -1.5)
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+target_position = Vector3(0, 0, -100)
+collision_mask = 4
+collide_with_areas = true
