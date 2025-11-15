@@ -47,7 +47,7 @@ size = Vector3(32, 0.001, 32)
 
 [node name="Gostek" parent="NavigationRegion3D" instance=ExtResource("7_0lift")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.072009, 1.2014427, -14.306542)
-player_path = NodePath("../../GridContainer/Viewport_container_player1/Viewport_player1/Player1")
+player_path = NodePath("../../GridContainer/Viewport_container_player2/Viewport_player2/Player2")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 anchors_preset = 15
