@@ -1,9 +1,21 @@
 extends Area3D
 
-var is_collected := false
+@export var float_speed: float = 2.0
+@export var float_amplitude: float = 0.1
 
-func _process(_delta):
+var is_collected := false
+var time_passed: float = 0.0
+var initial_y: float
+
+func _ready():
+	initial_y = position.y
+
+func _process(delta):
 	rotate_y(0.01)
+	
+	time_passed += delta
+	
+	position.y = initial_y + sin(time_passed * float_speed) * float_amplitude
 
 func _on_body_entered(body: Node3D):
 	if not is_collected and body is CharacterBody3D:

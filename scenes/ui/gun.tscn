@@ -11,6 +11,7 @@ orientation = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfxt0"]
 transparency = 1
+cull_mode = 2
 albedo_color = Color(1, 0.8039216, 0.08627451, 1)
 albedo_texture = ExtResource("1_4jc36")
 emission_enabled = true
@@ -27,7 +28,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.78049874)
 mesh = SubResource("BoxMesh_mauqa")
 
 [node name="MuzzleFlash" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, -0.011456549, 0.33526242)
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0.4)
+visible = false
 mesh = SubResource("PlaneMesh_5lqom")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_sfxt0")

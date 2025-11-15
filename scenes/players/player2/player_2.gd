@@ -14,6 +14,10 @@ var t_bob = 0.0
 #fov
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
+
+# signal
+signal player_hit
+
 # Camera
 @onready var camera_controller: Node3D = $CameraController
 @onready var camera: Camera3D = $CameraController/Camera3D

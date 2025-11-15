@@ -1,11 +1,12 @@
 extends CanvasLayer
 
-# eunem żeby wybór był prosty, między graczami
+# eunem żeby wybór był prosty, między graczami, za pomocą inspektora.
 enum PlayerType { PLAYER_1, PLAYER_2 }
 @export var player_hud_type: PlayerType = PlayerType.PLAYER_1
 
 @export var loot_collected = 0
 
+@onready var got_hit = $GotHit
 @onready var crosshair: TextureRect = $Crosshair
 @onready var crosshair_hit: TextureRect = $CrosshairHit
 @onready var loot_indicator_panel: Panel = $LootIndicatorBackground
@@ -21,6 +22,7 @@ func _ready():
 
 	match player_hud_type:
 		PlayerType.PLAYER_1:
+			got_hit = false
 			crosshair.visible = true
 			loot_indicator_panel.visible = false
 			
@@ -31,6 +33,7 @@ func _ready():
 			crosshair_hit.position.y = viewport_size.y / 2 - crosshair.size.y / 2
 
 		PlayerType.PLAYER_2:
+			got_hit = false
 			crosshair.visible = false
 			crosshair_hit.visible = false
 			loot_indicator_panel.visible = true
@@ -47,6 +50,11 @@ func _on_collectible_body_entered(body: Node3D) -> void:
 
 func update_health(_value: float) -> void:
 	pass
+
+func _on_player_player_hit():
+	got_hit.visible = true
+	await get_tree().create_timer(0.2).timeout
+	got_hit.visible = false
 
 func _on_enemy_hit():
 	crosshair_hit.visible = true

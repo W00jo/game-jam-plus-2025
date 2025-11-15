@@ -39,3 +39,11 @@ vertical_alignment = 1
 visible = false
 offset_right = 4.0
 offset_bottom = 27.0
+
+[node name="GotHit" type="ColorRect" parent="."]
+visible = false
+offset_left = -178.0
+offset_top = -163.0
+offset_right = 1322.0
+offset_bottom = 837.0
+color = Color(1, 0, 0, 0.43137255)
