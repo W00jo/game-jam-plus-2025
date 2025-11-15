@@ -24,6 +24,7 @@ func _ready():
 		PlayerType.PLAYER_1:
 			got_hit = false
 			crosshair.visible = true
+			crosshair_hit.visible = true
 			loot_indicator_panel.visible = false
 			
 			# Center the crosshair
