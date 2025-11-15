@@ -689,13 +689,13 @@ transform = Transform3D(-0.06505497, 0, 0.9978817, 0, 1, 0, -0.9978817, 0, -0.06
 transform = Transform3D(-0.99310124, 0, -0.1172601, 0, 1, 0, 0.1172601, 0, -0.99310124, 11.356631, 0.75227684, -19.431751)
 
 [node name="plyta" parent="." instance=ExtResource("10_2n176")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.941854, -0.37541008, 25.533709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.941854, -0.46584046, 25.533709)
 
 [node name="plyta2" parent="." instance=ExtResource("10_2n176")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.14091, 0.023628235, 29.946503)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.14091, -0.46631658, 29.946503)
 
 [node name="plyta3" parent="." instance=ExtResource("10_2n176")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.295055, 0.023609161, -14.611502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.295055, -0.45529842, -14.611502)
 
 [node name="plyta4" parent="." instance=ExtResource("10_2n176")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3351, 0.02362442, -44.48148)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3351, -0.4673698, -44.48148)
