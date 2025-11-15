@@ -19,10 +19,7 @@ shape = SubResource("ConvexPolygonShape3D_plyga")
 
 [node name="CameraController" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11235762, -0.2508281)
-top_level = true
 script = ExtResource("2_ldeu4")
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
-
-[node name="CameraControllerAnchor" type="Marker3D" parent="."]
