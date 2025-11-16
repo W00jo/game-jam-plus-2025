@@ -78,6 +78,9 @@ bones/32/position = Vector3(-3.0114359e-06, 10.6067295, 1.5705831e-05)
 [node name="Plane" parent="player_looter/Armature/Skeleton3D" index="0"]
 layers = 4
 
+[node name="AnimationPlayer" parent="player_looter" index="1"]
+root_motion_track = NodePath("Armature/Skeleton3D:mixamorig_Hips")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.083740234, 0)
 shape = SubResource("CapsuleShape3D_jad7f")
