@@ -23,6 +23,10 @@ signal player_hit
 @onready var camera_controller: Node3D = $CameraController
 @onready var camera: Camera3D = $CameraController/Camera3D
 
+# Model
+@onready var model = $player_looter/Armature
+@onready var animation_player = $player_looter/AnimationPlayer
+
 func _physics_process(delta: float) -> void:
 	# Right stick look
 	var look_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
@@ -69,6 +73,15 @@ func _physics_process(delta: float) -> void:
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED *2)
 	var target_fov = BASE_FOV + FOV_CHANGE *velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8)
+	
+		# Odpalanie się animacji
+	if is_on_floor():
+		if velocity.length() > 0.1:
+			animation_player.play("Running") 
+		else:
+			animation_player.play("Idle")
+	else:
+		animation_player.play("Jump")
 	
 	move_and_slide()
 

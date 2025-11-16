@@ -22,6 +22,7 @@ project/assembly_name="GameJamPlus"
 [global_group]
 
 enemy="Non-player characters designed to hurt/damage the player(s)."
+player=""
 
 [input]
 

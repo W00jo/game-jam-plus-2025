@@ -3,11 +3,12 @@ extends CharacterBody3D
 var player = null
 var state_machine
 var health = 1
+var is_active = false
 
 signal enemy_hit
 
 const SPEED = 4.0
-const ATTACK_RANGE = 2.5
+const ATTACK_RANGE = 1.25
 var can_attack = true
 
 @export var player_path : NodePath
@@ -18,8 +19,14 @@ var can_attack = true
 func _ready():
 	player = get_node(player_path)
 	state_machine = anim_tree.get("parameters/playback")
+	anim_tree.active = true
 
 func _process(_delta):
+	anim_tree.set("parameters/conditions/walk", is_active)
+	
+	if not is_active:
+		return
+	
 	velocity = Vector3.ZERO
 	
 	if player == null:
@@ -41,7 +48,7 @@ func _process(_delta):
 	
 	# Warunki odpalania się animacji
 	anim_tree.set("parameters/conditions/scream", _target_in_range())
-	anim_tree.set("parameters/conditions/walk", !_target_in_range())
+	#anim_tree.set("parameters/conditions/walk", !_target_in_range())
 	
 	if _target_in_range() and can_attack:
 		_hit_finished()
@@ -49,6 +56,11 @@ func _process(_delta):
 		get_tree().create_timer(1.5).timeout.connect(func(): can_attack = true)
 	
 	move_and_slide()
+
+func _on_detection_zone_body_entered(body: Node3D):
+	if body.is_in_group("player") and not is_active:
+		print("Player detected!")
+		is_active = true
 
 func _target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE

@@ -9,7 +9,7 @@ const HIT_STAGGER = 8.0
 
 # Ruch głową... w ruchu i skoku
 const BOB_FREQ = 2.0
-const BOB_AMP = 0.08
+const BOB_AMP = 0.02
 var t_bob = 0.0
 
 # zmienne FOV
@@ -33,8 +33,8 @@ var instance
 @onready var rifle_barrel = $Head/Gun/Meshes/Barrel
 
 # Model's root node references
-#@onready var model = $Arma ture
-#@onready var animation_player = $AnimationPlayer
+@onready var model = $player_shooter/Armature
+@onready var animation_player = $player_shooter/AnimationPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -62,7 +62,7 @@ func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left_1", "move_right_1", "move_up_1", "move_down_1")
 	var direction := (camera_controller.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	#model.rotation.y = camera_controller.rotation.y
+	model.rotation.y = camera_controller.rotation.y
 	
 	if is_on_floor():
 		if direction:
@@ -85,19 +85,19 @@ func _physics_process(delta):
 	camera.fov = lerp(camera.fov, target_fov, delta * 8)
 	
 	# Odpalanie się animacji
-	#if is_on_floor():
-		#if velocity.length() > 0.1:
-			#animation_player.play("Run") 
-		#else:
-			#animation_player.play("Idle")
-	#else:
-		#animation_player.play("Jump")
+	if is_on_floor():
+		if velocity.length() > 0.1:
+			animation_player.play("Running") 
+		else:
+			animation_player.play("Idle")
+	else:
+		animation_player.play("Jump")
 	
 	# Shooting
 	if Input.is_action_pressed("shoot"):
 		_shooting()
-		#if !gun_anim.is_playing():
-			#gun_anim.play("Shoot")
+		if !rifle_anim.is_playing():
+			rifle_anim.play("Shoot")
 	
 	move_and_slide()
 
@@ -112,7 +112,7 @@ func hit():
 
 func _shooting():
 	if !rifle_anim.is_playing():
-		rifle_anim.play("Shoot")
+		rifle_anim.play("shoot")
 		instance = bullet_trail.instantiate()
 		if aim_ray.is_colliding():
 			var collider = aim_ray.get_collider()
