@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://ct6bwd7da40mn"]
+[gd_scene load_steps=78 format=3 uid="uid://ct6bwd7da40mn"]
 
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_jw8yd"]
 [ext_resource type="Texture2D" uid="uid://dp6u5jcdato08" path="res://assets/greybox_textures/Nowy projekt.png" id="2_74xmw"]
@@ -11,18 +11,22 @@
 [ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="9_x2ch1"]
 [ext_resource type="PackedScene" uid="uid://bbf0uq1c5lhvs" path="res://assets/models/enviroment/manhole/plyta.glb" id="10_2n176"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qubam"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="Gradient" id="Gradient_csbb7"]
+colors = PackedColorArray(0.067961, 0.1368556, 0.29811653, 1, 0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_xc3br"]
-sky_material = SubResource("ProceduralSkyMaterial_qubam")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mmplq"]
+gradient = SubResource("Gradient_csbb7")
+fill_from = Vector2(1, 0.38764045)
 
-[sub_resource type="Environment" id="Environment_hd3w3"]
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_de0io"]
+night_sky = SubResource("GradientTexture2D_mmplq")
+
+[sub_resource type="Sky" id="Sky_xidr1"]
+sky_material = SubResource("PhysicalSkyMaterial_de0io")
+
+[sub_resource type="Environment" id="Environment_8c33x"]
 background_mode = 2
-sky = SubResource("Sky_xc3br")
-tonemap_mode = 2
-glow_enabled = true
+sky = SubResource("Sky_xidr1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7o7o"]
 albedo_texture = ExtResource("2_74xmw")
@@ -215,11 +219,11 @@ albedo_texture = ExtResource("8_4x87c")
 [node name="World" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.45204133, 0.21367897, 0, 0.42735788, 0.90408254, -0.50000006, 0.78295845, -0.37010276, -166.32202, 0, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_hd3w3")
+environment = SubResource("Environment_8c33x")
 
 [node name="Player1" parent="." instance=ExtResource("1_jw8yd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.575466, 42.661777)
