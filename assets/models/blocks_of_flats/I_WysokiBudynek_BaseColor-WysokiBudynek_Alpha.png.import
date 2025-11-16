@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcxirh4ncx7fl"
-path.s3tc="res://.godot/imported/I_WysokiBudynek_BaseColor-WysokiBudynek_Alpha.png-29b9db6749da435ea2d069de9dfed4fa.s3tc.ctex"
+path.s3tc="res://.godot/imported/I_WysokiBudynek_BaseColor-WysokiBudynek_Alpha.png-498fa8016bbf8ac423f582e203878338.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/Flats/I_WysokiBudynek_BaseColor-WysokiBudynek_Alpha.png"
-dest_files=["res://.godot/imported/I_WysokiBudynek_BaseColor-WysokiBudynek_Alpha.png-29b9db6749da435ea2d069de9dfed4fa.s3tc.ctex"]
+source_file="res://assets/models/blocks_of_flats/I_WysokiBudynek_BaseColor-WysokiBudynek_Alpha.png"
+dest_files=["res://.godot/imported/I_WysokiBudynek_BaseColor-WysokiBudynek_Alpha.png-498fa8016bbf8ac423f582e203878338.s3tc.ctex"]
 
 [params]
 

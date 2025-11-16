@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://frdomkqevcyo"
-path.s3tc="res://.godot/imported/O1_Budynek_Normal.png-e11a8e3d1246c09a9a6edb39232958a2.s3tc.ctex"
+path.s3tc="res://.godot/imported/O1_Budynek_Normal.png-639080208f7b9684158ef66cd7eef197.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/Flats/O1_Budynek_Normal.png"
-dest_files=["res://.godot/imported/O1_Budynek_Normal.png-e11a8e3d1246c09a9a6edb39232958a2.s3tc.ctex"]
+source_file="res://assets/models/blocks_of_flats/O1_Budynek_Normal.png"
+dest_files=["res://.godot/imported/O1_Budynek_Normal.png-639080208f7b9684158ef66cd7eef197.s3tc.ctex"]
 
 [params]
 

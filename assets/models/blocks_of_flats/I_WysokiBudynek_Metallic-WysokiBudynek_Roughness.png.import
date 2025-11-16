@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgyqovde7tsmx"
-path.s3tc="res://.godot/imported/I_WysokiBudynek_Metallic-WysokiBudynek_Roughness.png-581629353a0e3cf7ef24c4bcff635b15.s3tc.ctex"
+path.s3tc="res://.godot/imported/I_WysokiBudynek_Metallic-WysokiBudynek_Roughness.png-da498cd261475d64a545990b20ef9217.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/Flats/I_WysokiBudynek_Metallic-WysokiBudynek_Roughness.png"
-dest_files=["res://.godot/imported/I_WysokiBudynek_Metallic-WysokiBudynek_Roughness.png-581629353a0e3cf7ef24c4bcff635b15.s3tc.ctex"]
+source_file="res://assets/models/blocks_of_flats/I_WysokiBudynek_Metallic-WysokiBudynek_Roughness.png"
+dest_files=["res://.godot/imported/I_WysokiBudynek_Metallic-WysokiBudynek_Roughness.png-da498cd261475d64a545990b20ef9217.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7gql5vcn04nv"
-path.s3tc="res://.godot/imported/dead_tree_bark-mix-diffuse-2.jpg-7dbc355cf16827e2341e4ec84df852ed.s3tc.ctex"
+path.s3tc="res://.godot/imported/dead_tree_bark-mix-diffuse-2.jpg-2f73ac813c88997031f33320fb15b2b1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/dead_tree_bark-mix-diffuse-2.jpg"
-dest_files=["res://.godot/imported/dead_tree_bark-mix-diffuse-2.jpg-7dbc355cf16827e2341e4ec84df852ed.s3tc.ctex"]
+source_file="res://assets/models/enviroment/tree_dead/dead_tree_bark-mix-diffuse-2.jpg"
+dest_files=["res://.godot/imported/dead_tree_bark-mix-diffuse-2.jpg-2f73ac813c88997031f33320fb15b2b1.s3tc.ctex"]
 
 [params]
 

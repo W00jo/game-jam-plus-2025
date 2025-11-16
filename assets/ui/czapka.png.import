@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4i8bg60ifwux"
-path="res://.godot/imported/czapka.png-af7c8d458cd1faf6441ce5637f147c56.ctex"
+path="res://.godot/imported/czapka.png-d7f0ec402dcecb3d8dc073999afa0b2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/czapka.png"
-dest_files=["res://.godot/imported/czapka.png-af7c8d458cd1faf6441ce5637f147c56.ctex"]
+source_file="res://assets/ui/czapka.png"
+dest_files=["res://.godot/imported/czapka.png-d7f0ec402dcecb3d8dc073999afa0b2c.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duc3bfufyjahk"
-path.s3tc="res://.godot/imported/O2_Budynek_Metallic-Budynek_Roughness.png-b2310f4d3b38910fc8147cb6603ec968.s3tc.ctex"
+path.s3tc="res://.godot/imported/O2_Budynek_Metallic-Budynek_Roughness.png-f5ab81569d6923f06e2ede0734789454.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/Flats/O2_Budynek_Metallic-Budynek_Roughness.png"
-dest_files=["res://.godot/imported/O2_Budynek_Metallic-Budynek_Roughness.png-b2310f4d3b38910fc8147cb6603ec968.s3tc.ctex"]
+source_file="res://assets/models/blocks_of_flats/O2_Budynek_Metallic-Budynek_Roughness.png"
+dest_files=["res://.godot/imported/O2_Budynek_Metallic-Budynek_Roughness.png-f5ab81569d6923f06e2ede0734789454.s3tc.ctex"]
 
 [params]
 

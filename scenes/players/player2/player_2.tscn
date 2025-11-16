@@ -4,15 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://sd1grwfnw0vm" path="res://assets/models/player_looter/play_looter.glb" id="2_wms8c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jad7f"]
+radius = 0.22363281
+height = 1.3496094
 
 [node name="Player2" type="CharacterBody3D"]
 collision_mask = 7
 script = ExtResource("1_wms8c")
 
 [node name="player_looter" parent="." instance=ExtResource("2_wms8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7464194, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.099609375, 0)
 shape = SubResource("CapsuleShape3D_jad7f")
 
 [node name="CameraController" type="Node3D" parent="."]
@@ -20,3 +23,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11235762, -0.2508281)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
+
+[editable path="player_looter"]

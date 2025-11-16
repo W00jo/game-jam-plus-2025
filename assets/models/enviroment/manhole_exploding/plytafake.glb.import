@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cducucxkcq4r4"
-path="res://.godot/imported/plytafake.glb-cd1d7d34a5b05a4d159914b6eb094370.scn"
+path="res://.godot/imported/plytafake.glb-95d36ad9e0ab195097253fe14ed191d5.scn"
 
 [deps]
 
-source_file="res://assets/models/plytafake.glb"
-dest_files=["res://.godot/imported/plytafake.glb-cd1d7d34a5b05a4d159914b6eb094370.scn"]
+source_file="res://assets/models/enviroment/manhole_exploding/plytafake.glb"
+dest_files=["res://.godot/imported/plytafake.glb-95d36ad9e0ab195097253fe14ed191d5.scn"]
 
 [params]
 

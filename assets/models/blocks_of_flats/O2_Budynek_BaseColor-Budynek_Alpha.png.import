@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7bjm0tdloeic"
-path.s3tc="res://.godot/imported/O2_Budynek_BaseColor-Budynek_Alpha.png-92e632c5f2a30998f535732d99f04868.s3tc.ctex"
+path.s3tc="res://.godot/imported/O2_Budynek_BaseColor-Budynek_Alpha.png-39cdb3f5631c01a502f3b2b943be92b8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/Flats/O2_Budynek_BaseColor-Budynek_Alpha.png"
-dest_files=["res://.godot/imported/O2_Budynek_BaseColor-Budynek_Alpha.png-92e632c5f2a30998f535732d99f04868.s3tc.ctex"]
+source_file="res://assets/models/blocks_of_flats/O2_Budynek_BaseColor-Budynek_Alpha.png"
+dest_files=["res://.godot/imported/O2_Budynek_BaseColor-Budynek_Alpha.png-39cdb3f5631c01a502f3b2b943be92b8.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co4kn5mx4wlgr"
-path.s3tc="res://.godot/imported/StreetLamp_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-928c61a025fe4f7941190ae6738271ce.s3tc.ctex"
+path.s3tc="res://.godot/imported/StreetLamp_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-009d9ff83a45300acf91d7dec90052e8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/StreetLamp_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/StreetLamp_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-928c61a025fe4f7941190ae6738271ce.s3tc.ctex"]
+source_file="res://assets/models/enviroment/street_lamp/StreetLamp_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png"
+dest_files=["res://.godot/imported/StreetLamp_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-009d9ff83a45300acf91d7dec90052e8.s3tc.ctex"]
 
 [params]
 

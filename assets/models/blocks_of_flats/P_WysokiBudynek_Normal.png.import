@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5xk6wvbql5ub"
-path.s3tc="res://.godot/imported/P_WysokiBudynek_Normal.png-d1ad84f892c147716811d9b6167167f4.s3tc.ctex"
+path.s3tc="res://.godot/imported/P_WysokiBudynek_Normal.png-e9dbf987fce9d4e2d72ab631165d948b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/Flats/P_WysokiBudynek_Normal.png"
-dest_files=["res://.godot/imported/P_WysokiBudynek_Normal.png-d1ad84f892c147716811d9b6167167f4.s3tc.ctex"]
+source_file="res://assets/models/blocks_of_flats/P_WysokiBudynek_Normal.png"
+dest_files=["res://.godot/imported/P_WysokiBudynek_Normal.png-e9dbf987fce9d4e2d72ab631165d948b.s3tc.ctex"]
 
 [params]
 

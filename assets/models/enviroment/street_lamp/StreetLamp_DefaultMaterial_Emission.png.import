@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxmbujfdavki1"
-path.s3tc="res://.godot/imported/StreetLamp_DefaultMaterial_Emission.png-8eb13f5ee70d8c36cfca5e04f19aeee4.s3tc.ctex"
+path.s3tc="res://.godot/imported/StreetLamp_DefaultMaterial_Emission.png-d75e814a91b453e7624b5a483289749b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/StreetLamp_DefaultMaterial_Emission.png"
-dest_files=["res://.godot/imported/StreetLamp_DefaultMaterial_Emission.png-8eb13f5ee70d8c36cfca5e04f19aeee4.s3tc.ctex"]
+source_file="res://assets/models/enviroment/street_lamp/StreetLamp_DefaultMaterial_Emission.png"
+dest_files=["res://.godot/imported/StreetLamp_DefaultMaterial_Emission.png-d75e814a91b453e7624b5a483289749b.s3tc.ctex"]
 
 [params]
 

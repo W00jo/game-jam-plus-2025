@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvncgf6uatf68"
-path.s3tc="res://.godot/imported/plyta_DefaultMaterial_Metallic.png-DefaultMaterial_Roughness.png-f9c1f7d6d9316dcc33e8897d48b8d130.s3tc.ctex"
+path.s3tc="res://.godot/imported/plyta_DefaultMaterial_Metallic.png-DefaultMaterial_Roughness.png-5d251fef33957ad207385e1869e68338.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/plyta_DefaultMaterial_Metallic.png-DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/plyta_DefaultMaterial_Metallic.png-DefaultMaterial_Roughness.png-f9c1f7d6d9316dcc33e8897d48b8d130.s3tc.ctex"]
+source_file="res://assets/models/enviroment/manhole/plyta_DefaultMaterial_Metallic.png-DefaultMaterial_Roughness.png"
+dest_files=["res://.godot/imported/plyta_DefaultMaterial_Metallic.png-DefaultMaterial_Roughness.png-5d251fef33957ad207385e1869e68338.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://ct6bwd7da40mn"]
+[gd_scene load_steps=76 format=3 uid="uid://ct6bwd7da40mn"]
 
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_jw8yd"]
 [ext_resource type="Texture2D" uid="uid://dp6u5jcdato08" path="res://assets/greybox_textures/Nowy projekt.png" id="2_74xmw"]
@@ -7,10 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://csannvkkvbe5g" path="res://assets/greybox_textures/greybox_purple_grid.png" id="4_74xmw"]
 [ext_resource type="Texture2D" uid="uid://b28jksn0oe2cx" path="res://assets/greybox_textures/greybox_yellow_grid.png" id="5_ni5vy"]
 [ext_resource type="Texture2D" uid="uid://b7dutupx0xu52" path="res://assets/greybox_textures/greybox_red_grid.png" id="6_j22gu"]
-[ext_resource type="PackedScene" uid="uid://b8fc2e8ajhwoi" path="res://assets/map.glb" id="7_sxxxr"]
 [ext_resource type="Texture2D" uid="uid://bkgc7r3a2tlq6" path="res://assets/greybox_textures/greybox_grey_grid.png" id="8_4x87c"]
 [ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="9_x2ch1"]
-[ext_resource type="PackedScene" uid="uid://bbf0uq1c5lhvs" path="res://assets/models/plyta.glb" id="10_2n176"]
+[ext_resource type="PackedScene" uid="uid://bbf0uq1c5lhvs" path="res://assets/models/enviroment/manhole/plyta.glb" id="10_2n176"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qubam"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -213,7 +212,7 @@ albedo_texture = ExtResource("6_j22gu")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3wvu"]
 albedo_texture = ExtResource("8_4x87c")
 
-[node name="TestMap" type="Node3D"]
+[node name="World" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -611,10 +610,6 @@ material_override = SubResource("StandardMaterial3D_f1gf5")
 use_collision = true
 collision_layer = 2
 size = Vector3(3.5605083, 10.160003, 11.419029)
-
-[node name="ref" parent="." instance=ExtResource("7_sxxxr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4136041, -0.2705822, 112.03205)
-visible = false
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(78.495, 0, 0, 0, 2.494, 0, 0, 0, 78.495, -2.9342957, 14.727143, 1.1285667)
