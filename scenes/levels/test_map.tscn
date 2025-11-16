@@ -1,6 +1,7 @@
-[gd_scene load_steps=74 format=3 uid="uid://ct6bwd7da40mn"]
+[gd_scene load_steps=77 format=3 uid="uid://ct6bwd7da40mn"]
 
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_jw8yd"]
+[ext_resource type="Texture2D" uid="uid://dp6u5jcdato08" path="res://assets/greybox_textures/Nowy projekt.png" id="2_74xmw"]
 [ext_resource type="Texture2D" uid="uid://8ibohbppec5j" path="res://assets/greybox_textures/greybox_light_grid.png" id="2_x2ch1"]
 [ext_resource type="Texture2D" uid="uid://cbc31yfa4ewtw" path="res://assets/greybox_textures/greybox_teal_grid.png" id="3_2n176"]
 [ext_resource type="Texture2D" uid="uid://csannvkkvbe5g" path="res://assets/greybox_textures/greybox_purple_grid.png" id="4_74xmw"]
@@ -25,7 +26,15 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7o7o"]
-albedo_texture = ExtResource("2_x2ch1")
+albedo_texture = ExtResource("2_74xmw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ni5vy"]
+albedo_texture = ExtResource("2_74xmw")
+refraction_enabled = true
+uv1_scale = Vector3(32.265, 32.265, 32.265)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j22gu"]
+albedo_texture = ExtResource("2_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh3s4"]
 albedo_texture = ExtResource("3_2n176")
@@ -219,8 +228,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.575466, 42.661777)
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9850092, -0.06597519, -0.14274216)
 material_override = SubResource("StandardMaterial3D_p7o7o")
+material_overlay = SubResource("StandardMaterial3D_ni5vy")
 use_collision = true
 size = Vector3(155.40337, 0.17919922, 155.27754)
+material = SubResource("StandardMaterial3D_j22gu")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7306795, 13.076441, 64.55231)
