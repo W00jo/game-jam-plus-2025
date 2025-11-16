@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6equ3tfxs33u"]
+
+[ext_resource type="Script" uid="uid://3x381wwx0ohi" path="res://scenes/ui/credits.gd" id="1_e5ls7"]
+[ext_resource type="Texture2D" uid="uid://ylxl5mh12gsq" path="res://assets/ludki2.png" id="1_oap8i"]
+[ext_resource type="FontFile" uid="uid://bi34feob6qhns" path="res://assets/fonts/DonGraffiti.otf" id="2_pqmjv"]
+[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/x.gd" id="3_e5ls7"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e5ls7")
+
+[node name="Ludki2" type="Sprite2D" parent="."]
+position = Vector2(575, 324)
+scale = Vector2(0.64212966, 0.64212966)
+texture = ExtResource("1_oap8i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1103.0
+offset_top = 3.0
+offset_right = 1143.0
+offset_bottom = 43.0
+
+[node name="X" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pqmjv")
+theme_override_font_sizes/font_size = 61
+text = "X"
+script = ExtResource("3_e5ls7")
+
+[connection signal="pressed" from="VBoxContainer/X" to="." method="_on_x_pressed"]

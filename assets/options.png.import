@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2kl7c7ve7yng"
-path.s3tc="res://.godot/imported/NPCAnimation_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png-42c2b20d0bfae44328e5d88d248db617.s3tc.ctex"
+uid="uid://xpgfmmhumywk"
+path="res://.godot/imported/options.png-d1fb7952892655747177aeaca3b0faed.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "775efcf72b04c0a4cfd7d14ffc73571c"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models/NPC/NPCAnimation_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png"
-dest_files=["res://.godot/imported/NPCAnimation_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png-42c2b20d0bfae44328e5d88d248db617.s3tc.ctex"]
+source_file="res://assets/options.png"
+dest_files=["res://.godot/imported/options.png-d1fb7952892655747177aeaca3b0faed.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
