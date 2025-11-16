@@ -16,7 +16,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_opcje_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/options.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/menu/options.tscn")
 
 
 func _on_exit_pressed() -> void:
@@ -24,8 +24,8 @@ func _on_exit_pressed() -> void:
 
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/credits.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/menu/credits.tscn")
 
 
 func _on_how_to_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/how_to_play.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/menu/how_to_play.tscn")
