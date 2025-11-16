@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kcqkcmujglad"
-path.s3tc="res://.godot/imported/play_looter_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png-107496ba3730045c148480a619c11e73.s3tc.ctex"
+uid="uid://dt1gc8rh8lxo7"
+path.s3tc="res://.godot/imported/Ground-Urban_Texture_A_P4110676.jpg-72e0d129d84eb483d3c2da406dcb3ff5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "318662670fa8eade8e53ad881dfda67d"
-}
 
 [deps]
 
-source_file="res://assets/models/player_looter/play_looter_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png"
-dest_files=["res://.godot/imported/play_looter_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png-107496ba3730045c148480a619c11e73.s3tc.ctex"]
+source_file="res://assets/models/enviroment/Ground-Urban_Texture_A_P4110676.jpg"
+dest_files=["res://.godot/imported/Ground-Urban_Texture_A_P4110676.jpg-72e0d129d84eb483d3c2da406dcb3ff5.s3tc.ctex"]
 
 [params]
 

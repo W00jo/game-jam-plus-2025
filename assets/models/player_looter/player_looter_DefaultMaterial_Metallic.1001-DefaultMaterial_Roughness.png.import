@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn3t4dmmlia6n"
-path.s3tc="res://.godot/imported/play_looter_DefaultMaterial_Emission.png-25d65810bffa5a7d6897648f7855c2ef.s3tc.ctex"
+uid="uid://dqmt841cncp7w"
+path.s3tc="res://.godot/imported/player_looter_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-e87e3689e9a9ebf56971db6440ca0756.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "efeebdda98ec1d7fb2ad83d23f0713bf"
+"md5": "0be7c534f0a091102a83982bdd235f60"
 }
 
 [deps]
 
-source_file="res://assets/models/player_looter/play_looter_DefaultMaterial_Emission.png"
-dest_files=["res://.godot/imported/play_looter_DefaultMaterial_Emission.png-25d65810bffa5a7d6897648f7855c2ef.s3tc.ctex"]
+source_file="res://assets/models/player_looter/player_looter_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png"
+dest_files=["res://.godot/imported/player_looter_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png-e87e3689e9a9ebf56971db6440ca0756.s3tc.ctex"]
 
 [params]
 
