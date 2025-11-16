@@ -37,15 +37,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -581.0
+offset_left = -531.0
 offset_top = -264.0
-offset_right = -13.0
+offset_right = 37.0
 offset_bottom = -108.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 101
-text = "GO BRO SHOOT"
+text = "Shoot Bro Loot"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
