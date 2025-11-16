@@ -3,7 +3,7 @@ extends CharacterBody3D
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
-const JUMP_VELOCITY = 10.0
+const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
 const HIT_STAGGER = 8.0
 
