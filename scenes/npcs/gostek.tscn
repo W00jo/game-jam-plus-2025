@@ -13,43 +13,43 @@ radius = 18.310547
 height = 51.705444
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_djdji"]
-radius = 3.4921875
+radius = 4.9833984
 height = 20.927979
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aar6o"]
-radius = 4.3222656
-height = 16.634216
+radius = 5.508789
+height = 19.837128
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhdyv"]
-radius = 2.4316406
-height = 10.215332
+radius = 5.590332
+height = 17.832886
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wn2pb"]
-radius = 2.9394531
+radius = 6.2495117
 height = 30.501465
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i8bv0"]
-radius = 3.1582031
+radius = 5.585449
 height = 30.20996
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b74o0"]
-radius = 2.512207
-height = 13.749512
+radius = 4.227539
+height = 14.871826
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_af85v"]
-radius = 2.7827148
+radius = 6.6938477
 height = 31.137207
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ekjvm"]
-radius = 3.260254
+radius = 5.9208984
 height = 30.233154
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_55eea"]
-radius = 2.2485352
-height = 13.958496
+radius = 3.6958008
+height = 15.983154
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3in0s"]
-radius = 0.1772461
+radius = 0.107910156
 height = 1.2490234
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_aar6o"]
@@ -98,7 +98,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/LeftArm/Area3D"]
-transform = Transform3D(1.0000023, 1.937151e-07, -2.9802322e-08, 5.2154064e-08, 1.0000002, 9.313226e-09, 8.940697e-08, 6.4074993e-07, 1, -7.6293945e-06, 9.923241, -3.8146973e-06)
+transform = Transform3D(1.0000012, 8.940697e-08, -8.940697e-08, -4.4703484e-08, 1.0000002, -8.037314e-07, -1.4901161e-07, 6.482005e-07, 0.9999984, -8.583069e-06, 9.923235, -7.6293945e-06)
 shape = SubResource("CapsuleShape3D_djdji")
 
 [node name="LeftForeArm" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="5"]
@@ -111,7 +111,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/LeftForeArm/Area3D"]
-transform = Transform3D(0.9999999, 5.9604645e-07, 4.4703484e-08, 0, 1, 1.4901161e-08, -5.9604645e-08, -8.940697e-08, 1, 0, 12.7140465, 1.5258789e-05)
+transform = Transform3D(0.99999774, 6.593764e-07, 8.940697e-08, -3.9488077e-07, 1, -4.7963113e-08, -6.4074993e-07, -2.2817403e-07, 0.9999999, 1.9073486e-06, 14.315514, 2.2888184e-05)
 shape = SubResource("CapsuleShape3D_aar6o")
 
 [node name="LeftHand" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="6"]
@@ -124,7 +124,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/LeftHand/Area3D"]
-transform = Transform3D(1, -4.4703484e-08, 5.9604645e-08, -1.7136335e-07, 1, -1.6391277e-07, 2.9802322e-08, -4.4703484e-08, 1, -4.7683716e-07, 4.107666, 0)
+transform = Transform3D(0.99999684, -5.9604645e-08, 2.9802322e-08, 2.5629997e-06, 1, -2.8312206e-07, 1.4901161e-08, -4.4703484e-08, 1.0000002, 0, 6.3685365, -1.9073486e-05)
 shape = SubResource("CapsuleShape3D_xhdyv")
 
 [node name="RightArm" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="7"]
@@ -163,7 +163,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/RightHand/Area3D"]
-transform = Transform3D(1, -4.4703484e-08, 5.9604645e-08, -1.7136335e-07, 1, -1.6391277e-07, 2.9802322e-08, -4.4703484e-08, 1, -4.7683716e-07, 4.107666, 0)
+transform = Transform3D(1.0000002, 0, -1.013279e-06, -2.115965e-06, 0.9999998, 1.013279e-06, -5.9604645e-08, -5.9604645e-08, 0.9999987, 0, 5.655575, -1.9073486e-05)
 shape = SubResource("CapsuleShape3D_xhdyv")
 
 [node name="LeftUpLeg" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="10"]
@@ -176,7 +176,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/LeftUpLeg/Area3D"]
-transform = Transform3D(1.0000032, 2.1979213e-07, 2.30968e-07, 8.000061e-07, 1.0000091, 1.4901161e-08, -1.7136335e-07, -1.4901161e-08, 1, 3.8146973e-06, 16.380234, 3.8146973e-06)
+transform = Transform3D(1.0000032, 2.0788548e-07, 2.3079338e-07, 7.454464e-07, 1.0000073, 9.313226e-09, -1.7145067e-07, -2.2351742e-08, 0.9999984, 3.8146973e-06, 16.38022, 3.5762787e-06)
 shape = SubResource("CapsuleShape3D_wn2pb")
 
 [node name="LeftLeg" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="11"]
@@ -189,7 +189,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/LeftLeg/Area3D"]
-transform = Transform3D(1.0000007, 1.0058284e-07, -1.0430813e-07, 1.1175871e-08, 1.0000002, 4.0233135e-07, -4.3213367e-07, 3.2782555e-07, 1, -4.7683716e-07, 14.10498, 3.0994415e-06)
+transform = Transform3D(1.0000007, 9.9591034e-08, -1.04832e-07, 1.1085831e-08, 1.0000002, 4.172325e-07, -4.3190084e-07, 3.2782555e-07, 1, -9.536743e-07, 14.104977, 3.0994415e-06)
 shape = SubResource("CapsuleShape3D_i8bv0")
 
 [node name="LeftFoot" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="12"]
@@ -202,7 +202,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/LeftFoot/Area3D"]
-transform = Transform3D(0.9999983, -1.4156103e-07, -8.195639e-08, -9.685755e-08, 0.9999951, -4.7683716e-07, 0, -1.5497208e-06, 0.9999995, -4.7683716e-07, 5.8747535, -4.7683716e-07)
+transform = Transform3D(0.9999983, -3.501773e-07, -8.195639e-08, -9.685755e-08, 0.99999577, -4.7683716e-07, 0, -3.2782555e-07, 0.9999995, -1.9073486e-06, 6.4359074, -9.536743e-07)
 shape = SubResource("CapsuleShape3D_b74o0")
 
 [node name="BoneAttachment3D4" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="13"]
@@ -215,7 +215,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/BoneAttachment3D4/Area3D"]
-transform = Transform3D(1.0000002, -2.9802322e-08, -2.9802322e-08, -1.3038516e-07, 1.0000001, 2.9802322e-08, 2.3841858e-07, -7.4505806e-08, 1, 0, 14.5686035, 0)
+transform = Transform3D(0.99998677, -0.0052003246, -8.9273846e-05, 0.0052002515, 0.9999866, -2.0358711e-06, 8.949265e-05, 1.5310943e-06, 1, 4.7683716e-07, 14.568615, 0)
 shape = SubResource("CapsuleShape3D_af85v")
 
 [node name="BoneAttachment3D5" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="14"]
@@ -228,7 +228,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/BoneAttachment3D5/Area3D"]
-transform = Transform3D(0.9999999, 1.4901161e-08, -2.9802322e-08, -5.2154064e-08, 1, 0, -5.364418e-07, -8.940697e-08, 1, -5.722046e-06, 14.116566, -4.7683716e-07)
+transform = Transform3D(1.0000001, 1.4890929e-08, -2.9780495e-08, -5.23562e-08, 1, 0, -5.3650365e-07, -1.1920929e-07, 1, -5.722046e-06, 14.116566, -3.5762787e-07)
 shape = SubResource("CapsuleShape3D_ekjvm")
 
 [node name="BoneAttachment3D6" type="BoneAttachment3D" parent="MonsterAnimation/Armature_002/Skeleton3D" index="15"]
@@ -241,7 +241,7 @@ collision_layer = 4
 script = ExtResource("4_djdji")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterAnimation/Armature_002/Skeleton3D/BoneAttachment3D6/Area3D"]
-transform = Transform3D(1.0000001, 1.4901161e-08, 1.4901161e-08, 1.4901161e-08, 1, 0, 0, -1.7881393e-07, 1, -4.7683716e-06, 5.979248, -1.4305115e-06)
+transform = Transform3D(0.9999979, -2.2351742e-08, 1.1175871e-07, 1.4901161e-08, 0.99999857, 1.4901161e-07, -1.7881393e-07, -1.5795231e-06, 0.9999982, -4.2915344e-06, 6.991576, -1.9073486e-06)
 shape = SubResource("CapsuleShape3D_55eea")
 
 [node name="CollisionMonsterNPC" type="CollisionShape3D" parent="."]

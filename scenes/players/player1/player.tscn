@@ -29,7 +29,7 @@ cull_mask = 1048573
 transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.9999999, 0, 8.742277e-08, 0, -0.9999999, 0.3, -0.20441449, -1.3659627)
 
 [node name="AimRay" type="RayCast3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.5)
 target_position = Vector3(0, 0, -100)
 collision_mask = 4
 collide_with_areas = true
