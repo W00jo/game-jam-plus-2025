@@ -4,10 +4,11 @@ var player = null
 var state_machine
 var health = 1
 
-signal zombie_hit
+signal enemy_hit
 
 const SPEED = 4.0
 const ATTACK_RANGE = 2.5
+var can_attack = true
 
 @export var player_path : NodePath
 
@@ -20,6 +21,9 @@ func _ready():
 
 func _process(_delta):
 	velocity = Vector3.ZERO
+	
+	if player == null:
+		return
 	
 	#match state_machine.get_current_node():
 		#"Run"
@@ -36,6 +40,11 @@ func _process(_delta):
 	
 	#anim_tree.get("parameters")
 	
+	if _target_in_range() and can_attack:
+		_hit_finished()
+		can_attack = false
+		get_tree().create_timer(1.5).timeout.connect(func(): can_attack = true)
+	
 	move_and_slide()
 
 func _target_in_range():
@@ -43,9 +52,10 @@ func _target_in_range():
 
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
-		var dir = global_position.direction_to(player.global_position)
-		player.hit(dir)
+		player.hit()
 
 func _on_area_3d_body_part_hit(dam):
 	health -= dam
-	emit_signal("zombie_hit")
+	emit_signal("enemy_hit")
+	if health <= 0:
+		queue_free()

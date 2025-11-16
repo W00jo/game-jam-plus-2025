@@ -5,11 +5,10 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.1
+#const HIT_STAGGER = 8.0
 
-# Częstotliwość skakania głowy
+# Ruch głową... w ruchu i skoku
 const BOB_FREQ = 2.0
-
-# Wysokość skoku głowy
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
@@ -66,7 +65,7 @@ func _physics_process(delta: float) -> void:
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
 	
-	#FOV
+	# FOV
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED *2)
 	var target_fov = BASE_FOV + FOV_CHANGE *velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8)
@@ -78,3 +77,7 @@ func _headbob(time) -> Vector3:
 	pos.y =sin(time * BOB_FREQ) * BOB_AMP 
 	pos.x =cos(time * BOB_FREQ/2) * BOB_AMP
 	return pos
+
+func hit():
+	emit_signal("player_hit")
+	#velocity += dir * HIT_STAGGER

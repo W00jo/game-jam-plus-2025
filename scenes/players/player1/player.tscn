@@ -11,7 +11,6 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 [node name="Player1" type="CharacterBody3D"]
 collision_mask = 7
 script = ExtResource("1_plyga")
-WALK_SPEED = 15.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_dtwy2")
@@ -19,18 +18,22 @@ mesh = SubResource("CapsuleMesh_dtwy2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_2tc2p")
 
-[node name="CameraController" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11235762, -0.2508281)
 
-[node name="Camera3D" type="Camera3D" parent="CameraController"]
+[node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
 cull_mask = 1048573
 
-[node name="Gun" parent="CameraController" instance=ExtResource("3_2tc2p")]
-transform = Transform3D(1, 0, 0, 0, -0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0.3, 0, -1.5)
+[node name="Gun" parent="Head" instance=ExtResource("3_2tc2p")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.9999999, 0, 8.742277e-08, 0, -0.9999999, 0.3, -0.20441449, -1.3659627)
 
-[node name="RayCast3D" type="RayCast3D" parent="CameraController"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+[node name="AimRay" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 target_position = Vector3(0, 0, -100)
 collision_mask = 4
 collide_with_areas = true
+
+[node name="AimRayEnd" type="Node3D" parent="Head"]
+
+[editable path="Head/Gun"]
