@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw83fj0ovqjhn"
-path.s3tc="res://.godot/imported/NPCAnimation_fdbde78ebb63f14d289c2a5fcd2fb6a8.jpg-daa899dc00c5be6f89ac623b686ca6e8.s3tc.ctex"
+path.s3tc="res://.godot/imported/NPCAnimation_fdbde78ebb63f14d289c2a5fcd2fb6a8.jpg-6ff60162ed7ac4f08e2a7d2e38be5e51.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/models/npc/NPCAnimation_fdbde78ebb63f14d289c2a5fcd2fb6a8.jpg"
-dest_files=["res://.godot/imported/NPCAnimation_fdbde78ebb63f14d289c2a5fcd2fb6a8.jpg-daa899dc00c5be6f89ac623b686ca6e8.s3tc.ctex"]
+source_file="res://assets/models/NPC/NPCAnimation_fdbde78ebb63f14d289c2a5fcd2fb6a8.jpg"
+dest_files=["res://.godot/imported/NPCAnimation_fdbde78ebb63f14d289c2a5fcd2fb6a8.jpg-6ff60162ed7ac4f08e2a7d2e38be5e51.s3tc.ctex"]
 
 [params]
 
