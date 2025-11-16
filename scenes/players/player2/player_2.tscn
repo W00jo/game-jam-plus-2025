@@ -76,7 +76,7 @@ bones/31/rotation = Quaternion(0.4144865, 0.14054035, -0.06498225, 0.89678687)
 bones/32/position = Vector3(-3.0114359e-06, 10.6067295, 1.5705831e-05)
 
 [node name="Plane" parent="player_looter/Armature/Skeleton3D" index="0"]
-layers = 4
+layers = 524288
 
 [node name="AnimationPlayer" parent="player_looter" index="1"]
 root_motion_track = NodePath("Armature/Skeleton3D:mixamorig_Hips")
@@ -90,6 +90,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.251)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
-cull_mask = 1048571
+cull_mask = 524287
 
 [editable path="player_looter"]

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GameJamPlus"
-run/main_scene="uid://dy4q4lk1onlnd"
+run/main_scene="uid://klggb37mgai1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://global/game_manager.gd"
 
 [dotnet]
 
