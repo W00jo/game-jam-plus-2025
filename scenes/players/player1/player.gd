@@ -3,7 +3,7 @@ extends CharacterBody3D
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 10.0
 const SENSITIVITY = 0.005
 const HIT_STAGGER = 8.0
 
@@ -25,8 +25,8 @@ var instance
 # Camera
 @onready var camera_controller: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
-@onready var aim_ray = $Head/AimRay
-@onready var aim_ray_end = $Head/AimRayEnd
+@onready var aim_ray = $Head/Camera3D/AimRay
+@onready var aim_ray_end = $Head/Camera3D/AimRayEnd
 
 # Gun
 @onready var rifle_anim = $Head/Gun/ShootingAnimation
@@ -97,7 +97,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("shoot"):
 		_shooting()
 		if !rifle_anim.is_playing():
-			rifle_anim.play("Shoot")
+			rifle_anim.play("shoot")
 	
 	move_and_slide()
 

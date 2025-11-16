@@ -1,7 +1,10 @@
 extends MeshInstance3D
 
+var alpha = 1.0
+
 func _ready() -> void:
-	pass # Replace with function body.
+	var dup_mat = material_override.duplicate()
+	material_override = dup_mat
 
 func init(pos1, pos2):
 	var draw_mesh = ImmediateMesh.new()
@@ -11,8 +14,9 @@ func init(pos1, pos2):
 	draw_mesh.surface_add_vertex(pos2)
 	draw_mesh.surface_end()
 
-func _process(_delta: float) -> void:
-	pass
+func _process(delta):
+	alpha -= delta * 3.5
+	material_override.albedo_color.a = alpha
 
 func _on_timer_timeout() -> void:
 	queue_free()

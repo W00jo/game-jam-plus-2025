@@ -184,7 +184,6 @@ _data = {
 [node name="Gun" type="Node3D"]
 
 [node name="Meshes" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9998356, -0.018131476, 0, 0.018131476, 0.9998356, 0, 0, -0.02077828)
 
 [node name="Wood" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-0.01, 0, -8.7422775e-10, 0, 0.01, 0, 8.7422775e-10, 0, -0.01, 0, 0, -0.55512977)
@@ -197,7 +196,7 @@ mesh = SubResource("ArrayMesh_mauqa")
 skeleton = NodePath("")
 
 [node name="MuzzleFlash" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(0.18180995, 0, 0, 0, -7.947166e-09, -0.18180995, 0, 0.18180995, -7.947166e-09, 0, 0.020852607, 0.089913696)
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.02, 0.06010686)
 mesh = SubResource("PlaneMesh_5lqom")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_sfxt0")
