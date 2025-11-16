@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://dy4q4lk1onlnd"]
+
+[ext_resource type="PackedScene" uid="uid://batnu0uma6vhk" path="res://scenes/npcs/gostek.tscn" id="1_7c366"]
+[ext_resource type="Script" path="res://scenes/levels/viewport_container_player_1.gd" id="2_ho4vq"]
+[ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="3_dubqp"]
+[ext_resource type="PackedScene" uid="uid://dmrwwjnwxvabd" path="res://scenes/ui/hud.tscn" id="4_35d48"]
+[ext_resource type="PackedScene" uid="uid://8kdpemwib222" path="res://scenes/players/player2/player_2.tscn" id="5_m2j1u"]
+[ext_resource type="PackedScene" uid="uid://cendlct4ehhly" path="res://scenes/enviroment/landmine/landmine.tscn" id="6_k4tkr"]
+[ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="7_junah"]
+[ext_resource type="PackedScene" uid="uid://14ts8ibs7115" path="res://scenes/ui/pause_menu.tscn" id="8_kqya4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqnsq"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_tsias"]
+sky_material = SubResource("ProceduralSkyMaterial_xqnsq")
+
+[sub_resource type="Environment" id="Environment_7k8c1"]
+background_mode = 2
+sky = SubResource("Sky_tsias")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_0lift"]
+vertices = PackedVector3Array(15.5, 0.4995, -15.5, 11.75, 0.4995, -15.5, 12.25, 0.4995, -15, 12.25, 0.4995, -13.75, 11.75, 0.4995, -13.25, 15.5, 0.4995, 15.5, 10, 0.4995, -15, 10.5, 0.4995, -15.5, -15.5, 0.4995, -15.5, 10.25, 0.4995, -13.25, -15.5, 0.4995, 15.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(8, 7, 6), PackedInt32Array(8, 6, 9), PackedInt32Array(8, 9, 10), PackedInt32Array(10, 9, 5), PackedInt32Array(9, 4, 5)]
+agent_radius = 0.4
+
+[node name="TestWorld" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7k8c1")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_0lift")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(32, 0.001, 32)
+
+[node name="Gostek" parent="NavigationRegion3D" instance=ExtResource("1_7c366")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.072009, 1.2014427, -14.306542)
+player_path = NodePath("../../GridContainer/Viewport_container_player2/Viewport_player2/Player2")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Viewport_container_player1" type="SubViewportContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+script = ExtResource("2_ho4vq")
+
+[node name="Viewport_player1" type="SubViewport" parent="GridContainer/Viewport_container_player1"]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="Player1" parent="GridContainer/Viewport_container_player1/Viewport_player1" instance=ExtResource("3_dubqp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4905853, 1.4881334, -9.479806)
+
+[node name="HUD" parent="GridContainer/Viewport_container_player1/Viewport_player1" instance=ExtResource("4_35d48")]
+
+[node name="Viewport_container_player2" type="SubViewportContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport_player2" type="SubViewport" parent="GridContainer/Viewport_container_player2"]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="Player2" parent="GridContainer/Viewport_container_player2/Viewport_player2" instance=ExtResource("5_m2j1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4905853, 1.6713071, -1.6846259)
+
+[node name="HUD" parent="GridContainer/Viewport_container_player2/Viewport_player2" instance=ExtResource("4_35d48")]
+player_hud_type = 1
+
+[node name="LandMine" parent="." instance=ExtResource("6_k4tkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0.5048461, -4)
+
+[node name="Collectibles" type="Node3D" parent="."]
+
+[node name="Collectible" parent="Collectibles" instance=ExtResource("7_junah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.757, 1.2, -4.916)
+
+[node name="Collectible2" parent="Collectibles" instance=ExtResource("7_junah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9259977, 1.2, -4.916)
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_kqya4")]
+visible = false
+
+[connection signal="enemy_hit" from="NavigationRegion3D/Gostek" to="GridContainer/Viewport_container_player1/Viewport_player1/HUD" method="_on_enemy_hit"]
+[connection signal="player_hit" from="GridContainer/Viewport_container_player2/Viewport_player2/Player2" to="GridContainer/Viewport_container_player2/Viewport_player2/HUD" method="_on_player_2_player_hit"]
+[connection signal="body_entered" from="Collectibles/Collectible" to="GridContainer/Viewport_container_player2/Viewport_player2/HUD" method="_on_collectible_body_entered"]
+[connection signal="body_entered" from="Collectibles/Collectible2" to="GridContainer/Viewport_container_player2/Viewport_player2/HUD" method="_on_collectible_body_entered"]
