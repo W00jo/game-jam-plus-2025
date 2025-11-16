@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=3 uid="uid://dy4q4lk1onlnd"]
 
-[ext_resource type="PackedScene" uid="uid://batnu0uma6vhk" path="res://scenes/npcs/gostek.tscn" id="1_7c366"]
+[ext_resource type="PackedScene" uid="uid://batnu0uma6vhk" path="res://scenes/npcs/fake_npc/gostek.tscn" id="1_7c366"]
 [ext_resource type="Script" path="res://scenes/levels/viewport_container_player_1.gd" id="2_ho4vq"]
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="3_dubqp"]
-[ext_resource type="PackedScene" uid="uid://dmrwwjnwxvabd" path="res://scenes/ui/hud.tscn" id="4_35d48"]
+[ext_resource type="PackedScene" uid="uid://dmrwwjnwxvabd" path="res://scenes/ui/hud/hud.tscn" id="4_35d48"]
 [ext_resource type="PackedScene" uid="uid://8kdpemwib222" path="res://scenes/players/player2/player_2.tscn" id="5_m2j1u"]
 [ext_resource type="PackedScene" uid="uid://cendlct4ehhly" path="res://scenes/enviroment/landmine/landmine.tscn" id="6_k4tkr"]
 [ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="7_junah"]
-[ext_resource type="PackedScene" uid="uid://14ts8ibs7115" path="res://scenes/ui/pause_menu.tscn" id="8_kqya4"]
+[ext_resource type="PackedScene" uid="uid://14ts8ibs7115" path="res://scenes/ui/menu/pause_menu.tscn" id="8_kqya4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqnsq"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

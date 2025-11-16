@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://batnu0uma6vhk"]
 
-[ext_resource type="Script" uid="uid://bvj8u2clbnqfd" path="res://scenes/npcs/gostek.gd" id="1_nbysy"]
+[ext_resource type="Script" uid="uid://bvj8u2clbnqfd" path="res://scenes/npcs/fake_npc/gostek.gd" id="1_nbysy"]
 [ext_resource type="PackedScene" uid="uid://b7m7r7yr1gjtu" path="res://assets/models/monster_NPC/MonsterAnimation.glb" id="2_aar6o"]
 [ext_resource type="Script" uid="uid://d77v3mb61tek" path="res://scenes/npcs/enemy_damage_taking.gd" id="3_tag54"]
 [ext_resource type="Script" uid="uid://c7xigl1oti4e5" path="res://scenes/npcs/area_3d.gd" id="4_djdji"]

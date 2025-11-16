@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwt1d75fe302a"]
 
-[ext_resource type="Script" uid="uid://7qc8ksv8wxlj" path="res://scenes/ui/how_to_play.gd" id="1_mfe6v"]
-[ext_resource type="Texture2D" uid="uid://d3r3plvel5xrv" path="res://assets/howtoplay.png" id="1_o8b4v"]
+[ext_resource type="Script" uid="uid://7qc8ksv8wxlj" path="res://scenes/ui/menu/how_to_play.gd" id="1_mfe6v"]
+[ext_resource type="Texture2D" uid="uid://d3r3plvel5xrv" path="res://assets/ui/howtoplay.png" id="1_o8b4v"]
 [ext_resource type="FontFile" uid="uid://bi34feob6qhns" path="res://assets/fonts/DonGraffiti.otf" id="3_d56r8"]
-[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/x.gd" id="4_jrmmo"]
+[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="4_jrmmo"]
 
 [node name="How_to_play" type="Control"]
 layout_mode = 3

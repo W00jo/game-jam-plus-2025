@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6equ3tfxs33u"]
 
-[ext_resource type="Script" uid="uid://3x381wwx0ohi" path="res://scenes/ui/credits.gd" id="1_e5ls7"]
-[ext_resource type="Texture2D" uid="uid://ylxl5mh12gsq" path="res://assets/ludki2.png" id="1_oap8i"]
+[ext_resource type="Script" uid="uid://3x381wwx0ohi" path="res://scenes/ui/menu/credits.gd" id="1_e5ls7"]
+[ext_resource type="Texture2D" uid="uid://ylxl5mh12gsq" path="res://assets/ui/ludki2.png" id="1_oap8i"]
 [ext_resource type="FontFile" uid="uid://bi34feob6qhns" path="res://assets/fonts/DonGraffiti.otf" id="2_pqmjv"]
-[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/x.gd" id="3_e5ls7"]
+[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="3_e5ls7"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3

@@ -19,7 +19,7 @@ const FOV_CHANGE = 1.5
 signal player_hit
 
 # Bullets
-var bullet_trail = load("res://scenes/ui/bullet_trail.tscn")
+var bullet_trail = load("res://scenes/ui/hud/bullet_trail.tscn")
 var instance
 
 # Camera

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://14ts8ibs7115"]
 
-[ext_resource type="Script" uid="uid://bu63mhat5u51x" path="res://scenes/ui/pause_menu.gd" id="1_0lmf7"]
+[ext_resource type="Script" uid="uid://bu63mhat5u51x" path="res://scenes/ui/menu/pause_menu.gd" id="1_0lmf7"]
 [ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="1_6tw0m"]
 
 [sub_resource type="Animation" id="Animation_0lmf7"]

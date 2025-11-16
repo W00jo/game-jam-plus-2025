@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ci1sob8dmgoou"]
 
-[ext_resource type="Script" uid="uid://cloxqn84h8iy7" path="res://scenes/ui/options.gd" id="1_hhwow"]
-[ext_resource type="Texture2D" uid="uid://xpgfmmhumywk" path="res://assets/options.png" id="2_wby6m"]
+[ext_resource type="Script" uid="uid://cloxqn84h8iy7" path="res://scenes/ui/menu/options.gd" id="1_hhwow"]
+[ext_resource type="Texture2D" uid="uid://xpgfmmhumywk" path="res://assets/ui/options.png" id="2_wby6m"]
 [ext_resource type="FontFile" uid="uid://bi34feob6qhns" path="res://assets/fonts/DonGraffiti.otf" id="3_pykmj"]
-[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/x.gd" id="4_gdfy8"]
+[ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="4_gdfy8"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
