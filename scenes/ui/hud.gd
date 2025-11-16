@@ -34,7 +34,6 @@ func _ready():
 			crosshair_hit.position.y = viewport_size.y / 2 - crosshair.size.y / 2
 
 		PlayerType.PLAYER_2:
-			got_hit = false
 			crosshair.visible = false
 			crosshair_hit.visible = false
 			loot_indicator_panel.visible = true
@@ -49,15 +48,12 @@ func _on_collectible_body_entered(body: Node3D) -> void:
 		loot_collected += 1
 		$LootIndicatorBackground/LootIndicator.text = "Loot: " + str(loot_collected)
 
-func update_health(_value: float) -> void:
-	pass
-
-func _on_player_player_hit():
-	got_hit.visible = true
-	await get_tree().create_timer(0.2).timeout
-	got_hit.visible = false
-
 func _on_enemy_hit():
 	crosshair_hit.visible = true
 	await get_tree().create_timer(0.05).timeout
 	crosshair_hit.visible = false
+
+func _on_player_2_player_hit() -> void:
+	got_hit.visible = true
+	await get_tree().create_timer(0.2).timeout
+	got_hit.visible = false

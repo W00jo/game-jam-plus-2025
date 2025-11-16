@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var speed
-@export var WALK_SPEED = 5.0
+const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
@@ -20,8 +20,8 @@ const FOV_CHANGE = 1.5
 @onready var camera_controller: Node3D = $CameraController
 @onready var camera: Camera3D = $CameraController/Camera3D
 # Model's root node references
-@onready var model = $player_shooter
-@onready var animation_player = $player_shooter/AnimationPlayer
+#@onready var model = $Armature
+#@onready var animation_player = $AnimationPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -49,7 +49,7 @@ func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left_1", "move_right_1", "move_up_1", "move_down_1")
 	var direction := (camera_controller.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	model.rotation.y = camera_controller.rotation.y
+	#model.rotation.y = camera_controller.rotation.y
 	
 	if is_on_floor():
 		if direction:
@@ -72,13 +72,13 @@ func _physics_process(delta):
 	camera.fov = lerp(camera.fov, target_fov, delta * 8)
 	
 	# Odpalanie się animacji
-	if is_on_floor():
-		if velocity.length() > 0.1:
-			animation_player.play("Run") 
-		else:
-			animation_player.play("Idle")
-	else:
-		animation_player.play("Jump")
+	#if is_on_floor():
+		#if velocity.length() > 0.1:
+			#animation_player.play("Run") 
+		#else:
+			#animation_player.play("Idle")
+	#else:
+		#animation_player.play("Jump")
 	
 	# Shooting
 	#if Input.is_action_pressed("shoot"):
