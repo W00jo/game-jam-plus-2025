@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p3g22y54o6ra"
-path="res://.godot/imported/NPCAnimation.glb-f31be148254e3584dbb475eb66b75cf3.scn"
+uid="uid://ql7dvtedxeie"
+path="res://.godot/imported/rifle.glb-5689630a5c3d967c9058e555d1762f2e.scn"
 
 [deps]
 
-source_file="res://assets/models/npc/NPCAnimation.glb"
-dest_files=["res://.godot/imported/NPCAnimation.glb-f31be148254e3584dbb475eb66b75cf3.scn"]
+source_file="res://assets/models/player_shooter/rifle.glb"
+dest_files=["res://.godot/imported/rifle.glb-5689630a5c3d967c9058e555d1762f2e.scn"]
 
 [params]
 

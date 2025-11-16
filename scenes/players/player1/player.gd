@@ -5,22 +5,35 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
-# Częstotliwość skakania głowy
+const HIT_STAGGER = 8.0
+
+# Ruch głową... w ruchu i skoku
 const BOB_FREQ = 2.0
-# Wysokość skoku głowy
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
-# fov zmienne
+# zmienne FOV
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
+signal player_hit
+
+# Bullets
+var bullet_trail = load("res://scenes/ui/bullet_trail.tscn")
+var instance
+
 # Camera
-@onready var aim_ray = $CameraController/RayCast3D
-@onready var camera_controller: Node3D = $CameraController
-@onready var camera: Camera3D = $CameraController/Camera3D
+@onready var camera_controller: Node3D = $Head
+@onready var camera: Camera3D = $Head/Camera3D
+@onready var aim_ray = $Head/AimRay
+@onready var aim_ray_end = $Head/AimRayEnd
+
+# Gun
+@onready var rifle_anim = $Head/Gun/ShootingAnimation
+@onready var rifle_barrel = $Head/Gun/Meshes/Barrel
+
 # Model's root node references
-#@onready var model = $Armature
+#@onready var model = $Arma ture
 #@onready var animation_player = $AnimationPlayer
 
 func _ready():
@@ -81,9 +94,10 @@ func _physics_process(delta):
 		#animation_player.play("Jump")
 	
 	# Shooting
-	#if Input.is_action_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
+		_shooting()
 		#if !gun_anim.is_playing():
-			#gun
+			#gun_anim.play("Shoot")
 	
 	move_and_slide()
 
@@ -93,7 +107,18 @@ func _headbob(time) -> Vector3:
 	pos.x =cos(time * BOB_FREQ/2) * BOB_AMP
 	return pos
 
-func _shoot_sniper():
-	if aim_ray.is_colliding():
-		if aim_ray.get_collider().is_in_group("enemy"):
-			aim_ray.get_collider().hit()
+func hit():
+	emit_signal("player_hit")
+
+func _shooting():
+	if !rifle_anim.is_playing():
+		rifle_anim.play("Shoot")
+		instance = bullet_trail.instantiate()
+		if aim_ray.is_colliding():
+			var collider = aim_ray.get_collider()
+			if collider and collider.is_in_group("enemy"):
+				print("zabity")
+				aim_ray.get_collider().hit()
+			else:
+				instance.init(rifle_barrel.global_position, aim_ray_end.global_position)
+			get_parent().add_child(instance)
