@@ -768,6 +768,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.7408, -13.850122, 52.51126
 
 [node name="O2" parent="." instance=ExtResource("14_px3xn")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.860161, 7.5269938, -89.38702)
+visible = false
 
 [node name="O1" parent="." instance=ExtResource("15_8cjxf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.54702, 11.336988, 1.3218365)

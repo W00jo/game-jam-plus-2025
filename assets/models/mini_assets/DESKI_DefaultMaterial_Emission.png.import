@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr4xrwd8e0mac"
-path.s3tc="res://.godot/imported/NPCAnimation_DefaultMaterial_Normal.png-83fe35c13029ffe01e19f298b3260347.s3tc.ctex"
+uid="uid://dseig6kcgstlm"
+path.s3tc="res://.godot/imported/DESKI_DefaultMaterial_Emission.png-bf06a403dda035e7d2b7e7afb2599982.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e9da95dd1374dc30869875441922c82a"
+"md5": "d1dd210d6b1312cb342b56d02bd5e651"
 }
 
 [deps]
 
-source_file="res://assets/models/NPC/NPCAnimation_DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/NPCAnimation_DefaultMaterial_Normal.png-83fe35c13029ffe01e19f298b3260347.s3tc.ctex"]
+source_file="res://assets/models/mini_assets/DESKI_DefaultMaterial_Emission.png"
+dest_files=["res://.godot/imported/DESKI_DefaultMaterial_Emission.png-bf06a403dda035e7d2b7e7afb2599982.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://assets/models/NPC/NPCAnimation_DefaultMaterial_Normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

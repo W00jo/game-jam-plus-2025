@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p3g22y54o6ra"
-path="res://.godot/imported/NPCAnimation.glb-786153bc0fd48389817ff2bc2e2f8b6b.scn"
+uid="uid://d7yabte4deye"
+path="res://.godot/imported/smieci2.glb-b65c3192dcad2005c0946d658eed2c11.scn"
 
 [deps]
 
-source_file="res://assets/models/NPC/NPCAnimation.glb"
-dest_files=["res://.godot/imported/NPCAnimation.glb-786153bc0fd48389817ff2bc2e2f8b6b.scn"]
+source_file="res://assets/models/mini_assets/smieci2.glb"
+dest_files=["res://.godot/imported/smieci2.glb-b65c3192dcad2005c0946d658eed2c11.scn"]
 
 [params]
 

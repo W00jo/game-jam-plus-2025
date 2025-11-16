@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p3g22y54o6ra"
-path="res://.godot/imported/NPCAnimation.glb-786153bc0fd48389817ff2bc2e2f8b6b.scn"
+uid="uid://cmpbggu6uwrcp"
+path="res://.godot/imported/plotek.glb-2222a82d3283c5cac9b5e6eb2166a1a5.scn"
 
 [deps]
 
-source_file="res://assets/models/NPC/NPCAnimation.glb"
-dest_files=["res://.godot/imported/NPCAnimation.glb-786153bc0fd48389817ff2bc2e2f8b6b.scn"]
+source_file="res://assets/models/mini_assets/plotek.glb"
+dest_files=["res://.godot/imported/plotek.glb-2222a82d3283c5cac9b5e6eb2166a1a5.scn"]
 
 [params]
 
