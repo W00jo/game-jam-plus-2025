@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://ct6bwd7da40mn"]
+[gd_scene load_steps=88 format=3 uid="uid://ct6bwd7da40mn"]
 
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player1/player.tscn" id="1_jw8yd"]
 [ext_resource type="Texture2D" uid="uid://dp6u5jcdato08" path="res://assets/greybox_textures/Nowy projekt.png" id="2_74xmw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b28jksn0oe2cx" path="res://assets/greybox_textures/greybox_yellow_grid.png" id="5_ni5vy"]
 [ext_resource type="Texture2D" uid="uid://b7dutupx0xu52" path="res://assets/greybox_textures/greybox_red_grid.png" id="6_j22gu"]
 [ext_resource type="Texture2D" uid="uid://bkgc7r3a2tlq6" path="res://assets/greybox_textures/greybox_grey_grid.png" id="8_4x87c"]
+[ext_resource type="Texture2D" uid="uid://dt1gc8rh8lxo7" path="res://assets/models/enviroment/Ground-Urban_Texture_A_P4110676.jpg" id="9_gs7m4"]
 [ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="9_x2ch1"]
 [ext_resource type="PackedScene" uid="uid://bbf0uq1c5lhvs" path="res://assets/models/enviroment/manhole/plyta.glb" id="10_2n176"]
 [ext_resource type="PackedScene" uid="uid://s4iegor7vtjo" path="res://assets/models/blocks_of_flats/P.glb" id="12_gs7m4"]
@@ -196,6 +197,12 @@ albedo_texture = ExtResource("4_74xmw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5nv8o"]
 albedo_texture = ExtResource("4_74xmw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btahq"]
+albedo_texture = ExtResource("9_gs7m4")
+uv1_scale = Vector3(43.855, 43.855, 43.855)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_px3xn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7o7o"]
 albedo_texture = ExtResource("2_74xmw")
@@ -674,10 +681,17 @@ transform = Transform3D(-0.06505497, 0, 0.9978817, 0, 1, 0, -0.9978817, 0, -0.06
 [node name="Collectible6" parent="Collectible7" instance=ExtResource("9_x2ch1")]
 transform = Transform3D(-0.99310124, 0, -0.1172601, 0, 1, 0, 0.1172601, 0, -0.99310124, 11.356631, 0.75227684, -19.431751)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(76.865, 0, 0, 0, 76.865, 0, 0, 0, 76.865, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_btahq")
+mesh = SubResource("PlaneMesh_px3xn")
+skeleton = NodePath("../Mur/CSGBox3D")
+
 [node name="Mur" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Mur"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9850092, -0.06597519, -0.14274216)
+visible = false
 material_override = SubResource("StandardMaterial3D_p7o7o")
 material_overlay = SubResource("StandardMaterial3D_ni5vy")
 use_collision = true
