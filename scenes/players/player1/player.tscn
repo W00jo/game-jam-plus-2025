@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwullwuqebjtc"]
+[gd_scene load_steps=5 format=3 uid="uid://dwullwuqebjtc"]
 
 [ext_resource type="Script" uid="uid://bgtkr45u8u1mq" path="res://scenes/players/player1/player.gd" id="1_plyga"]
 [ext_resource type="PackedScene" uid="uid://bdts1fkmtbsew" path="res://scenes/ui/gun.tscn" id="3_2tc2p"]
-[ext_resource type="PackedScene" uid="uid://c6yoas316s6lo" path="res://assets/models/player_shooter/player_shooter.glb" id="3_x03nx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_dtwy2"]
 
@@ -19,21 +18,22 @@ mesh = SubResource("CapsuleMesh_dtwy2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_2tc2p")
 
-[node name="CameraController" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11235762, -0.2508281)
 
-[node name="Camera3D" type="Camera3D" parent="CameraController"]
+[node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6263945, -0.10964608)
 cull_mask = 1048573
 
-[node name="Gun" parent="CameraController" instance=ExtResource("3_2tc2p")]
-transform = Transform3D(1, 0, 0, 0, -0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0.3, 0, -1.5)
+[node name="Gun" parent="Head" instance=ExtResource("3_2tc2p")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 0.9999999, 0, 8.742277e-08, 0, -0.9999999, 0.3, -0.20441449, -1.3659627)
 
-[node name="RayCast3D" type="RayCast3D" parent="CameraController"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+[node name="AimRay" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 target_position = Vector3(0, 0, -100)
 collision_mask = 4
 collide_with_areas = true
 
-[node name="player_shooter" parent="." instance=ExtResource("3_x03nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39262876, 0, -0.57317674)
+[node name="AimRayEnd" type="Node3D" parent="Head"]
+
+[editable path="Head/Gun"]

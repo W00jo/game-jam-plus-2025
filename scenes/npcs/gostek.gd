@@ -4,7 +4,7 @@ var player = null
 var state_machine
 var health = 1
 
-signal zombie_hit
+signal enemy_hit
 
 const SPEED = 4.0
 const ATTACK_RANGE = 2.5
@@ -52,9 +52,10 @@ func _target_in_range():
 
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
-		# The 'hit' function in player_2.gd takes no arguments.
 		player.hit()
 
 func _on_area_3d_body_part_hit(dam):
 	health -= dam
-	emit_signal("zombie_hit")
+	emit_signal("enemy_hit")
+	if health <= 0:
+		queue_free()
