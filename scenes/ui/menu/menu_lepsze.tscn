@@ -37,30 +37,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -531.0
-offset_top = -264.0
-offset_right = 37.0
-offset_bottom = -108.0
+offset_left = -536.0
+offset_top = -276.0
+offset_right = 32.0
+offset_bottom = -170.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 101
 text = "Shoot Bro Loot"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -446.0
-offset_top = -74.0
-offset_right = -212.0
-offset_bottom = 253.0
+anchors_preset = -1
+anchor_left = 0.18055555
+anchor_top = 0.2962963
+anchor_right = 0.38368055
+anchor_bottom = 0.8009259
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
