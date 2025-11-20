@@ -23,6 +23,8 @@ func _on_body_entered(body: Node3D):
 		$CollectSound.play()
 		$CollisionShape.set_deferred("disabled", true)
 		$CollisionMesh.visible = false
-		print("działa")
+		print("Zbiera")
+	else:
+		print("Nie zbiera")
 
 func _on_sound_finish(): queue_free()

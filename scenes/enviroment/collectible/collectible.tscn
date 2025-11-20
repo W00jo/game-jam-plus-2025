@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://obqey0lah7xx" path="res://scenes/enviroment/collectible/collectible.gd" id="1_pgilc"]
 [ext_resource type="Texture2D" uid="uid://llagmvm23k4w" path="res://assets/models/godot_head/head_main_texture_noise.png" id="2_63bg3"]
-[ext_resource type="AudioStream" uid="uid://cnr4npcnkrcdu" path="res://assets/audio/sfx/pick_up_1.mp3" id="3_63bg3"]
+[ext_resource type="AudioStream" uid="uid://cnr4npcnkrcdu" path="res://assets/audio/sfx/pick_up.mp3" id="3_63bg3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3vdw"]
 resource_name = "Material.002"

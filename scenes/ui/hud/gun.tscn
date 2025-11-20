@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://bdts1fkmtbsew"]
 
-[ext_resource type="Texture2D" uid="uid://bthb8ymtrxxph" path="res://assets/ui/muzzle_05.png" id="1_4jc36"]
+[ext_resource type="Texture2D" uid="uid://bthb8ymtrxxph" path="res://assets/ui/muzzle_flash.png" id="1_4jc36"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uoywl"]
 resource_name = "wood"
@@ -95,6 +95,21 @@ emission = Color(1, 0.7254902, 0, 1)
 emission_energy_multiplier = 1.5
 emission_texture = ExtResource("1_4jc36")
 
+[sub_resource type="Animation" id="Animation_n2074"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes/MuzzleFlash:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5707964, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_4jc36"]
 resource_name = "shoot"
 length = 0.7
@@ -158,21 +173,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1.5707964, 0, 0), Vector3(1.5707964, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_n2074"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Meshes/MuzzleFlash:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.5707964, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5lqom"]

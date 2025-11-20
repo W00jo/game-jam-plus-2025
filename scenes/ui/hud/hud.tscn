@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmrwwjnwxvabd"]
+[gd_scene load_steps=5 format=3 uid="uid://dmrwwjnwxvabd"]
 
 [ext_resource type="Script" uid="uid://d3qmhprbodkt6" path="res://scenes/ui/hud/hud.gd" id="1_0mwgc"]
-[ext_resource type="Texture2D" uid="uid://5ex5gugrxf73" path="res://assets/ui/crosshair007.png" id="2_hqnrr"]
-[ext_resource type="Texture2D" uid="uid://bjugpblnob3dk" path="res://assets/ui/crosshair005.png" id="3_bo48s"]
+[ext_resource type="Texture2D" uid="uid://5k02w3wc0xbp" path="res://assets/ui/crosshair_shooter.png" id="2_as3gr"]
+[ext_resource type="Texture2D" uid="uid://damw3x0qs7xsr" path="res://assets/ui/hitmarker.png" id="3_ax4tw"]
+[ext_resource type="Texture2D" uid="uid://dv8ajf47tnvvj" path="res://assets/ui/prof.png" id="4_ax4tw"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0mwgc")
@@ -16,15 +17,19 @@ offset_bottom = 837.0
 color = Color(1, 0, 0, 0.43137255)
 
 [node name="Crosshair" type="TextureRect" parent="."]
+modulate = Color(0.5882353, 0.8862745, 0.9019608, 1)
+self_modulate = Color(0.5568628, 0.84313726, 0.8980392, 1)
 offset_right = 64.0
 offset_bottom = 64.0
-texture = ExtResource("2_hqnrr")
+texture = ExtResource("2_as3gr")
 
 [node name="CrosshairHit" type="TextureRect" parent="."]
 visible = false
+modulate = Color(0.80784315, 0.7882353, 0.5254902, 1)
+self_modulate = Color(0.80784315, 0.7882353, 0.5254902, 1)
 offset_right = 64.0
 offset_bottom = 64.0
-texture = ExtResource("3_bo48s")
+texture = ExtResource("3_ax4tw")
 
 [node name="LootIndicatorBackground" type="Panel" parent="."]
 offset_right = 185.0
@@ -37,8 +42,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
 bbcode_enabled = true
-text = "Loot: 0"
+text = "[b]Loot[/b] left to collect: 0"
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_ax4tw")
