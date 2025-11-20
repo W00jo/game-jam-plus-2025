@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameManager="*res://global/game_manager.gd"
 
+[display]
+
+mouse_cursor/custom_image="uid://cga75ho2gwcb1"
+
 [dotnet]
 
 project/assembly_name="GameJamPlus"

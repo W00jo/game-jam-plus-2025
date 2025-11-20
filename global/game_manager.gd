@@ -1,7 +1,7 @@
 extends Node
 
 var collectibles_gathered: int = 0
-const COLLECTIBLES_TO_WIN: int = 3
+const COLLECTIBLES_TO_WIN: int = 6
 
 signal collectible_gathered(count: int)
 signal game_won

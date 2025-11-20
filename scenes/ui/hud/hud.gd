@@ -16,7 +16,7 @@ func _ready():
 	# Wait one frame to make sure the viewport size is correct
 	await get_tree().process_frame
 	
-	$LootIndicatorBackground/LootIndicator.text = "Loot: " + str(loot_collected)
+	$LootIndicatorBackground/LootIndicator.text = "" + str(loot_collected)
 	
 	var viewport_size = get_viewport().get_visible_rect().size
 

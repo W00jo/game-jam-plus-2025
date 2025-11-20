@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhw4djmtivvo2"]
+
+[ext_resource type="PackedScene" uid="uid://p3g22y54o6ra" path="res://assets/models/npc/NPCAnimation.glb" id="1_adfnl"]
+[ext_resource type="Script" uid="uid://bhv1wfsrqy8m6" path="res://scenes/npc/passive/citizen.gd" id="1_n55g4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n55g4"]
+radius = 0.11621094
+height = 1.1611481
+
+[node name="Citizen" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_n55g4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61533356, 0.03427279)
+shape = SubResource("CapsuleShape3D_n55g4")
+
+[node name="NPCAnimation" parent="." instance=ExtResource("1_adfnl")]
+
+[node name="Skeleton3D" parent="NPCAnimation/Armature_002" index="0"]
+bones/0/position = Vector3(0.02637719, 0.006085813, -67.03241)
+bones/0/rotation = Quaternion(-0.7163911, -0.007761455, -0.0063023204, 0.6976273)
+bones/1/rotation = Quaternion(-0.041016836, -0.0011886893, 0.0007113454, 0.9991575)
+bones/2/rotation = Quaternion(0.00887939, -0.021636883, -0.0010601031, 0.999726)
+bones/3/rotation = Quaternion(0.008826787, -0.021646136, -0.00068114744, 0.9997266)
+bones/4/rotation = Quaternion(0.025378816, 0.0079966085, -0.012256837, 0.9995708)
+bones/5/rotation = Quaternion(0.04819692, -0.0148465475, 0.031546522, 0.99822915)
+bones/7/position = Vector3(3.590251, 7.4859033, -0.06037603)
+bones/7/rotation = Quaternion(-0.48699778, -0.5016375, 0.5619958, -0.44198832)
+bones/8/position = Vector3(-1.0373608e-06, 7.3690267, 4.8285074e-09)
+bones/8/rotation = Quaternion(0.537467, 0.13472264, 0.090221986, 0.82755005)
+bones/9/rotation = Quaternion(0.03278109, 0.00058988767, 0.25073794, 0.96749973)
+bones/10/position = Vector3(-3.6526228e-06, 21.371029, 3.5569649e-06)
+bones/10/rotation = Quaternion(0.11449218, 0.9312061, 0.13478224, -0.31871697)
+bones/11/rotation = Quaternion(-0.047188364, -0.12985155, -0.44276902, 0.88592744)
+bones/12/rotation = Quaternion(-0.052844413, 0.008798643, 0.49390313, 0.8678651)
+bones/13/rotation = Quaternion(0.012442763, -0.016215695, -0.01841965, 0.9996214)
+bones/14/position = Vector3(0.41374063, 2.4891849, -1.013279e-06)
+bones/15/rotation = Quaternion(-0.16178569, -0.12231978, -0.083693884, 0.9756325)
+bones/16/rotation = Quaternion(-0.30568516, -0.010952002, 0.037781008, 0.9513197)
+bones/17/rotation = Quaternion(-0.15125863, 0.008660642, -2.149354e-06, 0.9884563)
+bones/19/rotation = Quaternion(0.52392876, -0.48316526, 0.500191, 0.49179173)
+bones/20/rotation = Quaternion(0.5625924, -0.116010636, -0.119907185, 0.8097245)
+bones/21/position = Vector3(5.671706e-07, 16.616352, 1.332377e-06)
+bones/21/rotation = Quaternion(0.03028702, -0.0006110273, -0.23229383, 0.97217387)
+bones/22/position = Vector3(-3.1816471e-06, 21.362265, 2.7453345e-06)
+bones/22/rotation = Quaternion(-0.11678916, 0.9071805, 0.04099682, 0.40212333)
+bones/23/position = Vector3(-0.1555564, 2.7407157, 1.6689322e-06)
+bones/23/rotation = Quaternion(-0.12676744, 0.0018781791, 0.37281382, 0.9192043)
+bones/24/rotation = Quaternion(-0.026908753, -0.013270134, -0.32340822, 0.94578373)
+bones/25/position = Vector3(-0.5300424, 2.5829785, -1.2901227e-06)
+bones/25/rotation = Quaternion(0.02740987, 0.023832804, -0.006261108, 0.9993205)
+bones/26/position = Vector3(-0.45798743, 2.2852716, -3.1590462e-06)
+bones/27/rotation = Quaternion(-0.11240495, 0.06071399, -0.002508033, 0.9918028)
+bones/28/rotation = Quaternion(-0.29288882, -0.009705394, 0.19043137, 0.9369407)
+bones/29/rotation = Quaternion(-0.062024307, 0.006010642, 0.050015893, 0.9968025)
+bones/30/position = Vector3(0.14092171, 2.7161865, -1.0728832e-06)
+bones/31/rotation = Quaternion(0.037186515, 0.08348542, 0.99546975, -0.026218073)
+bones/32/position = Vector3(3.0945137e-07, 29.124197, 3.245663e-07)
+bones/32/rotation = Quaternion(-0.22049345, -0.07908681, 0.0125510525, 0.9720959)
+bones/33/rotation = Quaternion(0.54377955, 0.04369804, -0.046640817, 0.836791)
+bones/34/rotation = Quaternion(0.32991394, 0.07571852, -0.025491841, 0.9406242)
+bones/36/rotation = Quaternion(-0.120511495, 0.08135684, 0.988156, 0.04904889)
+bones/37/rotation = Quaternion(-0.18381912, 0.0353334, -0.0077276565, 0.98229444)
+bones/38/rotation = Quaternion(0.5069597, -0.018002862, 0.06658996, 0.8592052)
+bones/39/rotation = Quaternion(0.3262305, -0.07461574, 0.025840977, 0.94198644)
+
+[node name="WanderTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]
+
+[editable path="NPCAnimation"]
