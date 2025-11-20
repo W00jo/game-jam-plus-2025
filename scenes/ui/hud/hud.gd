@@ -9,11 +9,13 @@ enum PlayerType { PLAYER_1, PLAYER_2 }
 @onready var got_hit = $GotHit
 @onready var crosshair: TextureRect = $Crosshair
 @onready var crosshair_hit: TextureRect = $CrosshairHit
+## Gracz lootujący, mimo że nie strzela, potrzebuje mieć tą kropoczkę aby móc nie tylko wycentrować swoje (jako gracza) pole widzenia, ale też jako formę walki z motion sickness.
+@onready var dot_marker: TextureRect = $DotMarker
 @onready var loot_indicator_panel: Panel = $LootIndicatorBackground
 @onready var loot_indicator_label: RichTextLabel = $LootIndicatorBackground/LootIndicator
 
 func _ready():
-	# Wait one frame to make sure the viewport size is correct
+	# Waits one frame to make sure the viewport size is correct
 	await get_tree().process_frame
 	
 	$LootIndicatorBackground/LootIndicator.text = "" + str(loot_collected)
@@ -25,6 +27,7 @@ func _ready():
 			got_hit = false
 			crosshair.visible = true
 			loot_indicator_panel.visible = false
+			dot_marker.visible = false
 			
 			# Center the crosshair
 			crosshair.position.x = viewport_size.x / 2 - crosshair.size.x / 2
@@ -33,9 +36,15 @@ func _ready():
 			crosshair_hit.position.y = viewport_size.y / 2 - crosshair.size.y / 2
 
 		PlayerType.PLAYER_2:
+			got_hit = false
 			crosshair.visible = false
 			crosshair_hit.visible = false
 			loot_indicator_panel.visible = true
+			dot_marker.visible = true
+			
+			# Center the dot marker
+			dot_marker.position.x = viewport_size.x / 2 - dot_marker.size.x / 2
+			dot_marker.position.y = viewport_size.y / 2 - dot_marker.size.y / 2
 			
 			# Center the loot indicator at the top of the screen
 			loot_indicator_panel.position.x = viewport_size.x / 2 - loot_indicator_panel.size.x / 2

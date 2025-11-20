@@ -7,7 +7,7 @@ var gate : bool = true
 func _ready() -> void:
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 		# Plays the idle animation.
 	if is_on_floor() and animation_player.current_animation != "IdleNPC":
 		animation_player.play("IdleNPC")
