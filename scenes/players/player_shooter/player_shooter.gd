@@ -1,11 +1,15 @@
 extends CharacterBody3D
 
+# Customowe sygnały
+signal player_hit
+signal update_ammo
+
 var speed
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
-const JUMP_VELOCITY = 4.5
+@export var WALK_SPEED = 5.0
+@export var SPRINT_SPEED = 8.0
+@export var JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
-const HIT_STAGGER = 8.0
+@export var HIT_STAGGER = 8.0
 
 # Ruch głową... w ruchu i skoku
 const BOB_FREQ = 2.0
@@ -15,8 +19,6 @@ var t_bob = 0.0
 # zmienne FOV
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
-
-signal player_hit
 
 # Bullets
 var bullet_trail = load("res://scenes/ui/hud/bullet_trail.tscn")
@@ -29,8 +31,8 @@ var instance
 @onready var aim_ray_end = $ShooterHead/Camera3D/AimRayEnd
 
 # Gun
-@onready var rifle_anim = $ShooterHead/Gun/ShootingAnimation
-@onready var rifle_barrel = $ShooterHead/Gun/Meshes/Barrel
+@onready var gun_anim = $ShooterHead/Gun/ShootingAnimation
+@onready var gun_barrel = $ShooterHead/Gun/Meshes/Barrel
 
 # Model's root node references
 @onready var model = $player_shooter/Armature
@@ -96,8 +98,8 @@ func _physics_process(delta):
 	# Shooting
 	if Input.is_action_pressed("shoot"):
 		_shooting()
-		if !rifle_anim.is_playing():
-			rifle_anim.play("shoot")
+		if !gun_anim.is_playing():
+			gun_anim.play("shoot")
 	
 	move_and_slide()
 
@@ -111,8 +113,8 @@ func hit():
 	emit_signal("player_hit")
 
 func _shooting():
-	if !rifle_anim.is_playing():
-		rifle_anim.play("shoot")
+	if !gun_anim.is_playing():
+		gun_anim.play("shoot")
 		instance = bullet_trail.instantiate()
 		if aim_ray.is_colliding():
 			var collider = aim_ray.get_collider()
@@ -120,5 +122,8 @@ func _shooting():
 				print("zabity")
 				aim_ray.get_collider().hit()
 			else:
-				instance.init(rifle_barrel.global_position, aim_ray_end.global_position)
+				instance.init(gun_barrel.global_position, aim_ray_end.global_position)
 			get_parent().add_child(instance)
+
+func _reload():
+	pass
