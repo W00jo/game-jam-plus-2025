@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal enemy_hit
+
 const STUNNED_SPEED = 0.0
 const STUN_DURATION = 3.0
 const ATTACK_RANGE = 2.0
@@ -102,4 +104,5 @@ func _on_stun_timeout():
 	print("Gonitwa!")
 	
 func hit():
+	emit_signal("enemy_hit")
 	stun()

@@ -50,12 +50,12 @@ func _ready():
 			loot_indicator_panel.position.x = viewport_size.x / 2 - loot_indicator_panel.size.x / 2
 			loot_indicator_panel.position.y = 20 # A small margin from the top
 
-# You can add functions to update the UI
 func _on_collectible_body_entered(body: Node3D) -> void:
 	if body is CharacterBody3D:
 		loot_collected += 1
 		$LootIndicatorBackground/LootIndicator.text = "Loot: " + str(loot_collected)
 
+## Hitmarker
 func _on_enemy_hit():
 	crosshair_hit.visible = true
 	await get_tree().create_timer(0.35).timeout
