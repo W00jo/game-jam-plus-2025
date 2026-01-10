@@ -709,7 +709,7 @@ script = ExtResource("19_yywnm")
 
 [node name="Viewport_player1" type="SubViewport" parent="SplitScreen/Viewport_container_player1"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="Player1" parent="SplitScreen/Viewport_container_player1/Viewport_player1" instance=ExtResource("1_jw8yd")]
@@ -789,7 +789,7 @@ stretch = true
 
 [node name="Viewport_player2" type="SubViewport" parent="SplitScreen/Viewport_container_player2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="Player2" parent="SplitScreen/Viewport_container_player2/Viewport_player2" instance=ExtResource("22_gc5je")]
