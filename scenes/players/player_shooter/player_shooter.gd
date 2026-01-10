@@ -11,6 +11,12 @@ var speed
 const SENSITIVITY = 0.005
 @export var HIT_STAGGER = 8.0
 
+# Ammo system
+@export var MAX_AMMO = 4
+@export var RELOAD_TIME = 2.0
+var current_ammo = MAX_AMMO
+var is_reloading = false
+
 # Ruch głową... w ruchu i skoku
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.02
@@ -40,6 +46,8 @@ var instance
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	current_ammo = MAX_AMMO
+	emit_signal("update_ammo", current_ammo, MAX_AMMO)
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -96,10 +104,12 @@ func _physics_process(delta):
 		animation_player.play("Jump")
 	
 	# Shooting
-	if Input.is_action_pressed("shoot"):
+	if Input.is_action_pressed("shoot") and !is_reloading:
 		_shooting()
-		if !gun_anim.is_playing():
-			gun_anim.play("shoot")
+	
+	# Reload
+	if Input.is_action_just_pressed("reload") and current_ammo < MAX_AMMO and !is_reloading:
+		_reload()
 	
 	move_and_slide()
 
@@ -113,8 +123,12 @@ func hit():
 	emit_signal("player_hit")
 
 func _shooting():
-	if !gun_anim.is_playing():
+	if !gun_anim.is_playing() and current_ammo > 0:
 		gun_anim.play("shoot")
+		current_ammo -= 1
+		print("Ammo: ", current_ammo, "/", MAX_AMMO)
+		emit_signal("update_ammo", current_ammo, MAX_AMMO)
+		
 		instance = bullet_trail.instantiate()
 		if aim_ray.is_colliding():
 			var collider = aim_ray.get_collider()
@@ -124,6 +138,19 @@ func _shooting():
 			else:
 				instance.init(gun_barrel.global_position, aim_ray_end.global_position)
 			get_parent().add_child(instance)
+		
+		# Auto reload when out of ammo
+		if current_ammo == 0:
+			_reload()
 
 func _reload():
-	pass
+	if is_reloading:
+		return
+	
+	is_reloading = true
+	print("Reload... (" + str(RELOAD_TIME) + " seconds)")
+	await get_tree().create_timer(RELOAD_TIME).timeout
+	current_ammo = MAX_AMMO
+	is_reloading = false
+	print("Ammo: ", current_ammo, "/", MAX_AMMO)
+	emit_signal("update_ammo", current_ammo, MAX_AMMO)
