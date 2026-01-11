@@ -10,31 +10,34 @@ script = ExtResource("1_0mwgc")
 
 [node name="GotHit" type="ColorRect" parent="."]
 visible = false
-offset_left = -178.0
-offset_top = -163.0
-offset_right = 1322.0
-offset_bottom = 837.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 1984.0
+offset_bottom = 1152.0
 color = Color(1, 0, 0, 0.43137255)
 
 [node name="Crosshair" type="TextureRect" parent="."]
 modulate = Color(0.5882353, 0.8862745, 0.9019608, 1)
 self_modulate = Color(0.5568628, 0.84313726, 0.8980392, 1)
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 48.0
+offset_bottom = 48.0
 texture = ExtResource("2_as3gr")
+expand_mode = 1
 
 [node name="CrosshairHit" type="TextureRect" parent="."]
 visible = false
 modulate = Color(0.80784315, 0.7882353, 0.5254902, 1)
 self_modulate = Color(0.80784315, 0.7882353, 0.5254902, 1)
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 48.0
+offset_bottom = 48.0
 texture = ExtResource("3_ax4tw")
+expand_mode = 1
 
 [node name="DotMarker" type="TextureRect" parent="."]
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 72.0
+offset_bottom = 72.0
 texture = ExtResource("4_2wu1p")
+expand_mode = 1
 
 [node name="LootIndicatorBackground" type="Panel" parent="."]
 offset_right = 185.0

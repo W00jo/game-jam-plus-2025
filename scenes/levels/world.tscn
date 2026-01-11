@@ -801,6 +801,7 @@ player_hud_type = 1
 [node name="PauseMenu" parent="." instance=ExtResource("23_3lsws")]
 visible = false
 
+[connection signal="player_hit" from="SplitScreen/Viewport_container_player1/Viewport_player1/Player1" to="SplitScreen/Viewport_container_player1/Viewport_player1/HUD" method="_on_player_1_player_hit"]
 [connection signal="player_hit" from="SplitScreen/Viewport_container_player2/Viewport_player2/Player2" to="SplitScreen/Viewport_container_player2/Viewport_player2/HUD" method="_on_player_2_player_hit"]
 
 [editable path="NavigationWorld/textured_wall_stairs"]
