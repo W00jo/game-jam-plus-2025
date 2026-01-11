@@ -1,9 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwt1d75fe302a"]
+[gd_scene load_steps=8 format=3 uid="uid://dwt1d75fe302a"]
 
 [ext_resource type="Script" uid="uid://7qc8ksv8wxlj" path="res://scenes/ui/menu/how_to_play.gd" id="1_mfe6v"]
-[ext_resource type="Texture2D" uid="uid://d3r3plvel5xrv" path="res://assets/ui/howtoplay.png" id="1_o8b4v"]
-[ext_resource type="FontFile" uid="uid://bi34feob6qhns" path="res://assets/fonts/DonGraffiti.otf" id="3_d56r8"]
+[ext_resource type="Texture2D" uid="uid://chxlbb71byf8b" path="res://assets/ui/howtoplay.png" id="1_o8b4v"]
+[ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="2_font"]
 [ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="4_jrmmo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.35, 0.47, 0.51, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.6)
+shadow_size = 15
 
 [node name="How_to_play" type="Control"]
 layout_mode = 3
@@ -14,23 +54,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mfe6v")
 
-[node name="Howtoplay" type="Sprite2D" parent="."]
-position = Vector2(584, 333)
-scale = Vector2(0.6379629, 0.637963)
+[node name="HowtoplayBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_o8b4v")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 1103.0
-offset_top = 3.0
-offset_right = 1143.0
-offset_bottom = 43.0
-
-[node name="X" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_d56r8")
-theme_override_font_sizes/font_size = 61
+[node name="Return" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 text = "X"
 script = ExtResource("4_jrmmo")
 
-[connection signal="pressed" from="VBoxContainer/X" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_x_pressed"]

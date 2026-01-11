@@ -1,12 +1,10 @@
 extends Control
 
 func _ready():
-	# Connect button signals
-	$VBoxContainer/Retry.pressed.connect(_on_retry_pressed)
-	$VBoxContainer/MainMenu.pressed.connect(_on_main_menu_pressed)
-	$VBoxContainer/ImDone.pressed.connect(_on_im_done_pressed)
+	$MainContainer/VBoxContainer/Retry.pressed.connect(_on_retry_pressed)
+	$MainContainer/VBoxContainer/MainMenu.pressed.connect(_on_main_menu_pressed)
+	$MainContainer/VBoxContainer/ImDone.pressed.connect(_on_im_done_pressed)
 	
-	# Show mouse cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_retry_pressed():
