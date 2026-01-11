@@ -4,6 +4,10 @@ extends CharacterBody3D
 signal player_hit
 signal update_ammo
 
+# HP System
+@export var MAX_HP = 3
+var current_hp = MAX_HP
+
 var speed
 @export var WALK_SPEED = 5.0
 @export var SPRINT_SPEED = 8.0
@@ -47,6 +51,7 @@ var instance
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	current_ammo = MAX_AMMO
+	current_hp = MAX_HP
 	emit_signal("update_ammo", current_ammo, MAX_AMMO)
 
 func _unhandled_input(event):
@@ -120,7 +125,12 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func hit():
+	current_hp -= 1
+	print("Player Shooter hit! HP: ", current_hp, "/", MAX_HP)
 	emit_signal("player_hit")
+	
+	if current_hp <= 0:
+		_show_fail_screen()
 
 func _shooting():
 	if !gun_anim.is_playing() and current_ammo > 0:
@@ -154,3 +164,9 @@ func _reload():
 	is_reloading = false
 	print("Ammo: ", current_ammo, "/", MAX_AMMO)
 	emit_signal("update_ammo", current_ammo, MAX_AMMO)
+
+func _show_fail_screen():
+	print("Player Shooter died!")
+	get_tree().paused = true
+	var fail_screen = load("res://scenes/ui/misc/fail.tscn").instantiate()
+	get_tree().root.add_child(fail_screen)

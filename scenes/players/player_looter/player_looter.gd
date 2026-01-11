@@ -1,5 +1,9 @@
 extends CharacterBody3D
 
+# HP System
+@export var MAX_HP = 3
+var current_hp = MAX_HP
+
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
@@ -92,5 +96,16 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func hit():
+	current_hp -= 1
+	print("Player Looter hit! HP: ", current_hp, "/", MAX_HP)
 	emit_signal("player_hit")
 	#velocity += dir * HIT_STAGGER
+	
+	if current_hp <= 0:
+		_show_fail_screen()
+
+func _show_fail_screen():
+	print("Player Looter died!")
+	get_tree().paused = true
+	var fail_screen = load("res://scenes/ui/misc/fail.tscn").instantiate()
+	get_tree().root.add_child(fail_screen)
