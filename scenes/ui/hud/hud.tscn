@@ -63,4 +63,5 @@ vertical_alignment = 1
 position = Vector2(790.99994, 425.99997)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_ax4tw")
-vframes = 3
+hframes = 3
+vframes = 2
