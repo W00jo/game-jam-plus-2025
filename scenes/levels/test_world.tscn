@@ -1,5 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dy4q4lk1onlnd"]
+[gd_scene load_steps=16 format=3 uid="uid://dy4q4lk1onlnd"]
 
+[ext_resource type="AudioStream" uid="uid://c7c0vfuqh75vd" path="res://assets/audio/soundtrack/ambient_music_2_cut.mp3" id="1_ambient"]
+[ext_resource type="Script" path="res://scenes/levels/ambient_music.gd" id="1_music_script"]
 [ext_resource type="PackedScene" uid="uid://batnu0uma6vhk" path="res://scenes/npc/enemies/gostek.tscn" id="1_7c366"]
 [ext_resource type="Script" path="res://scenes/levels/viewport_container_player_1.gd" id="2_ho4vq"]
 [ext_resource type="PackedScene" uid="uid://cnmr4bnng8r7b" path="res://scenes/npc/enemies/stalker.tscn" id="3_35d48"]
@@ -30,6 +32,14 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Arr
 agent_radius = 0.4
 
 [node name="TestWorld" type="Node3D"]
+
+[node name="AmbientMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ambient")
+bus = &"Music"
+script = ExtResource("1_music_script")
+fade_in_duration = 3.0
+target_volume_db = 0.0
+start_volume_db = -40.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)

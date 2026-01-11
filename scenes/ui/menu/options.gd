@@ -2,6 +2,8 @@ extends Control
 
 @onready var volume_label = $MainContainer/ContentVBox/VolumeLabel
 @onready var volume_slider = $MainContainer/ContentVBox/VolumeSlider
+@onready var sfx_label = $MainContainer/ContentVBox/SFXLabel
+@onready var sfx_slider = $MainContainer/ContentVBox/SFXSlider
 @onready var flag_pl = $MainContainer/ContentVBox/LanguageFlags/FlagPL
 @onready var flag_en = $MainContainer/ContentVBox/LanguageFlags/FlagEN
 @onready var flag_es = $MainContainer/ContentVBox/LanguageFlags/FlagES
@@ -9,10 +11,17 @@ extends Control
 
 func _ready():
 	GameManager.play_menu_music()
+	ButtonSoundManager.connect_buttons_in_tree(self)
 	# Start volume = 100%
 	var current_volume = db_to_linear(AudioServer.get_bus_volume_db(0))
 	volume_slider.value = current_volume * 100
 	volume_label.text = str(int(volume_slider.value)) + "%"
+	
+	# Initialize SFX volume
+	var sfx_bus_index = AudioServer.get_bus_index("SFX")
+	var current_sfx_volume = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus_index))
+	sfx_slider.value = current_sfx_volume * 100
+	sfx_label.text = str(int(sfx_slider.value)) + "%"
 	
 	# Highlight current language
 	_update_language_selection(TranslationServer.get_locale())
@@ -24,6 +33,15 @@ func _on_volume_value_changed(value: float) -> void:
 	var db_value = linear_to_db(value / 100.0)
 	AudioServer.set_bus_volume_db(0, db_value)
 	volume_label.text = str(int(value)) + "%"
+	GameManager.save_settings()
+
+
+func _on_sfx_volume_changed(value: float) -> void:
+	var sfx_bus_index = AudioServer.get_bus_index("SFX")
+	var db_value = linear_to_db(value / 100.0)
+	AudioServer.set_bus_volume_db(sfx_bus_index, db_value)
+	sfx_label.text = str(int(value)) + "%"
+	GameManager.save_settings()
 
 
 func _on_language_selected(language_code: String) -> void:
@@ -31,6 +49,7 @@ func _on_language_selected(language_code: String) -> void:
 	TranslationServer.set_locale(language_code)
 	_update_translations(get_tree().root)
 	_update_language_selection(language_code)
+	GameManager.save_settings()
 
 
 func _update_language_selection(locale: String) -> void:

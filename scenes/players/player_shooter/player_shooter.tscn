@@ -109,4 +109,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101)
 [node name="Gun" parent="ShooterHead" instance=ExtResource("3_2tc2p")]
 transform = Transform3D(-0.8, 0, -1.2079664e-07, -1.437826e-09, 0.7999433, 0.009522292, 1.2078809e-07, 0.009522292, -0.7999433, 0.1565747, -0.15938097, -1.0355291)
 
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
 [editable path="player_shooter"]

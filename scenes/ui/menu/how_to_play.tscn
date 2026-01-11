@@ -272,6 +272,36 @@ theme_override_font_sizes/font_size = 28
 text = "MOVEMENT"
 vertical_alignment = 1
 
+[node name="SpaceIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("13_er4ov")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SpaceDescLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "JUMP"
+vertical_alignment = 1
+
+[node name="ShiftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("13_key_shift")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ShiftLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "SPRINT"
+vertical_alignment = 1
+
 [node name="MouseLeftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -315,36 +345,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
 text = "RELOAD"
-vertical_alignment = 1
-
-[node name="SpaceIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("13_er4ov")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="SpaceDescLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
-auto_translate_mode = 1
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 28
-text = "JUMP"
-vertical_alignment = 1
-
-[node name="ShiftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("13_key_shift")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="ShiftLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
-auto_translate_mode = 1
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 28
-text = "SPRINT"
 vertical_alignment = 1
 
 [node name="LooterContainer" type="PanelContainer" parent="ColumnsHBox"]

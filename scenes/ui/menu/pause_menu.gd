@@ -4,6 +4,7 @@ var pause_toggle = false
 
 func _ready() -> void:
 	self.visible = false
+	ButtonSoundManager.connect_buttons_in_tree(self)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):

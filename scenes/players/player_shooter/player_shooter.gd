@@ -35,6 +35,16 @@ const AIM_FOV = 50.0  # Zoomed in FOV when aiming
 var bullet_trail = load("res://scenes/ui/hud/bullet_trail.tscn")
 var instance
 
+# Laser sounds cycling
+var laser_sounds = [
+	preload("res://assets/audio/sfx/laser_0.ogg"),
+	preload("res://assets/audio/sfx/laser_1.ogg"),
+	preload("res://assets/audio/sfx/laser_2.ogg"),
+	preload("res://assets/audio/sfx/laser_3.ogg"),
+	preload("res://assets/audio/sfx/laser_4.ogg")
+]
+var current_laser_index = 0
+
 # Camera
 @onready var camera_controller: Node3D = $ShooterHead
 @onready var camera: Camera3D = $ShooterHead/Camera3D
@@ -44,6 +54,7 @@ var instance
 # Gun
 @onready var gun_anim = $ShooterHead/Gun/ShootingAnimation
 @onready var gun_barrel = $ShooterHead/Gun/Meshes/Barrel
+@onready var shoot_sound = $ShootSound
 
 # Model's root node references
 @onready var model = $player_shooter/Armature
@@ -142,6 +153,12 @@ func hit():
 func _shooting():
 	if !gun_anim.is_playing() and current_ammo > 0:
 		gun_anim.play("shoot")
+		
+		# Play cycling laser sound
+		shoot_sound.stream = laser_sounds[current_laser_index]
+		shoot_sound.play()
+		current_laser_index = (current_laser_index + 1) % laser_sounds.size()
+		
 		current_ammo -= 1
 		print("Ammo: ", current_ammo, "/", MAX_AMMO)
 		emit_signal("update_ammo", current_ammo, MAX_AMMO)

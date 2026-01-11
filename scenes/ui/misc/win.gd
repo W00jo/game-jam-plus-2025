@@ -5,6 +5,7 @@ var time_passed = 0.0
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	ButtonSoundManager.connect_buttons_in_tree(self)
 
 func _process(delta: float) -> void:
 	if godot_head:

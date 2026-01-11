@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://obqey0lah7xx" path="res://scenes/enviroment/collectible/collectible.gd" id="1_pgilc"]
 [ext_resource type="Texture2D" uid="uid://llagmvm23k4w" path="res://assets/models/godot_head/head_main_texture_noise.png" id="2_63bg3"]
-[ext_resource type="AudioStream" uid="uid://cnr4npcnkrcdu" path="res://assets/audio/sfx/pick_up.mp3" id="3_63bg3"]
+[ext_resource type="AudioStream" uid="uid://cmf5f7ek57gpy" path="res://assets/audio/sfx/collected.ogg" id="3_63bg3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3vdw"]
 resource_name = "Material.002"
@@ -61,6 +61,7 @@ shape = SubResource("SphereShape3D_63bg3")
 
 [node name="CollectSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_63bg3")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="CollectSound" to="." method="_on_sound_finish"]

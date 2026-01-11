@@ -1,5 +1,7 @@
 [gd_scene load_steps=79 format=3 uid="uid://ct6bwd7da40mn"]
 
+[ext_resource type="AudioStream" uid="uid://c7c0vfuqh75vd" path="res://assets/audio/soundtrack/ambient_music_2_cut.mp3" id="1_ambient"]
+[ext_resource type="Script" path="res://scenes/levels/ambient_music.gd" id="1_music_script"]
 [ext_resource type="PackedScene" uid="uid://cendlct4ehhly" path="res://scenes/enviroment/landmine/landmine.tscn" id="1_8cjxf"]
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player_shooter/player_shooter.tscn" id="1_jw8yd"]
 [ext_resource type="PackedScene" uid="uid://cdrrcd0166eik" path="res://assets/models/blocks_of_flats/I.glb" id="2_pj0xw"]
@@ -12,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bjv4lsau0ktn0" path="res://assets/models/blocks_of_flats/O1.glb" id="15_8cjxf"]
 [ext_resource type="PackedScene" uid="uid://cp6jqp0rhaund" path="res://assets/models/blocks_of_flats/L.glb" id="16_jtmcs"]
 [ext_resource type="PackedScene" uid="uid://c2sqnxi5ul53k" path="res://assets/models/blocks_of_flats/[.glb" id="17_3lsws"]
-[ext_resource type="PackedScene" uid="uid://bhw4djmtivvo2" path="res://scenes/npc/passive/citizen.tscn" id="17_jtmcs"]
 [ext_resource type="PackedScene" uid="uid://t3y2ianydf5q" path="res://assets/models/mini_assets/DESKI.glb" id="18_gs7m4"]
 [ext_resource type="Script" path="res://scenes/levels/viewport_container_player_1.gd" id="19_yywnm"]
 [ext_resource type="PackedScene" uid="uid://dmrwwjnwxvabd" path="res://scenes/ui/hud/hud.tscn" id="21_rny25"]
@@ -198,6 +199,14 @@ data = PackedVector3Array(-31.909199, 9.5147, -7.3409996, -30.575998, 9.9092, -7
 [sub_resource type="PlaneMesh" id="PlaneMesh_8cjxf"]
 
 [node name="World" type="Node3D"]
+
+[node name="AmbientMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ambient")
+bus = &"Music"
+script = ExtResource("1_music_script")
+fade_in_duration = 3.0
+target_volume_db = 0.0
+start_volume_db = -40.0
 
 [node name="Moon" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.48814803, 0.108219825, 0, 0.21643963, 0.9762959, -0.50000006, 0.8454971, -0.18744221, -166.32202, 0, 0)
@@ -669,29 +678,6 @@ shape = SubResource("ConcavePolygonShape3D_ndy1i")
 transform = Transform3D(76.73, 0, 0, 0, -76.73, 6.70795e-06, 0, -6.70795e-06, -76.73, 0, -1.9360466, 0)
 mesh = SubResource("PlaneMesh_8cjxf")
 
-[node name="PassiveNPCs" type="Node3D" parent="."]
-
-[node name="Citizen" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.048019, 0.00094374653, 36.56517)
-
-[node name="Citizen2" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.489827, 0.00094374653, 37.01463)
-
-[node name="Citizen3" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.154386, 0.00094374653, 35.629787)
-
-[node name="Citizen4" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.841952, 0.00094374653, 38.146145)
-
-[node name="Citizen5" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.525624, 0.00094374653, 38.64798)
-
-[node name="Citizen6" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.11166, 0.00094374653, 34.965454)
-
-[node name="Citizen7" parent="PassiveNPCs" instance=ExtResource("17_jtmcs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.301528, 0.00094374653, 35.165993)
-
 [node name="SplitScreen" type="GridContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -709,7 +695,7 @@ script = ExtResource("19_yywnm")
 
 [node name="Viewport_player1" type="SubViewport" parent="SplitScreen/Viewport_container_player1"]
 handle_input_locally = false
-size = Vector2i(574, 648)
+size = Vector2i(958, 1080)
 render_target_update_mode = 4
 
 [node name="Player1" parent="SplitScreen/Viewport_container_player1/Viewport_player1" instance=ExtResource("1_jw8yd")]
@@ -789,7 +775,7 @@ stretch = true
 
 [node name="Viewport_player2" type="SubViewport" parent="SplitScreen/Viewport_container_player2"]
 handle_input_locally = false
-size = Vector2i(574, 648)
+size = Vector2i(958, 1080)
 render_target_update_mode = 4
 
 [node name="Player2" parent="SplitScreen/Viewport_container_player2/Viewport_player2" instance=ExtResource("22_gc5je")]

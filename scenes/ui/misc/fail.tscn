@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://0af5rb8v4dbl"]
+[gd_scene load_steps=9 format=3 uid="uid://0af5rb8v4dbl"]
 
 [ext_resource type="Script" uid="uid://bglbpa18u8rq6" path="res://scenes/ui/misc/fail.gd" id="1_fail"]
+[ext_resource type="AudioStream" uid="uid://chsfqw1sgfk6p" path="res://assets/audio/sfx/death.ogg" id="2_death"]
 [ext_resource type="FontFile" uid="uid://baapgywj73daj" path="res://assets/fonts/HelpMe.ttf" id="2_mdmnb"]
 [ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="3_font"]
 
@@ -141,3 +142,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 text = "EXIT_BUTTON_FUNNY"
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_death")
+autoplay = false
+bus = &"SFX"
+parameters/looping = true

@@ -140,6 +140,30 @@ theme_override_font_sizes/font_size = 32
 text = "100%"
 horizontal_alignment = 1
 
+[node name="SFXVolume" type="Label" parent="MainContainer/ContentVBox"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 48
+text = "SFX_VOLUME"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="MainContainer/ContentVBox"]
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 2
+value = 100.0
+
+[node name="SFXLabel" type="Label" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+
 [node name="LanguageLabel" type="Label" parent="MainContainer/ContentVBox"]
 auto_translate_mode = 1
 layout_mode = 2
@@ -204,6 +228,7 @@ text = "x"
 script = ExtResource("4_gdfy8")
 
 [connection signal="value_changed" from="MainContainer/ContentVBox/VolumeSlider" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="MainContainer/ContentVBox/SFXSlider" to="." method="_on_sfx_volume_changed"]
 [connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagPL" to="." method="_on_language_selected" binds= ["pl"]]
 [connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagEN" to="." method="_on_language_selected" binds= ["en"]]
 [connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagES" to="." method="_on_language_selected" binds= ["es"]]
