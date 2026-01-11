@@ -70,10 +70,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -80.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 80.0
+offset_left = -120.0
+offset_top = 56.0
+offset_right = -55.0
+offset_bottom = 124.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -83,7 +83,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "X"
+text = "x"
 script = ExtResource("4_jrmmo")
 
 [connection signal="pressed" from="Return" to="." method="_on_x_pressed"]
