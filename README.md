@@ -1,25 +1,32 @@
-# Game title
+# Game Jam Plus 2025
 
 ## Overview
 
-Short description of the game and its genre.
+An asymmetric local co-op survival game featuring two distinct roles:
+
+- **The Shooter** (Mouse & Keyboard) -- Defends the team using a weapon.
+- **The Looter** (Controller) -- Focuses on navigation and objective completion.
+
+The goal is to gather collectibles while surviving against two distinct enemy types.
 
 ## Project structure
 
-- **assets/** → Art, audio, fonts, shaders
-- **config/** → Settings and translations
-- **docs/** → Notes and changelog
-- **scenes/** → Main game scenes and their respective `scripts`
+- **assets/** → Art, models, sprites, audio, and fonts
+- **global/** → Configuration, and translation files
+- **docs/** → Design notes and (potential) documentation
+- **scenes/** → All game scenes alongside corresponding scripts (levels, players, UI, enemies) separated by category
 
 ## How to run
 
-Create a `project` in Godot.
+1. Clone the repository.
+2. Import the project in **Godot 4.5+** (forward compatibility).
+3. Run the main project scene.
 
 ## Naming conventions
 
 ### Godot
 
-These naming conventions follow the Godot Engine style. Breaking these will make your code clash with the built-in naming conventions, leading to inconsistent code. As a summary table:
+These naming conventions follow the Godot Engine style. Breaking these will make your code clash with the built-in naming conventions, leading to inconsistent code[^1]. As a summary table:
 
 | Type | Convention | Example |
 | --- | --- | --- |
@@ -40,9 +47,9 @@ Simple ruleset for naming branches in the project.
 1. Use `kebab-case`.
 2. Use prefix, as in `prefix/` to indicate purpose or the author.
 
-Examples: `jakub/player-movement` or `feature/player-movement`.
+Examples: `wujo/player-movement` or `feature/player-movement` (better version).
 
-## Code order
+## Code order[^2]
 
 ```gdscript
 01. @tool, @icon, @static_unload
@@ -74,6 +81,8 @@ Examples: `jakub/player-movement` or `feature/player-movement`.
 
 ## Credits
 
-List any free/paid assets, tools, or contributors.
+**Developers**: Wujo, Felipe, Gabriela, Roxi, Kacper
+**Engine**: Godot 4.5
 
-*Summarized from Godot Docs*.
+[^1]: Summarized from Godot Docs.
+[^2]: Ibidem.

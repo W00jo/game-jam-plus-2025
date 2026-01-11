@@ -53,8 +53,8 @@ func _update_loot_display():
 	var current = GameManager.collectibles_gathered
 	var total = GameManager.collectibles_to_win
 	loot_indicator_label.text = "[b]" + tr("LOOT") + "[/b][color=#6b8c96]" + str(current) + "/" + str(total) + "[/color]"
-	
-func _on_collectible_gathered(count: int):
+
+func _on_collectible_gathered(_count: int):
 	_update_loot_display()
 	
 ## Hitmarker
