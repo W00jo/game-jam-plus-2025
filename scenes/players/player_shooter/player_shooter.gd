@@ -1,11 +1,25 @@
 extends CharacterBody3D
 
+# Customowe sygnały
+signal player_hit
+signal update_ammo
+
+# HP System
+@export var MAX_HP = 3
+var current_hp = MAX_HP
+
 var speed
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
-const JUMP_VELOCITY = 4.5
+@export var WALK_SPEED = 5.0
+@export var SPRINT_SPEED = 8.0
+@export var JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
-const HIT_STAGGER = 8.0
+@export var HIT_STAGGER = 8.0
+
+# Ammo system
+@export var MAX_AMMO = 4
+@export var RELOAD_TIME = 2.0
+var current_ammo = MAX_AMMO
+var is_reloading = false
 
 # Ruch głową... w ruchu i skoku
 const BOB_FREQ = 2.0
@@ -15,8 +29,6 @@ var t_bob = 0.0
 # zmienne FOV
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
-
-signal player_hit
 
 # Bullets
 var bullet_trail = load("res://scenes/ui/hud/bullet_trail.tscn")
@@ -29,8 +41,8 @@ var instance
 @onready var aim_ray_end = $ShooterHead/Camera3D/AimRayEnd
 
 # Gun
-@onready var rifle_anim = $ShooterHead/Gun/ShootingAnimation
-@onready var rifle_barrel = $ShooterHead/Gun/Meshes/Barrel
+@onready var gun_anim = $ShooterHead/Gun/ShootingAnimation
+@onready var gun_barrel = $ShooterHead/Gun/Meshes/Barrel
 
 # Model's root node references
 @onready var model = $player_shooter/Armature
@@ -38,6 +50,9 @@ var instance
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	current_ammo = MAX_AMMO
+	current_hp = MAX_HP
+	emit_signal("update_ammo", current_ammo, MAX_AMMO)
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -94,10 +109,12 @@ func _physics_process(delta):
 		animation_player.play("Jump")
 	
 	# Shooting
-	if Input.is_action_pressed("shoot"):
+	if Input.is_action_pressed("shoot") and !is_reloading:
 		_shooting()
-		if !rifle_anim.is_playing():
-			rifle_anim.play("shoot")
+	
+	# Reload
+	if Input.is_action_just_pressed("reload") and current_ammo < MAX_AMMO and !is_reloading:
+		_reload()
 	
 	move_and_slide()
 
@@ -108,11 +125,20 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func hit():
+	current_hp -= 1
+	print("Player Shooter hit! HP: ", current_hp, "/", MAX_HP)
 	emit_signal("player_hit")
+	
+	if current_hp <= 0:
+		_show_fail_screen()
 
 func _shooting():
-	if !rifle_anim.is_playing():
-		rifle_anim.play("shoot")
+	if !gun_anim.is_playing() and current_ammo > 0:
+		gun_anim.play("shoot")
+		current_ammo -= 1
+		print("Ammo: ", current_ammo, "/", MAX_AMMO)
+		emit_signal("update_ammo", current_ammo, MAX_AMMO)
+		
 		instance = bullet_trail.instantiate()
 		if aim_ray.is_colliding():
 			var collider = aim_ray.get_collider()
@@ -120,5 +146,27 @@ func _shooting():
 				print("zabity")
 				aim_ray.get_collider().hit()
 			else:
-				instance.init(rifle_barrel.global_position, aim_ray_end.global_position)
+				instance.init(gun_barrel.global_position, aim_ray_end.global_position)
 			get_parent().add_child(instance)
+		
+		# Auto reload when out of ammo
+		if current_ammo == 0:
+			_reload()
+
+func _reload():
+	if is_reloading:
+		return
+	
+	is_reloading = true
+	print("Reload... (" + str(RELOAD_TIME) + " seconds)")
+	await get_tree().create_timer(RELOAD_TIME).timeout
+	current_ammo = MAX_AMMO
+	is_reloading = false
+	print("Ammo: ", current_ammo, "/", MAX_AMMO)
+	emit_signal("update_ammo", current_ammo, MAX_AMMO)
+
+func _show_fail_screen():
+	print("Player Shooter died!")
+	get_tree().paused = true
+	var fail_screen = load("res://scenes/ui/misc/fail.tscn").instantiate()
+	get_tree().root.add_child(fail_screen)
