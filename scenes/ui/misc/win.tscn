@@ -1,4 +1,72 @@
-[gd_scene format=3 uid="uid://i0affb3o03ye"]
+[gd_scene load_steps=11 format=3 uid="uid://i0affb3o03ye"]
+
+[ext_resource type="Script" uid="uid://dt1o7y4gf7vv" path="res://scenes/ui/misc/win.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bxir1vlcrrirx" path="res://assets/models/godot_head/head.glb" id="2_head"]
+[ext_resource type="Texture2D" uid="uid://d1n82yu5manko" path="res://assets/ui/background_universal.png" id="2_lr2oc"]
+[ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="3_title_font"]
+[ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="4_button_font"]
+
+[sub_resource type="Environment" id="Environment_godot_head"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_container"]
+content_margin_left = 40.0
+content_margin_top = 30.0
+content_margin_right = 40.0
+content_margin_bottom = 30.0
+bg_color = Color(0.08, 0.08, 0.08, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+content_margin_left = 30.0
+content_margin_top = 15.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_left = 30.0
+content_margin_top = 15.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.35, 0.47, 0.51, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+content_margin_left = 30.0
+content_margin_top = 15.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.6)
+shadow_size = 15
 
 [node name="Win" type="Control"]
 layout_mode = 3
@@ -7,38 +75,124 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_script")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BackgroundImage" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.8)
+texture = ExtResource("2_lr2oc")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="GodotHead3D" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1136.0
+offset_top = 72.0
+offset_right = -786.0
+offset_bottom = 422.0
+grow_horizontal = 0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="GodotHead3D"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(350, 350)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="GodotHead3D/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Head" parent="GodotHead3D/SubViewport" instance=ExtResource("2_head")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GodotHead3D/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 2, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="GodotHead3D/SubViewport"]
+environment = SubResource("Environment_godot_head")
+
+[node name="MainContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -100.0
-offset_right = 200.0
-offset_bottom = 100.0
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_container")
 
-[node name="WinLabel" type="Label" parent="VBoxContainer"]
+[node name="ContentVBox" type="VBoxContainer" parent="MainContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "NICE!"
+theme_override_constants/separation = 20
+
+[node name="WinLabel" type="Label" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_title_font")
+theme_override_font_sizes/font_size = 96
+text = "Victory!"
 horizontal_alignment = 1
 
-[node name="SubLabel" type="Label" parent="VBoxContainer"]
+[node name="SubLabel" type="Label" parent="MainContainer/ContentVBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "10/10"
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("4_button_font")
+theme_override_font_sizes/font_size = 32
+text = "You are safe! For now..."
 horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MainMenu" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_button_font")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "Return to main menu
+"
+
+[node name="SendFeedback" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_button_font")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "Feedback (itch.io link)"
+
+[node name="GG" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_button_font")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "GG! (Exit)"
+
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/SendFeedback" to="." method="_on_send_feedback_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/GG" to="." method="_on_gg_pressed"]

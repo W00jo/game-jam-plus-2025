@@ -3,9 +3,27 @@ extends Node
 @export var collectibles_to_win: int = 5
 
 var collectibles_gathered: int = 0
+var menu_music_player: AudioStreamPlayer
+var menu_music_stream = preload("res://assets/audio/sfx/music_1_cut.mp3")
 
 signal collectible_gathered(count: int)
 signal game_won
+
+func _ready():
+	# Create persistent menu music player
+	menu_music_player = AudioStreamPlayer.new()
+	menu_music_player.stream = menu_music_stream
+	menu_music_player.volume_db = -1.015
+	menu_music_player.bus = "Master"
+	add_child(menu_music_player)
+
+func play_menu_music():
+	if not menu_music_player.playing:
+		menu_music_player.play()
+
+func stop_menu_music():
+	if menu_music_player.playing:
+		menu_music_player.stop()
 
 func collect_item():
 	collectibles_gathered += 1

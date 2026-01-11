@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylxl5mh12gsq"
-path="res://.godot/imported/ludki2.png-deda3a5ae21f687e88c3681a8be20fc6.ctex"
+uid="uid://d0u8hws48722j"
+path="res://.godot/imported/background_credits.png-049d29e01259a816853e2431d46a539f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/ludki2.png"
-dest_files=["res://.godot/imported/ludki2.png-deda3a5ae21f687e88c3681a8be20fc6.ctex"]
+source_file="res://assets/ui/background_credits.png"
+dest_files=["res://.godot/imported/background_credits.png-049d29e01259a816853e2431d46a539f.ctex"]
 
 [params]
 

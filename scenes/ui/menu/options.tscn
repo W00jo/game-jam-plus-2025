@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci1sob8dmgoou"]
+[gd_scene load_steps=10 format=3 uid="uid://ci1sob8dmgoou"]
 
 [ext_resource type="Script" uid="uid://cloxqn84h8iy7" path="res://scenes/ui/menu/options.gd" id="1_hhwow"]
+[ext_resource type="Texture2D" uid="uid://d1n82yu5manko" path="res://assets/ui/background_universal.png" id="2_8qt8p"]
 [ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="2_font"]
-[ext_resource type="Texture2D" uid="uid://xpgfmmhumywk" path="res://assets/ui/options.png" id="2_wby6m"]
+[ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="3_xicu3"]
 [ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="4_gdfy8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_container"]
@@ -61,7 +62,7 @@ border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.6)
 shadow_size = 15
 
-[node name="Options" type="Control"]
+[node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,16 +71,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hhwow")
 
-[node name="OptionsBackground" type="TextureRect" parent="."]
+[node name="SettingsBackground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_wby6m")
+texture = ExtResource("2_8qt8p")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="Settings" type="Label" parent="."]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 72.0
+offset_right = 1306.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_xicu3")
+theme_override_font_sizes/font_size = 96
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MainContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -105,7 +119,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 48
-text = "Music Volume"
+text = "Volume"
 horizontal_alignment = 1
 
 [node name="VolumeSlider" type="HSlider" parent="MainContainer/ContentVBox"]
