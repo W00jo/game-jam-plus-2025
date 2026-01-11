@@ -2,6 +2,7 @@ extends CanvasLayer
 
 # eunem żeby wybór był prosty, między graczami, za pomocą inspektora.
 enum PlayerType { PLAYER_1, PLAYER_2 }
+
 @export var player_hud_type: PlayerType = PlayerType.PLAYER_1
 
 @onready var got_hit = $GotHit

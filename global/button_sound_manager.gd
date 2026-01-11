@@ -30,9 +30,9 @@ func connect_buttons_in_tree(node: Node):
 	
 	for child in node.get_children():
 		connect_buttons_in_tree(child)
-
+	
 func _on_button_pressed():
 	play_click_sound()
-
+	
 func _on_return_button_pressed():
 	play_return_sound()
