@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://klggb37mgai1"]
+[gd_scene load_steps=14 format=3 uid="uid://klggb37mgai1"]
 
 [ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="1_exnit"]
 [ext_resource type="Script" uid="uid://dvkflaybjapvp" path="res://scenes/ui/menu/menu_lepsze.gd" id="1_u5sr6"]
@@ -8,7 +8,85 @@
 [ext_resource type="Texture2D" uid="uid://dxs8eal4y6ilp" path="res://assets/ui/Ativo 74@gj+.png" id="6_l0m04"]
 [ext_resource type="Texture2D" uid="uid://b4i8bg60ifwux" path="res://assets/ui/czapka.png" id="7_hmgs3"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u5sr6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_container"]
+content_margin_left = 40.0
+content_margin_top = 30.0
+content_margin_right = 40.0
+content_margin_bottom = 30.0
+bg_color = Color(0.08, 0.08, 0.08, 0.75)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+content_margin_left = 30.0
+content_margin_top = 15.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.12, 0.12, 0.12, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+bg_color = Color(0.08, 0.08, 0.08, 0.9)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(0.18, 0.18, 0.18, 0.85)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_disabled"]
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_focus"]
+bg_color = Color(0.12, 0.12, 0.12, 0.8)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.5, 0.5, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,86 +97,128 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u5sr6")
 
-[node name="Menu1" type="Sprite2D" parent="."]
-position = Vector2(557, 324)
-scale = Vector2(0.6347223, 0.6347223)
+[node name="MenuBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_kyxmm")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="Panel" type="Panel" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 650.0
-
-[node name="Label" type="Label" parent="."]
+[node name="MainContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -513.0
-offset_top = -276.0
-offset_right = 55.0
-offset_bottom = -170.0
+offset_left = -832.0
+offset_top = -364.0
+offset_right = -201.0
+offset_bottom = 353.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_container")
+
+[node name="ContentVBox" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 101
 text = "Shoot Bro Loot"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.13020833
-anchor_top = 0.37345678
-anchor_right = 0.33333334
-anchor_bottom = 0.87808645
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+[node name="Buttons" type="VBoxContainer" parent="MainContainer/ContentVBox"]
+layout_mode = 2
 
-[node name="Start" type="Button" parent="VBoxContainer"]
+[node name="Start" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_exnit")
-theme_override_font_sizes/font_size = 71
-theme_override_styles/normal = SubResource("StyleBoxTexture_u5sr6")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "Start"
 
-[node name="How to play" type="Button" parent="VBoxContainer"]
+[node name="How to play" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 56
-theme_override_styles/normal = SubResource("StyleBoxTexture_u5sr6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "How to play"
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 56
-theme_override_styles/normal = SubResource("StyleBoxTexture_u5sr6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "Options"
 
-[node name="Credits" type="Button" parent="VBoxContainer"]
+[node name="Credits" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 56
-theme_override_styles/normal = SubResource("StyleBoxTexture_u5sr6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "Credis"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_exnit")
 theme_override_font_sizes/font_size = 56
-theme_override_styles/normal = SubResource("StyleBoxTexture_u5sr6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "Exit"
 
-[node name="LublinGameDevBiałePoziomRgb" type="Sprite2D" parent="."]
-position = Vector2(1019, 42.000004)
-scale = Vector2(0.035188776, 0.035188776)
+[node name="IconsHBox" type="HBoxContainer" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="IconKonduktor" type="TextureRect" parent="MainContainer/ContentVBox/IconsHBox"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("7_hmgs3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="IconLubGame" type="TextureRect" parent="MainContainer/ContentVBox/IconsHBox"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
 texture = ExtResource("3_74ugs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="IconGameJamPlus" type="TextureRect" parent="MainContainer/ContentVBox/IconsHBox"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("6_l0m04")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Music1Cut" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_is5ci")
@@ -106,18 +226,22 @@ volume_db = -1.015
 autoplay = true
 parameters/looping = true
 
-[node name="Ativo74_gj+" type="Sprite2D" parent="."]
-position = Vector2(1106.5625, 50.682045)
-scale = Vector2(0.017797133, 0.017797127)
-texture = ExtResource("6_l0m04")
+[node name="VersionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -30.0
+offset_right = 100.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_exnit")
+theme_override_font_sizes/font_size = 24
+text = "v0.2.0"
 
-[node name="Czapka" type="Sprite2D" parent="."]
-position = Vector2(940, 49)
-scale = Vector2(0.1100386, 0.11003861)
-texture = ExtResource("7_hmgs3")
-
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/How to play" to="." method="_on_how_to_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_opcje_pressed"]
-[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/How to play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Options" to="." method="_on_opcje_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Exit" to="." method="_on_exit_pressed"]
