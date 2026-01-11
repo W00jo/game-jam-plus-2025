@@ -10,6 +10,9 @@ signal collectible_gathered(count: int)
 signal game_won
 
 func _ready():
+	# Set default language to English
+	TranslationServer.set_locale("en")
+	
 	# Persistent music in main menu
 	menu_music_player = AudioStreamPlayer.new()
 	menu_music_player.stream = menu_music_stream

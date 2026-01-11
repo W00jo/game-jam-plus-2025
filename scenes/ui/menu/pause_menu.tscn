@@ -107,11 +107,12 @@ layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="PausedLabel" type="Label" parent="MainContainer/ContentVBox"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
 theme_override_fonts/font = ExtResource("1_6tw0m")
 theme_override_font_sizes/font_size = 96
-text = "Paused"
+text = "PAUSE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -120,6 +121,7 @@ layout_mode = 2
 
 [node name="Resume" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 process_mode = 3
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -129,9 +131,10 @@ theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Resume"
+text = "RESUME_BUTTON"
 
 [node name="Settings" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -141,9 +144,10 @@ theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Settings"
+text = "SETTINGS_BUTTON"
 
 [node name="Restart" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -153,9 +157,10 @@ theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Restart"
+text = "RETURN_MENU"
 
 [node name="Exit" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -165,7 +170,7 @@ theme_override_font_sizes/font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Exit"
+text = "EXIT_BUTTON"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -141,14 +141,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
 theme_override_fonts/font = ExtResource("3_title_font")
 theme_override_font_sizes/font_size = 96
-text = "Victory!"
+text = "WIN_MESSAGE"
 horizontal_alignment = 1
 
 [node name="SubLabel" type="Label" parent="MainContainer/ContentVBox"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_button_font")
 theme_override_font_sizes/font_size = 32
-text = "You are safe! For now..."
+text = "WIN_SUBMESSAGE"
 horizontal_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="MainContainer/ContentVBox"]
@@ -165,8 +165,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Main menu
-"
+text = "RETURN_MENU"
 
 [node name="SendFeedback" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
@@ -178,7 +177,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Feedback (itch.io)"
+text = "FEEDBACK_BUTTON"
 
 [node name="GG" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2

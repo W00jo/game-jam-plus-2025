@@ -40,6 +40,11 @@ import/blender/enabled=false
 enemy="Non-player characters designed to hurt/damage the player(s)."
 player=""
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://global/translations.EN.translation", "res://global/translations.PL.translation", "res://global/translations.ES.translation", "res://global/translations.PT.translation")
+locale/locale_filter_mode=0
+
 [input]
 
 ui_cancel={

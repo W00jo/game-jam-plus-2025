@@ -103,7 +103,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
 theme_override_fonts/font = ExtResource("2_mdmnb")
 theme_override_font_sizes/font_size = 72
-text = "You died..."
+text = "DEATH_MESSAGE"
 horizontal_alignment = 1
 
 [node name="Retry" type="Button" parent="MainContainer/VBoxContainer"]
@@ -116,7 +116,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Retry"
+text = "RETRY_BUTTON"
 
 [node name="MainMenu" type="Button" parent="MainContainer/VBoxContainer"]
 layout_mode = 2
@@ -128,7 +128,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "Main menu"
+text = "RETURN_MENU"
 
 [node name="ImDone" type="Button" parent="MainContainer/VBoxContainer"]
 layout_mode = 2
@@ -140,4 +140,4 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "I'm done"
+text = "EXIT_BUTTON_FUNNY"

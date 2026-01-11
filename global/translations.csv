@@ -1,0 +1,32 @@
+key,pl,en,es,pt
+START_BUTTON,Start,Start,Jugar,Jogar
+HELP_BUTTON,Jak grać,How to play,Cómo jugar,Como jogar
+SETTINGS_BUTTON,Opcje,Settings,Opciones,Opções
+CREDITS_BUTTON,Twórcy,Credits,Créditos,Créditos
+EXIT_BUTTON,Wyjście,Exit,Salir,Sair
+MUSIC_VOLUME,Głośność muzyki,Music volume,Volumen de la música,Volume da música
+RESUME_BUTTON,Wznów,Resume,Reanudar,Continuar
+RESTART_BUTTON,Zrestartuj,Restart,Reiniciar,Reiniciar
+EXIT_BUTTON,Wyjście,Exit,Salir,Salir
+OBJECTIVE,Cel,Objective,Objetivo,Objetivo
+CONTROLS,Sterowanie,Controls,Controles,Controles
+CAMERA_CONTROL,Sterowanie kamerą,Camera control,Control de cámara,Controle da câmera
+SHOOT,Strzał ,Shoot,Disparar,Atirar
+AIM,Celowanie,Aim,Apuntar,Mirar
+MOVEMENT,Poruszanie się,Move,Movimiento,Movimento
+RELOAD,Przeładowanie,Reload,Recargar,Recarregar
+JUMP,Skok,Jump,Saltar,Pular
+SPRINT,Sprint,Sprint,Esprintar,Correr
+SHOOTER_OBJECTIVE,"Osłaniaj swojego partnera z dachów budynków, strzelaj do ścigających go wrogów. Unikaj [color=#a65e5e][b][UTAJNIONO][/b][/color]!","Cover your buddy from the rooftops, shoot enemies chosing them. Avoid the [color=#a65e5e][b][REDACTED][/b][/color]!","Cubre a tu compañero desde los tejados, Dispara a los enemigos que lo persiguen. ¡Evita al [color=#a65e5e][b][CLASIFICADO][/b][/color]!","Cubra seu parceiro do telhado, Atire nos inimigos que o perseguem. Evite o [color=#a65e5e][b][CONFIDENCIAL][/b][/color]!"
+LOOTER_OBJECTIVE,"Eksploruj miasto i szukaj części G.O.D.O.T., aby uciec. Nie ufaj mieszkańcom, niektórzy to [color=#a65e5e][b][UTAJNIONO][/b][/color].","Explore the city, look for G.O.D.O.T. parts in order to escape. Do not trust the citizens, some are [color=#a65e5e][b][REDACTED][/b][/color].","Explora la ciudad, busca piezas de G.O.D.O.T. para escapar. No confíes en los ciudadanos, algunos son [color=#a65e5e][b][CLASIFICADO][/b][/color].","Explore a cidade, procure peças do G.O.D.O.T. para escapar. Não confie nos cidadãos, alguns são [color=#a65e5e][b][CONFIDENCIAL][/b][/color]."
+PAUSE,Pauza,Pause,Pausa,Pausa
+LANGUAGE,Język,Language,Idioma,Idioma
+WIN_MESSAGE,Zwycięstwo!,Victory!,¡Victoria!,Vitória!
+WIN_SUBMESSAGE,Jesteście bezpieczni! Póki co...,You are safe! For now...,¡Están a salvo! Por ahora...,Vocês estão a salvo! Por enquanto...
+DEATH_MESSAGE,NIE ŻYJESZ,You died...,HAS MUERTO,VOCÊ MORREU
+RETURN_MENU,Menu główne,Main menu,Menú Principal,Menu Principal
+FEEDBACK_BUTTON,Opinia? (link do itch.io),Feedback (link to itch.io),Opinión (enlace a itch.io),Feedback (link para itch.io)
+EXIT_BUTTON_FUNNY,Mam dość,I'm done,Ya basta,Desisto
+LOOT,Znalezione części: ,Loot collected: ,Piezas encontradas: ,Peças encontradas: 
+RETRY_BUTTON,Spróbujcie ponownie,Retry,Reintentar,Tentar novamente
+ITCHIO_BUTTON,Sprawdź naszą stronę na itchu!,Check our itch.io,Visita nuestro itch.io,Confira nosso itch.io

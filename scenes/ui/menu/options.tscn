@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://ci1sob8dmgoou"]
+[gd_scene load_steps=14 format=3 uid="uid://ci1sob8dmgoou"]
 
 [ext_resource type="Script" uid="uid://cloxqn84h8iy7" path="res://scenes/ui/menu/options.gd" id="1_hhwow"]
 [ext_resource type="Texture2D" uid="uid://d1n82yu5manko" path="res://assets/ui/background_universal.png" id="2_8qt8p"]
 [ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="2_font"]
 [ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="3_xicu3"]
 [ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="4_gdfy8"]
+[ext_resource type="Texture2D" uid="uid://ca5lmy6kdb07k" path="res://assets/ui/flag_pl.png" id="5_flag_pl"]
+[ext_resource type="Texture2D" uid="uid://8jciglq5pj1" path="res://assets/ui/flag_gb.png" id="6_flag_gb"]
+[ext_resource type="Texture2D" uid="uid://bkjewrqfvg0x0" path="res://assets/ui/flag_es.png" id="7_flag_es"]
+[ext_resource type="Texture2D" uid="uid://ow62d47ru6wq" path="res://assets/ui/flag_pt.png" id="8_flag_pt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_container"]
 content_margin_left = 40.0
@@ -83,6 +87,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="Settings" type="Label" parent="."]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 608.0
 offset_top = 72.0
@@ -91,7 +96,7 @@ offset_bottom = 207.0
 theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
 theme_override_fonts/font = ExtResource("3_xicu3")
 theme_override_font_sizes/font_size = 96
-text = "Settings"
+text = "SETTINGS_BUTTON"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -115,11 +120,12 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="MusicVolume" type="Label" parent="MainContainer/ContentVBox"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 48
-text = "Volume"
+text = "MUSIC_VOLUME"
 horizontal_alignment = 1
 
 [node name="VolumeSlider" type="HSlider" parent="MainContainer/ContentVBox"]
@@ -133,6 +139,48 @@ theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 32
 text = "100%"
 horizontal_alignment = 1
+
+[node name="LanguageLabel" type="Label" parent="MainContainer/ContentVBox"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 48
+text = "LANGUAGE"
+horizontal_alignment = 1
+
+[node name="LanguageFlags" type="HBoxContainer" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="FlagPL" type="TextureButton" parent="MainContainer/ContentVBox/LanguageFlags"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("5_flag_pl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FlagEN" type="TextureButton" parent="MainContainer/ContentVBox/LanguageFlags"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("6_flag_gb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FlagES" type="TextureButton" parent="MainContainer/ContentVBox/LanguageFlags"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("7_flag_es")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FlagPT" type="TextureButton" parent="MainContainer/ContentVBox/LanguageFlags"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("8_flag_pt")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 1
@@ -156,4 +204,8 @@ text = "x"
 script = ExtResource("4_gdfy8")
 
 [connection signal="value_changed" from="MainContainer/ContentVBox/VolumeSlider" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagPL" to="." method="_on_language_selected" binds= ["pl"]]
+[connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagEN" to="." method="_on_language_selected" binds= ["en"]]
+[connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagES" to="." method="_on_language_selected" binds= ["es"]]
+[connection signal="pressed" from="MainContainer/ContentVBox/LanguageFlags/FlagPT" to="." method="_on_language_selected" binds= ["pt"]]
 [connection signal="pressed" from="Return" to="." method="_on_x_pressed"]

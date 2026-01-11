@@ -27,11 +27,16 @@ func _on_resume_pressed() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _on_options_pressed() -> void:
+	get_tree().paused = false
+	pause_toggle = false
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().change_scene_to_file("res://scenes/ui/menu/options.tscn")
 
 func _on_restart_pressed() -> void:
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	pause_toggle = false
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://scenes/ui/menu/menu_lepsze.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

@@ -120,10 +120,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="EscLabel" type="Label" parent="EscHint"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 32
-text = "Pause"
+text = "PAUSE"
 vertical_alignment = 1
 
 [node name="ColumnsHBox" type="HBoxContainer" parent="."]
@@ -165,6 +166,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="TitleLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
 theme_override_fonts/font = ExtResource("3_title_font")
@@ -180,6 +182,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="ObjectiveLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("2_font")
@@ -192,11 +195,11 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_font")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "[center]Cover your buddy from the rooftops, shoot enemies chasing them.
-Avoid the [color=#a65e5e][b][REDACTED][/b][/color]![/center]"
+text = "SHOOTER_OBJECTIVE"
 fit_content = true
 
 [node name="ControlsLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("2_font")
@@ -221,10 +224,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="MouseMoveLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Camera control"
+text = "CAMERA_CONTROL"
 vertical_alignment = 1
 
 [node name="WASDContainer" type="HBoxContainer" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -261,10 +265,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="WASDLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Move"
+text = "MOVEMENT"
 vertical_alignment = 1
 
 [node name="MouseLeftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -275,10 +280,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="MouseLeftLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Shoot"
+text = "SHOOT"
 vertical_alignment = 1
 
 [node name="MouseRightIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -289,10 +295,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="MouseRightLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Aim"
+text = "AIM"
 vertical_alignment = 1
 
 [node name="KeyRIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -303,10 +310,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="KeyRLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Reload"
+text = "RELOAD"
 vertical_alignment = 1
 
 [node name="SpaceIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -317,10 +325,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="SpaceDescLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Jump"
+text = "JUMP"
 vertical_alignment = 1
 
 [node name="ShiftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -331,10 +340,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="ShiftLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Sprint"
+text = "SPRINT"
 vertical_alignment = 1
 
 [node name="LooterContainer" type="PanelContainer" parent="ColumnsHBox"]
@@ -363,6 +373,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="TitleLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
 theme_override_fonts/font = ExtResource("3_title_font")
@@ -372,6 +383,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ObjectiveLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("2_font")
@@ -384,11 +396,11 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_font")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "[center]Explore the city, look for G.O.D.O.T. parts, in order to escape the city.
-Do not trust the citizens, some are [color=#a65e5e][b][REDACTED][/b][/color]...[/center]"
+text = "LOOTER_OBJECTIVE"
 fit_content = true
 
 [node name="ControlsLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("2_font")
@@ -413,10 +425,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="StickRLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Camera control"
+text = "CAMERA_CONTROL"
 vertical_alignment = 1
 
 [node name="StickLIcon" type="TextureRect" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -427,10 +440,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="StickLLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Move"
+text = "MOVEMENT"
 vertical_alignment = 1
 
 [node name="ButtonDownIcon" type="TextureRect" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
@@ -441,10 +455,11 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="ButtonDownLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+auto_translate_mode = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 28
-text = "Jump"
+text = "JUMP"
 vertical_alignment = 1
 
 [node name="Return" type="Button" parent="."]
