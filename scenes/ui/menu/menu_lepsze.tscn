@@ -1,13 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://klggb37mgai1"]
+[gd_scene load_steps=17 format=3 uid="uid://klggb37mgai1"]
 
 [ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="1_exnit"]
 [ext_resource type="Script" uid="uid://dvkflaybjapvp" path="res://scenes/ui/menu/menu_lepsze.gd" id="1_u5sr6"]
-[ext_resource type="Texture2D" uid="uid://cv3gcpl8ubdqx" path="res://assets/ui/menu_1.png" id="2_kyxmm"]
-[ext_resource type="Texture2D" uid="uid://bgak4x2wg0n55" path="res://assets/ui/LublinGameDev_białe_poziom_RGB.png" id="3_74ugs"]
+[ext_resource type="Texture2D" uid="uid://cv3gcpl8ubdqx" path="res://assets/ui/background_main.png" id="2_kyxmm"]
+[ext_resource type="Texture2D" uid="uid://bgak4x2wg0n55" path="res://assets/ui/icon_lubgame.png" id="3_74ugs"]
 [ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="4_hmgs3"]
-[ext_resource type="AudioStream" uid="uid://cc50fqssmtjjq" path="res://assets/audio/sfx/music_1_cut.mp3" id="4_is5ci"]
-[ext_resource type="Texture2D" uid="uid://dxs8eal4y6ilp" path="res://assets/ui/Ativo 74@gj+.png" id="6_l0m04"]
-[ext_resource type="Texture2D" uid="uid://b4i8bg60ifwux" path="res://assets/ui/czapka.png" id="7_hmgs3"]
+[ext_resource type="Texture2D" uid="uid://dxs8eal4y6ilp" path="res://assets/ui/icon_gjp.png" id="6_l0m04"]
+[ext_resource type="Texture2D" uid="uid://b4i8bg60ifwux" path="res://assets/ui/icon_conductor.png" id="7_hmgs3"]
+[ext_resource type="Texture2D" uid="uid://2p2b3dpfkvlw" path="res://assets/ui/itchio_logo.png" id="8_itchio"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_container"]
 content_margin_left = 40.0
@@ -89,6 +89,40 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.5, 0.65, 0.7, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itchio"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.08, 0.08, 0.08, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itchio_hover"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.15, 0.15, 0.15, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.6)
+shadow_size = 10
+
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -117,9 +151,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -824.0
-offset_top = -364.0
+offset_top = -420.0
 offset_right = -46.0
-offset_bottom = 367.0
+offset_bottom = 443.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_container")
@@ -136,6 +170,13 @@ theme_override_font_sizes/font_size = 128
 text = "Shoot Bro Loot"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="VersionLabel" type="Label" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_hmgs3")
+theme_override_font_sizes/font_size = 24
+text = "v0.2.0"
+horizontal_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="MainContainer/ContentVBox"]
 layout_mode = 2
@@ -168,7 +209,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
 theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "How to play"
 
-[node name="Options" type="Button" parent="MainContainer/ContentVBox/Buttons"]
+[node name="Settings" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -180,7 +221,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
 theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
-text = "Options"
+text = "Settings"
 
 [node name="Credits" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
@@ -194,7 +235,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
 theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
-text = "Credis"
+text = "Credits"
 
 [node name="Exit" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 layout_mode = 2
@@ -212,52 +253,63 @@ text = "Exit"
 
 [node name="IconsHBox" type="HBoxContainer" parent="MainContainer/ContentVBox"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 75
 alignment = 1
 
 [node name="IconKonduktor" type="TextureRect" parent="MainContainer/ContentVBox/IconsHBox"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("7_hmgs3")
-expand_mode = 1
+expand_mode = 2
 stretch_mode = 5
 
 [node name="IconLubGame" type="TextureRect" parent="MainContainer/ContentVBox/IconsHBox"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 texture = ExtResource("3_74ugs")
-expand_mode = 1
+expand_mode = 4
 stretch_mode = 5
 
 [node name="IconGameJamPlus" type="TextureRect" parent="MainContainer/ContentVBox/IconsHBox"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("6_l0m04")
-expand_mode = 1
+expand_mode = 2
 stretch_mode = 5
 
-[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_is5ci")
-volume_db = -1.015
-autoplay = true
-parameters/looping = true
-
-[node name="VersionLabel" type="Label" parent="."]
+[node name="ItchioButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 2
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -48.0
-offset_right = 114.0
-offset_bottom = -22.0
+offset_left = -296.0
+offset_top = -152.0
+offset_right = -56.0
+offset_bottom = -48.0
+grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("1_exnit")
+theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+theme_override_colors/font_pressed_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/font_hover_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/icon_normal_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+theme_override_colors/icon_pressed_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_colors/icon_hover_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("4_hmgs3")
 theme_override_font_sizes/font_size = 24
-text = "v0.2.0"
+theme_override_styles/normal = SubResource("StyleBoxFlat_itchio")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_itchio_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_itchio_hover")
+text = "Check our itch.io"
+icon = ExtResource("8_itchio")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/How to play" to="." method="_on_how_to_play_pressed"]
-[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Options" to="." method="_on_opcje_pressed"]
+[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Settings" to="." method="_on_opcje_pressed"]
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ItchioButton" to="." method="_on_send_feedback_pressed"]

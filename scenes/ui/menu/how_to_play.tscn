@@ -1,9 +1,43 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwt1d75fe302a"]
+[gd_scene load_steps=27 format=3 uid="uid://dwt1d75fe302a"]
 
 [ext_resource type="Script" uid="uid://7qc8ksv8wxlj" path="res://scenes/ui/menu/how_to_play.gd" id="1_mfe6v"]
-[ext_resource type="Texture2D" uid="uid://chxlbb71byf8b" path="res://assets/ui/howtoplay.png" id="1_o8b4v"]
 [ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="2_font"]
+[ext_resource type="Texture2D" uid="uid://d1n82yu5manko" path="res://assets/ui/background_universal.png" id="2_o04u1"]
+[ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="3_title_font"]
 [ext_resource type="Script" uid="uid://dakapdyh1idyf" path="res://scenes/ui/menu/x.gd" id="4_jrmmo"]
+[ext_resource type="Texture2D" uid="uid://droc54qprwkfx" path="res://assets/ui/sterowanie/mouse_move.png" id="5_mouse_move"]
+[ext_resource type="Texture2D" uid="uid://stqaray86wan" path="res://assets/ui/sterowanie/mouse_left.png" id="6_mouse_left"]
+[ext_resource type="Texture2D" uid="uid://b5551rupoyjjw" path="res://assets/ui/sterowanie/mouse_right.png" id="7_mouse_right"]
+[ext_resource type="Texture2D" uid="uid://ydgoqqdmaoo1" path="res://assets/ui/sterowanie/keyboard_w_outline.png" id="8_key_w"]
+[ext_resource type="Texture2D" uid="uid://bo81fuvn337bd" path="res://assets/ui/sterowanie/keyboard_a_outline.png" id="9_key_a"]
+[ext_resource type="Texture2D" uid="uid://brew7er87toy6" path="res://assets/ui/sterowanie/keyboard_s_outline.png" id="10_key_s"]
+[ext_resource type="Texture2D" uid="uid://x8iaqij108et" path="res://assets/ui/sterowanie/keyboard_d_outline.png" id="11_key_d"]
+[ext_resource type="Texture2D" uid="uid://cnakqwbc8j11s" path="res://assets/ui/sterowanie/keyboard_r_outline.png" id="12_key_r"]
+[ext_resource type="Texture2D" uid="uid://c2855lm6tq7ea" path="res://assets/ui/sterowanie/keyboard_space_outline.png" id="13_er4ov"]
+[ext_resource type="Texture2D" uid="uid://ilj840poeqmk" path="res://assets/ui/sterowanie/keyboard_shift_outline.png" id="13_key_shift"]
+[ext_resource type="Texture2D" uid="uid://cowehpco5lnyk" path="res://assets/ui/sterowanie/gamepad_stick_r.png" id="14_gamepad_stick_r"]
+[ext_resource type="Texture2D" uid="uid://cjtfmy0vrgbf1" path="res://assets/ui/sterowanie/gamepad_sitck_l.png" id="15_gamepad_stick_l"]
+[ext_resource type="Texture2D" uid="uid://fftwp04so83k" path="res://assets/ui/sterowanie/gamepad_button_down.png" id="16_gamepad_button_down"]
+[ext_resource type="Texture2D" uid="uid://bgoljiggrr6rg" path="res://assets/ui/sterowanie/keyboard_escape_outline.png" id="17_key_esc"]
+[ext_resource type="Texture2D" uid="uid://b3jijy7musy1q" path="res://assets/ui/sterowanie/keyboard.png" id="18_keyboard_icon"]
+[ext_resource type="Texture2D" uid="uid://daoito1e4ujgd" path="res://assets/ui/sterowanie/mouse.png" id="19_mouse_icon"]
+[ext_resource type="Texture2D" uid="uid://buowg7qwrb34f" path="res://assets/ui/sterowanie/gamepad.png" id="21_gamepad_icon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_container"]
+content_margin_left = 40.0
+content_margin_top = 30.0
+content_margin_right = 40.0
+content_margin_bottom = 30.0
+bg_color = Color(0.08, 0.08, 0.08, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
 content_margin_left = 20.0
@@ -45,7 +79,7 @@ border_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 shadow_color = Color(0.41960785, 0.54901963, 0.5882353, 0.6)
 shadow_size = 15
 
-[node name="How_to_play" type="Control"]
+[node name="HowToPlay" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,26 +88,374 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mfe6v")
 
-[node name="HowtoplayBackground" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_o8b4v")
+texture = ExtResource("2_o04u1")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="EscHint" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="EscIcon" type="TextureRect" parent="EscHint"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("17_key_esc")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="EscLabel" type="Label" parent="EscHint"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "Pause"
+vertical_alignment = 1
+
+[node name="ColumnsHBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 112.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="ShooterContainer" type="PanelContainer" parent="ColumnsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_container")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColumnsHBox/ShooterContainer"]
+layout_mode = 2
+
+[node name="ContentVBox" type="VBoxContainer" parent="ColumnsHBox/ShooterContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="TitleContainer" type="HBoxContainer" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="KeyboardIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("18_keyboard_icon")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_title_font")
+theme_override_font_sizes/font_size = 72
+text = "Shooter"
+vertical_alignment = 1
+
+[node name="MouseIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("19_mouse_icon")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ObjectiveLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "OBJECTIVE"
+horizontal_alignment = 1
+
+[node name="ObjectiveText" type="RichTextLabel" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_font")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Cover your buddy from the rooftops, shoot enemies chasing them.
+Avoid the [color=#a65e5e][b][REDACTED][/b][/color]![/center]"
+fit_content = true
+
+[node name="ControlsLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="ControlsCenterContainer" type="CenterContainer" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+
+[node name="ControlsGrid" type="GridContainer" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="MouseMoveIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_mouse_move")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MouseMoveLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Camera control"
+vertical_alignment = 1
+
+[node name="WASDContainer" type="HBoxContainer" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="KeyW" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid/WASDContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("8_key_w")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="KeyA" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid/WASDContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("9_key_a")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="KeyS" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid/WASDContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("10_key_s")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="KeyD" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid/WASDContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("11_key_d")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="WASDLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Move"
+vertical_alignment = 1
+
+[node name="MouseLeftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_mouse_left")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MouseLeftLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Shoot"
+vertical_alignment = 1
+
+[node name="MouseRightIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("7_mouse_right")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MouseRightLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Aim"
+vertical_alignment = 1
+
+[node name="KeyRIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("12_key_r")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="KeyRLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Reload"
+vertical_alignment = 1
+
+[node name="SpaceIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("13_er4ov")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SpaceDescLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Jump"
+vertical_alignment = 1
+
+[node name="ShiftIcon" type="TextureRect" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("13_key_shift")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ShiftLabel" type="Label" parent="ColumnsHBox/ShooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Sprint"
+vertical_alignment = 1
+
+[node name="LooterContainer" type="PanelContainer" parent="ColumnsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_container")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColumnsHBox/LooterContainer"]
+layout_mode = 2
+
+[node name="ContentVBox" type="VBoxContainer" parent="ColumnsHBox/LooterContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="TitleContainer" type="HBoxContainer" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GamepadIcon" type="TextureRect" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("21_gamepad_icon")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/TitleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_title_font")
+theme_override_font_sizes/font_size = 72
+text = "Looter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ObjectiveLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "OBJECTIVE"
+horizontal_alignment = 1
+
+[node name="ObjectiveText" type="RichTextLabel" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_font")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Explore the city, look for G.O.D.O.T. parts, in order to escape the city.
+Do not trust the citizens, some are [color=#a65e5e][b][REDACTED][/b][/color]...[/center]"
+fit_content = true
+
+[node name="ControlsLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="ControlsCenterContainer" type="CenterContainer" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+
+[node name="ControlsGrid" type="GridContainer" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="StickRIcon" type="TextureRect" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("14_gamepad_stick_r")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="StickRLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Camera control"
+vertical_alignment = 1
+
+[node name="StickLIcon" type="TextureRect" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("15_gamepad_stick_l")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="StickLLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Move"
+vertical_alignment = 1
+
+[node name="ButtonDownIcon" type="TextureRect" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("16_gamepad_button_down")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ButtonDownLabel" type="Label" parent="ColumnsHBox/LooterContainer/ScrollContainer/ContentVBox/ControlsCenterContainer/ControlsGrid"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Jump"
+vertical_alignment = 1
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -120.0
-offset_top = 56.0
-offset_right = -55.0
-offset_bottom = 124.0
+offset_left = -104.0
+offset_top = 32.0
+offset_right = -39.0
+offset_bottom = 100.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)

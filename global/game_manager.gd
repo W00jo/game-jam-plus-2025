@@ -10,7 +10,7 @@ signal collectible_gathered(count: int)
 signal game_won
 
 func _ready():
-	# Create persistent menu music player
+	# Persistent music in main menu
 	menu_music_player = AudioStreamPlayer.new()
 	menu_music_player.stream = menu_music_stream
 	menu_music_player.volume_db = -1.015

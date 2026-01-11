@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chxlbb71byf8b"
-path="res://.godot/imported/howtoplay.png-34b558fedcfe26b40667265b98c07782.ctex"
+uid="uid://cowehpco5lnyk"
+path="res://.godot/imported/gamepad_stick_r.png-d57b80323e55d71a238af4e0fcfa30c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/howtoplay.png"
-dest_files=["res://.godot/imported/howtoplay.png-34b558fedcfe26b40667265b98c07782.ctex"]
+source_file="res://assets/ui/sterowanie/gamepad_stick_r.png"
+dest_files=["res://.godot/imported/gamepad_stick_r.png-d57b80323e55d71a238af4e0fcfa30c9.ctex"]
 
 [params]
 

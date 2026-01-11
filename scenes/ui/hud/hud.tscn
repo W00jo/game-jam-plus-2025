@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmrwwjnwxvabd"]
+[gd_scene load_steps=5 format=3 uid="uid://dmrwwjnwxvabd"]
 
 [ext_resource type="Script" uid="uid://d3qmhprbodkt6" path="res://scenes/ui/hud/hud.gd" id="1_0mwgc"]
 [ext_resource type="Texture2D" uid="uid://5k02w3wc0xbp" path="res://assets/ui/crosshair_shooter.png" id="2_as3gr"]
 [ext_resource type="Texture2D" uid="uid://damw3x0qs7xsr" path="res://assets/ui/hitmarker.png" id="3_ax4tw"]
 [ext_resource type="Texture2D" uid="uid://i775h3274i1a" path="res://assets/ui/crosshar_looter.png" id="4_2wu1p"]
-[ext_resource type="Texture2D" uid="uid://dv8ajf47tnvvj" path="res://assets/ui/prof.png" id="4_ax4tw"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0mwgc")
@@ -58,10 +57,3 @@ text = "[b]Loot[/b] left to collect: 0"
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(790.99994, 425.99997)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_ax4tw")
-hframes = 3
-vframes = 2
