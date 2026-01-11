@@ -51,81 +51,81 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.072009, 1.2014427, -14.306
 player_path = NodePath("../../GridContainer/Viewport_container_player2/Viewport_player2/Player2")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002" index="0"]
-bones/1/rotation = Quaternion(-0.049685173, -0.002975746, 0.0011072129, 0.9987599)
-bones/2/rotation = Quaternion(-0.0032967506, -0.021150215, 0.00075905287, 0.99977064)
-bones/3/rotation = Quaternion(-0.0033631248, -0.021105181, 0.000763629, 0.9997713)
-bones/4/rotation = Quaternion(0.030434676, 0.01909348, -0.020924153, 0.9991353)
-bones/5/rotation = Quaternion(0.06588856, -0.005571071, 0.014986013, 0.9976989)
-bones/7/rotation = Quaternion(-0.46084693, -0.5183131, 0.58182156, -0.42480034)
-bones/8/rotation = Quaternion(0.5265248, 0.13800605, 0.03679387, 0.8380766)
-bones/9/rotation = Quaternion(0.03482627, 0.00058717845, 0.2663818, 0.9632381)
-bones/10/rotation = Quaternion(0.10359446, 0.92693484, 0.13358742, -0.3349844)
-bones/11/rotation = Quaternion(-0.048674814, -0.13006717, -0.4413362, 0.8865301)
-bones/12/rotation = Quaternion(-0.052679703, 0.00850355, 0.49363405, 0.8680311)
-bones/13/rotation = Quaternion(0.013713426, -0.016388325, -0.02011275, 0.9995694)
-bones/15/rotation = Quaternion(-0.1721021, -0.12262115, -0.08556894, 0.9736647)
-bones/16/rotation = Quaternion(-0.25164297, -0.009943068, 0.04167302, 0.9668715)
-bones/17/rotation = Quaternion(-0.09720251, 0.006221019, 0.0028727646, 0.9952411)
-bones/19/rotation = Quaternion(0.49869624, -0.502108, 0.5087597, 0.4902584)
-bones/20/rotation = Quaternion(0.571288, -0.13986692, -0.08372832, 0.8043984)
-bones/21/rotation = Quaternion(0.030788384, -0.00061033346, -0.23613803, 0.97123146)
-bones/22/rotation = Quaternion(-0.11310325, 0.90161276, 0.03203548, 0.41626427)
-bones/23/rotation = Quaternion(-0.122414455, 0.0039293556, 0.37330055, 0.9195901)
-bones/24/rotation = Quaternion(-0.029280787, -0.01498767, -0.3251584, 0.9450873)
-bones/25/rotation = Quaternion(0.026229437, 0.023659455, -0.0074306265, 0.99934834)
-bones/27/rotation = Quaternion(-0.11798838, 0.060489774, 0.00304804, 0.99116623)
-bones/28/rotation = Quaternion(-0.25421104, -0.009067658, 0.17033795, 0.9519872)
-bones/29/rotation = Quaternion(-0.057075035, 0.005838859, 0.047376912, 0.997228)
-bones/31/rotation = Quaternion(0.04531542, 0.08327857, 0.9946444, -0.041156407)
-bones/32/rotation = Quaternion(-0.17976774, -0.07812405, 0.014999799, 0.9804872)
-bones/33/rotation = Quaternion(0.516483, 0.05308044, -0.07990733, 0.850907)
-bones/34/rotation = Quaternion(0.32716414, 0.07519378, -0.025847899, 0.9416165)
-bones/36/rotation = Quaternion(-0.107674316, 0.09820305, 0.98877853, 0.032855578)
-bones/37/rotation = Quaternion(-0.19294989, 0.05053823, -0.0022610757, 0.97990364)
-bones/38/rotation = Quaternion(0.5170804, -0.019730428, 0.036770027, 0.8549191)
-bones/39/rotation = Quaternion(0.32708192, -0.07477798, 0.02573178, 0.9416813)
+bones/1/rotation = Quaternion(-0.043324187, -0.004817736, 0.004962382, 0.99903715)
+bones/2/rotation = Quaternion(0.004029733, -0.03206186, 0.010731438, 0.99942017)
+bones/3/rotation = Quaternion(0.003429049, -0.03185583, 0.0109760845, 0.9994263)
+bones/4/rotation = Quaternion(0.028605621, 0.016479852, -0.02363027, 0.99917555)
+bones/5/rotation = Quaternion(0.046552613, -0.011807933, 0.01834458, 0.9986776)
+bones/7/rotation = Quaternion(-0.49787518, -0.49012306, 0.57249546, -0.42912564)
+bones/8/rotation = Quaternion(0.5353347, 0.13820705, 0.09632249, 0.82767)
+bones/9/rotation = Quaternion(0.03380394, 0.0005886798, 0.258562, 0.96540284)
+bones/10/rotation = Quaternion(0.10623315, 0.93249375, 0.13903227, -0.31597495)
+bones/11/rotation = Quaternion(-0.04948558, -0.13002267, -0.43870905, 0.88779485)
+bones/12/rotation = Quaternion(-0.04729978, 0.0017172846, 0.48727474, 0.8719651)
+bones/13/rotation = Quaternion(0.016271649, -0.016812311, -0.02614078, 0.9993845)
+bones/15/rotation = Quaternion(-0.17788424, -0.122134715, -0.08306909, 0.97290283)
+bones/16/rotation = Quaternion(-0.21971469, -0.009339383, 0.04388448, 0.97453195)
+bones/17/rotation = Quaternion(-0.086332746, 0.0057297125, 0.0034479606, 0.99624395)
+bones/19/rotation = Quaternion(0.51135224, -0.49312535, 0.5001653, 0.49515775)
+bones/20/rotation = Quaternion(0.56312793, -0.108675495, -0.10828614, 0.8120041)
+bones/21/rotation = Quaternion(0.028475063, -0.00061308563, -0.21839446, 0.9754449)
+bones/22/rotation = Quaternion(-0.12184391, 0.89858234, 0.03954841, 0.41969016)
+bones/23/rotation = Quaternion(-0.1192921, 0.007329007, 0.3757347, 0.91898817)
+bones/24/rotation = Quaternion(-0.033810362, -0.018379517, -0.32868809, 0.9436543)
+bones/25/rotation = Quaternion(0.024767373, 0.023420257, -0.009314789, 0.99937546)
+bones/27/rotation = Quaternion(-0.09481164, 0.062104236, -0.010464911, 0.99350107)
+bones/28/rotation = Quaternion(-0.2635721, -0.009222978, 0.17520864, 0.94854987)
+bones/29/rotation = Quaternion(-0.0704286, 0.006302075, 0.054495715, 0.99600726)
+bones/31/rotation = Quaternion(0.054266427, 0.0617535, 0.99503964, -0.05601631)
+bones/32/rotation = Quaternion(-0.17736386, -0.08510923, 0.0203949, 0.9802461)
+bones/33/rotation = Quaternion(0.508898, 0.06411429, -0.109098546, 0.8514751)
+bones/34/rotation = Quaternion(0.3297568, 0.07568849, -0.025512097, 0.94068104)
+bones/36/rotation = Quaternion(-0.08130581, 0.10136247, 0.99128187, 0.021803755)
+bones/37/rotation = Quaternion(-0.2510302, 0.053391874, 0.00041795516, 0.9665056)
+bones/38/rotation = Quaternion(0.55517286, -0.004923991, -0.0039228983, 0.8317112)
+bones/39/rotation = Quaternion(0.3268099, -0.074726164, 0.025766678, 0.9417789)
 
 [node name="Head" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="2"]
-transform = Transform3D(0.9977901, -0.0048048, -0.06627304, 0.066444576, 0.080637276, 0.99452627, 0.00056557916, -0.9967319, 0.08077833, 0.07415839, -2.9054756, -82.96361)
+transform = Transform3D(0.99063605, -0.060680576, -0.12230332, 0.12674373, 0.07570389, 0.9890423, -0.05075683, -0.9952823, 0.0826859, -0.9057297, -2.1075501, -82.9772)
 
 [node name="Torso" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="3"]
-transform = Transform3D(0.99997985, -0.0019159785, -0.0060541346, 0.005834087, -0.099253684, 0.995045, -0.0025073802, -0.99506027, -0.09924051, 0, -1.1473308, -55.17752)
+transform = Transform3D(0.99990433, -0.009497757, -0.010056174, 0.009196211, -0.086612746, 0.99619955, -0.010332655, -0.99619675, -0.08651711, 0, -1.1473308, -55.17752)
 
 [node name="LeftArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="4"]
-transform = Transform3D(0.10276422, 0.3424047, -0.9339155, -0.9937601, -0.0055851787, -0.11139697, -0.043358833, 0.93953556, 0.33969414, 10.790327, -3.9632378, -75.55145)
+transform = Transform3D(0.3195561, 0.31697926, -0.89297694, -0.94733614, 0.0860613, -0.30845964, -0.020924471, 0.9445195, 0.32778737, 10.19935, -2.3652081, -75.86557)
 
 [node name="LeftForeArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="5"]
-transform = Transform3D(0.24763703, 0.17729795, -0.9524919, -0.85753375, 0.49764758, -0.1303162, 0.45090064, 0.8490649, 0.27527496, 16.484173, -4.0561132, -59.927917)
+transform = Transform3D(0.42049256, 0.05579634, -0.90557855, -0.78274196, 0.5270344, -0.33098236, 0.45880362, 0.84800977, 0.2652883, 15.470396, -0.9340949, -60.159153)
 
 [node name="LeftHand" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="6"]
-transform = Transform3D(-0.7864396, 0.06710638, 0.6140105, 0.61317134, 0.20453724, 0.76301044, -0.074385315, 0.97655493, -0.20200416, 20.273209, 6.57913, -41.782528)
+transform = Transform3D(-0.88128334, -0.0013810396, 0.4725856, 0.462067, 0.20730987, 0.8622738, -0.09916261, 0.9782737, -0.18206087, 16.662817, 10.329174, -42.036316)
 
 [node name="RightArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="7"]
-transform = Transform3D(0.18881427, -0.30986887, 0.9318424, 0.9818913, 0.044647947, -0.18410847, 0.015444733, 0.9497303, 0.31268775, -10.956478, -4.6278057, -76.02834)
+transform = Transform3D(0.1818481, -0.27209455, 0.9449316, 0.9829457, 0.07704644, -0.16697812, -0.027369697, 0.9591811, 0.28146493, -11.52235, -4.288855, -75.49748)
 
 [node name="RightForeArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="8"]
-transform = Transform3D(0.29745743, -0.13212639, 0.9455482, 0.85436505, 0.4788665, -0.20185798, -0.42612046, 0.86788785, 0.2553267, -16.105368, -3.8859193, -60.24729)
+transform = Transform3D(0.2698176, -0.11547951, 0.9559617, 0.8582271, 0.47901413, -0.18436778, -0.43662834, 0.8701781, 0.22835414, -16.043568, -3.008624, -59.55939)
 
 [node name="RightHand" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="9"]
-transform = Transform3D(-0.87993705, -0.23148745, -0.41487837, -0.468337, 0.27594382, 0.83935386, -0.07981701, 0.93288165, -0.35122734, -18.927885, 6.343749, -41.707237)
+transform = Transform3D(-0.8755509, -0.20955372, -0.4353134, -0.47856206, 0.25262597, 0.84092695, -0.066248104, 0.9445989, -0.32147127, -18.51047, 7.2241983, -40.970413)
 
 [node name="LeftUpLeg" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="10"]
-transform = Transform3D(-0.99250543, 0.08941957, 0.083290555, 0.09700035, 0.16193506, 0.9820224, 0.07432438, 0.9827417, -0.16939515, 5.9848366, -0.46329382, -46.648655)
+transform = Transform3D(-0.9878347, 0.118179165, 0.101076074, 0.114912905, 0.11681474, 0.98648334, 0.10477462, 0.9860972, -0.12897396, 5.9848366, -0.46329382, -46.648655)
 
 [node name="LeftLeg" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="11"]
-transform = Transform3D(-0.9624909, 0.055359013, 0.2656068, 0.25023344, -0.19721678, 0.94788647, 0.10485621, 0.97879565, 0.17596668, 8.589109, 4.252935, -18.027092)
+transform = Transform3D(-0.948275, 0.084822685, 0.30590826, 0.2788138, -0.23820245, 0.93033457, 0.15178162, 0.96750414, 0.20223165, 9.42671, 2.938842, -17.929365)
 
 [node name="LeftFoot" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="12"]
-transform = Transform3D(-0.99518526, 0.07266125, 0.06577928, 0.097767875, 0.78337884, 0.6138066, -0.0069300793, 0.6172824, -0.78671086, 10.239534, -1.626709, 11.153841)
+transform = Transform3D(-0.9954974, 0.061638936, 0.07201105, 0.09371446, 0.7540793, 0.6500627, -0.014232781, 0.6538841, -0.75646025, 11.955538, -4.162712, 10.914934)
 
 [node name="BoneAttachment3D4" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="13"]
-transform = Transform3D(-0.9746536, -0.08612166, -0.20647904, -0.21938515, 0.18712671, 0.95752484, -0.043825887, 0.9785533, -0.20127751, -5.9848366, -0.35910308, -46.648655)
+transform = Transform3D(-0.98582804, -0.05971004, -0.15677376, -0.1656141, 0.19741198, 0.96623003, -0.02674462, 0.9785005, -0.20450306, -5.9848366, -0.35910308, -46.648655)
 
 [node name="BoneAttachment3D5" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="14"]
-transform = Transform3D(-0.9473332, 0.013107322, -0.319982, -0.3167437, -0.18580376, 0.9301348, -0.047262285, 0.98249936, 0.18016967, -8.4930935, 5.090883, -18.148706)
+transform = Transform3D(-0.96244186, 0.051104434, -0.2666356, -0.2697267, -0.29170942, 0.9176892, -0.030882148, 0.9551407, 0.2945376, -7.7238665, 5.3904366, -18.150244)
 
 [node name="BoneAttachment3D6" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="15"]
-transform = Transform3D(-0.9664397, -0.19748716, -0.16429615, -0.2567827, 0.76143765, 0.5952105, 0.007554801, 0.6174233, -0.78659457, -8.10225, -0.44954538, 11.148157)
+transform = Transform3D(-0.9640008, -0.22766277, -0.13737652, -0.26268762, 0.73534304, 0.62471265, -0.041204955, 0.63831055, -0.76867515, -6.199998, -3.307962, 10.33082)
 
 [node name="Citizen" parent="NavigationRegion3D" instance=ExtResource("4_ho4vq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.402817, 1.4587977, -13.740158)
@@ -260,10 +260,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9259977, 1.2, -4.916)
 [node name="PauseMenu" parent="." instance=ExtResource("8_kqya4")]
 visible = false
 
-[connection signal="player_hit" from="GridContainer/Viewport_container_player1/Viewport_player1/Player1" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_player_1_player_hit"]
-[connection signal="player_hit" from="GridContainer/Viewport_container_player2/Viewport_player2/Player2" to="GridContainer/Viewport_container_player2/Viewport_player2/Player2/HUD" method="_on_player_2_player_hit"]
 [connection signal="enemy_hit" from="NavigationRegion3D/Gostek" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_enemy_hit"]
 [connection signal="enemy_hit" from="NavigationRegion3D/Stalker" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_enemy_hit"]
+[connection signal="player_hit" from="GridContainer/Viewport_container_player1/Viewport_player1/Player1" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_player_1_player_hit"]
+[connection signal="player_hit" from="GridContainer/Viewport_container_player2/Viewport_player2/Player2" to="GridContainer/Viewport_container_player2/Viewport_player2/Player2/HUD" method="_on_player_2_player_hit"]
 
 [editable path="NavigationRegion3D/Gostek"]
 [editable path="NavigationRegion3D/Gostek/MonsterAnimation"]

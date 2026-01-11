@@ -1,10 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://cek341xms30k1"]
+[gd_scene load_steps=8 format=3 uid="uid://cek341xms30k1"]
 
 [ext_resource type="Script" path="res://scenes/hud/hud.gd" id="1_0mwgc"]
 [ext_resource type="Texture2D" uid="uid://5k02w3wc0xbp" path="res://assets/ui/crosshair_shooter.png" id="2_as3gr"]
+[ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="2_font"]
 [ext_resource type="Texture2D" uid="uid://damw3x0qs7xsr" path="res://assets/ui/hitmarker.png" id="3_ax4tw"]
 [ext_resource type="Texture2D" uid="uid://i775h3274i1a" path="res://assets/ui/crosshar_looter.png" id="4_2wu1p"]
 [ext_resource type="Texture2D" uid="uid://dv8ajf47tnvvj" path="res://assets/ui/icons_player.png" id="4_ax4tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loot_panel"]
+content_margin_left = 15.0
+content_margin_top = 10.0
+content_margin_right = 15.0
+content_margin_bottom = 10.0
+bg_color = Color(0.08, 0.08, 0.08, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6509804, 0.36862746, 0.36862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0mwgc")
@@ -42,8 +59,9 @@ offset_bottom = 64.0
 texture = ExtResource("4_2wu1p")
 
 [node name="LootIndicatorBackground" type="Panel" parent="."]
-offset_right = 185.0
-offset_bottom = 40.0
+offset_right = 220.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_loot_panel")
 
 [node name="LootIndicator" type="RichTextLabel" parent="LootIndicatorBackground"]
 layout_mode = 1
@@ -52,13 +70,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 12
-theme_override_font_sizes/bold_font_size = 12
-theme_override_font_sizes/bold_italics_font_size = 12
-theme_override_font_sizes/italics_font_size = 12
-theme_override_font_sizes/mono_font_size = 12
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_font")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
-text = "[b]Loot[/b] left to collect: 0"
+text = "[b]Loot[/b] collected: 0/0"
+fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1

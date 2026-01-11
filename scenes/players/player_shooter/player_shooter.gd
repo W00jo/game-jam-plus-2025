@@ -29,6 +29,7 @@ var t_bob = 0.0
 # zmienne FOV
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
+const AIM_FOV = 50.0  # Zoomed in FOV when aiming
 
 # Bullets
 var bullet_trail = load("res://scenes/ui/hud/bullet_trail.tscn")
@@ -94,9 +95,15 @@ func _physics_process(delta):
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
 	
-	# FOV
+	# FOV with aiming
+	var is_aiming = Input.is_action_pressed("aim")
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED *2)
-	var target_fov = BASE_FOV + FOV_CHANGE *velocity_clamped
+	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
+	
+	# Override FOV when aiming
+	if is_aiming:
+		target_fov = AIM_FOV
+	
 	camera.fov = lerp(camera.fov, target_fov, delta * 8)
 	
 	# Odpalanie się animacji
