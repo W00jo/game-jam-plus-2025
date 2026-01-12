@@ -17,7 +17,12 @@ enum PlayerType { PLAYER_1, PLAYER_2 }
 func _ready():
 	GameManager.collectible_gathered.connect(_on_collectible_gathered)
 	
-	# Połączenie sygnału citizen_shot z gracza
+	# Only shooter (Player 1) gets hitmarker
+	if player_hud_type == PlayerType.PLAYER_1:
+		GameManager.enemy_hit.connect(_on_enemy_hit)
+		GameManager.citizen_shot.connect(_on_citizen_shot)
+	
+	# Połączenie sygnału citizen_shot z gracza (backup, now handled by GameManager)
 	var player = get_parent()
 	if player and player.has_signal("citizen_shot"):
 		player.citizen_shot.connect(_on_citizen_shot)

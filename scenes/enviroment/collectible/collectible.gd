@@ -27,4 +27,5 @@ func _on_body_entered(body: Node3D):
 		# Ping global script
 		GameManager.collect_item()
 
-func _on_sound_finish(): queue_free()
+func _on_sound_finish():
+	queue_free()

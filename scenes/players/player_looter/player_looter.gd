@@ -98,6 +98,7 @@ func hit() -> void:
 	current_hp -= 1
 	print("Red got hit! HP: ", current_hp, "/", MAX_HP)
 	emit_signal("player_hit")
+	GameManager.record_player_hit()
 	
 	if current_hp <= 0:
 		_show_fail_screen()

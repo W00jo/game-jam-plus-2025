@@ -132,6 +132,7 @@ func hit() -> void:
 	current_hp -= 1
 	print("Green got hit! HP: ", current_hp, "/", MAX_HP)
 	emit_signal("player_hit")
+	GameManager.record_player_hit()
 	
 	if current_hp <= 0:
 		_show_fail_screen()
@@ -165,6 +166,7 @@ func _shooting() -> void:
 				# Sprawdzenie czy to citizen czy wróg
 				if collider.has_signal("citizen_killed"):
 					emit_signal("citizen_shot")
+					GameManager.record_citizen_shot()
 				aim_ray.get_collider().hit()
 			else:
 				instance.init(gun_barrel.global_position, aim_ray_end.global_position)

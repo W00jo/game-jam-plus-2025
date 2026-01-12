@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://bpkb8h3ux012k"]
+[gd_scene load_steps=7 format=4 uid="uid://bpkb8h3ux012k"]
+
+[ext_resource type="Script" uid="uid://dw4q7trbopgui" path="res://scenes/enviroment/collectible/treasure.gd" id="1_treasure_gd"]
+[ext_resource type="AudioStream" uid="uid://b03uany5sdcn7" path="res://assets/audio/sfx/beep.mp3" id="2_67bue"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwcs5"]
 resource_name = "Material.001"
@@ -43,6 +46,8 @@ shadow_mesh = SubResource("ArrayMesh_6lgbs")
 points = PackedVector3Array(0, 1.8404057, -1, 0, 2.2217994, -0.4802271, 0.7284652, 1.8404057, -0.72866094, 0.019772887, 0.70272017, -0.019968688, 0, 0.6787037, 0, -0.019968688, 0.70272017, -0.019968688, -0.72866094, 1.8404057, -0.72866094, -0.4802271, 2.2217994, 0, 0.48003137, 2.2217994, 0, 1, 1.8404057, 0, -0.019968688, 0.70272017, 0.019772887, -1, 1.8404057, 0, 0.019772887, 0.70272017, 0.019772887, 0, 1.8404057, 1, -0.72866094, 1.8404057, 0.7284652, 0, 2.2217994, 0.48003137, 0.7284652, 1.8404057, 0.7284652)
 
 [node name="Treasure" type="Area3D"]
+collision_layer = 3
+script = ExtResource("1_treasure_gd")
 
 [node name="TreasureModel" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_085e6")
@@ -53,3 +58,7 @@ shape = SubResource("ConvexPolygonShape3D_namx0")
 debug_color = Color(0.6457562, 0.51727396, 0.20683914, 0.41960785)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_67bue")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_sound_finish"]

@@ -111,6 +111,7 @@ func _on_stun_timeout() -> void:
 ## Called when enemy takes damage
 func hit() -> void:
 	emit_signal("enemy_hit")
+	GameManager.emit_signal("enemy_hit")  # Trigger hitmarker immediately
 	stun()
 
 ## Zwiększenie prędkości po zabiciu citizena
