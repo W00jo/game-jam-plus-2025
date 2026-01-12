@@ -48,26 +48,26 @@ func _ready():
 			
 			loot_indicator_panel.position.x = viewport_size.x / 2 - loot_indicator_panel.size.x / 2
 			loot_indicator_panel.position.y = 20
-	
+
 func _update_loot_display():
 	var current = GameManager.collectibles_gathered
 	var total = GameManager.collectibles_to_win
 	loot_indicator_label.text = "[b]" + tr("LOOT") + "[/b][color=#6b8c96]" + str(current) + "/" + str(total) + "[/color]"
-	
+
 func _on_collectible_gathered(_count: int):
 	_update_loot_display()
-	
+
 ## Hitmarker
 func _on_enemy_hit():
 	crosshair_hit.visible = true
 	await get_tree().create_timer(0.35).timeout
 	crosshair_hit.visible = false
-	
+
 func _on_player_1_player_hit() -> void:
 	got_hit.visible = true
 	await get_tree().create_timer(0.2).timeout
 	got_hit.visible = false
-	
+
 func _on_player_2_player_hit() -> void:
 	got_hit.visible = true
 	await get_tree().create_timer(0.2).timeout
