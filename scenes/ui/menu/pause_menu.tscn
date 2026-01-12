@@ -133,19 +133,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 text = "RESUME_BUTTON"
 
-[node name="Settings" type="Button" parent="MainContainer/ContentVBox/Buttons"]
-auto_translate_mode = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.41960785, 0.54901963, 0.5882353, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 56
-theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-text = "SETTINGS_BUTTON"
-
 [node name="Restart" type="Button" parent="MainContainer/ContentVBox/Buttons"]
 auto_translate_mode = 1
 layout_mode = 2
@@ -178,6 +165,5 @@ libraries = {
 }
 
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Settings" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="MainContainer/ContentVBox/Buttons/Exit" to="." method="_on_exit_pressed"]

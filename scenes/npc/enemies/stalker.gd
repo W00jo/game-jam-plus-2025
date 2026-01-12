@@ -8,6 +8,7 @@ const STUNNED_SPEED = 0.0
 const STUN_DURATION = 3.0
 const ATTACK_RANGE = 2.0
 const ATTACK_COOLDOWN = 2.0
+const SPEED_INCREASE_PER_KILL = 0.3
 
 # Export variables
 @export var player_path: NodePath
@@ -111,3 +112,10 @@ func _on_stun_timeout() -> void:
 func hit() -> void:
 	emit_signal("enemy_hit")
 	stun()
+
+## Zwiększenie prędkości po zabiciu citizena
+func increase_speed() -> void:
+	speed += SPEED_INCREASE_PER_KILL
+	print("Stalker speed increased to: ", speed)
+	# Visual feedback - czerwonawy kolor
+	material.albedo_color = Color(1.0, 0.3, 0.5, 1.0)

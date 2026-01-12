@@ -3,6 +3,7 @@ extends CharacterBody3D
 # Signals
 signal player_hit
 signal update_ammo
+signal citizen_shot
 
 # Constants
 const SENSITIVITY = 0.005
@@ -161,7 +162,9 @@ func _shooting() -> void:
 		if aim_ray.is_colliding():
 			var collider = aim_ray.get_collider()
 			if collider and collider.is_in_group("enemy"):
-				print("Zabity")
+				# Sprawdzenie czy to citizen czy wróg
+				if collider.has_signal("citizen_killed"):
+					emit_signal("citizen_shot")
 				aim_ray.get_collider().hit()
 			else:
 				instance.init(gun_barrel.global_position, aim_ray_end.global_position)

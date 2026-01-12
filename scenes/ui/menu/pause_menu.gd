@@ -27,12 +27,6 @@ func _on_resume_pressed() -> void:
 	pause_toggle = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _on_options_pressed() -> void:
-	get_tree().paused = false
-	pause_toggle = false
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().change_scene_to_file("res://scenes/ui/menu/options.tscn")
-
 func _on_restart_pressed() -> void:
 	get_tree().paused = false
 	pause_toggle = false

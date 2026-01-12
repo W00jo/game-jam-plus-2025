@@ -34,6 +34,15 @@ offset_bottom = 48.0
 texture = ExtResource("2_as3gr")
 expand_mode = 1
 
+[node name="CrosshairCitizenHit" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.6509804, 0.36862746, 0.36862746, 1)
+self_modulate = Color(0.6509804, 0.36862746, 0.36862746, 1)
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("2_as3gr")
+expand_mode = 1
+
 [node name="CrosshairHit" type="TextureRect" parent="."]
 visible = false
 modulate = Color(0.80784315, 0.7882353, 0.5254902, 1)

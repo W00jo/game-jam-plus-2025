@@ -25,7 +25,12 @@ func _ready():
 	_update_language_selection(TranslationServer.get_locale())
 
 func _on_x_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/menu/menu_lepsze.tscn")
+	# Return to previous scene if set, otherwise go to main menu
+	if GameManager.previous_scene != "":
+		get_tree().change_scene_to_file(GameManager.previous_scene)
+		GameManager.previous_scene = ""  # Reset after use
+	else:
+		get_tree().change_scene_to_file("res://scenes/ui/menu/menu_lepsze.tscn")
 
 func _on_volume_value_changed(value: float) -> void:
 	GameManager.music_volume = value / 100.0

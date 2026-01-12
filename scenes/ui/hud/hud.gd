@@ -7,6 +7,7 @@ enum PlayerType { PLAYER_1, PLAYER_2 }
 
 @onready var got_hit = $GotHit
 @onready var crosshair: TextureRect = $Crosshair
+@onready var crosshair_citizen_hit: TextureRect = $CrosshairCitizenHit
 @onready var crosshair_hit: TextureRect = $CrosshairHit
 ## Gracz lootujący, mimo że nie strzela, potrzebuje mieć tą kropoczkę aby móc nie tylko wycentrować swoje (jako gracza) pole widzenia, ale też jako formę walki z motion sickness.
 @onready var dot_marker: TextureRect = $DotMarker
@@ -15,6 +16,11 @@ enum PlayerType { PLAYER_1, PLAYER_2 }
 
 func _ready():
 	GameManager.collectible_gathered.connect(_on_collectible_gathered)
+	
+	# Połączenie sygnału citizen_shot z gracza
+	var player = get_parent()
+	if player and player.has_signal("citizen_shot"):
+		player.citizen_shot.connect(_on_citizen_shot)
 	
 	# Loading screen (trochę)
 	await get_tree().process_frame
@@ -33,12 +39,15 @@ func _ready():
 			
 			crosshair.position.x = viewport_size.x / 2 - crosshair.size.x / 2
 			crosshair.position.y = viewport_size.y / 2 - crosshair.size.y / 2
+			crosshair_citizen_hit.position.x = viewport_size.x / 2 - crosshair.size.x / 2
+			crosshair_citizen_hit.position.y = viewport_size.y / 2 - crosshair.size.y / 2
 			crosshair_hit.position.x = viewport_size.x / 2 - crosshair.size.x / 2
 			crosshair_hit.position.y = viewport_size.y / 2 - crosshair.size.y / 2
 	
 		PlayerType.PLAYER_2:
 			got_hit.visible = false
 			crosshair.visible = false
+			crosshair_citizen_hit.visible = false
 			crosshair_hit.visible = false
 			loot_indicator_panel.visible = true
 			dot_marker.visible = true
@@ -52,7 +61,7 @@ func _ready():
 func _update_loot_display():
 	var current = GameManager.collectibles_gathered
 	var total = GameManager.collectibles_to_win
-	loot_indicator_label.text = "[b]" + tr("LOOT") + "[/b][color=#6b8c96]" + str(current) + "/" + str(total) + "[/color]"
+	loot_indicator_label.text = tr("LOOT") + "[color=#6b8c96]" + str(current) + "/" + str(total) + "[/color]"
 
 func _on_collectible_gathered(_count: int):
 	_update_loot_display()
@@ -62,6 +71,13 @@ func _on_enemy_hit():
 	crosshair_hit.visible = true
 	await get_tree().create_timer(0.35).timeout
 	crosshair_hit.visible = false
+
+## Czerwony flash celownika po zabiciu citizena (sygnalizacja pomyłki)
+func _on_citizen_shot():
+	var original_modulate = crosshair.modulate
+	crosshair.modulate = Color(0.6509804, 0.36862746, 0.36862746, 1.0)  # Czerwony kolor
+	await get_tree().create_timer(0.3).timeout
+	crosshair.modulate = original_modulate
 
 func _on_player_1_player_hit() -> void:
 	got_hit.visible = true

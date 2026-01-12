@@ -7,7 +7,7 @@
 radius = 0.11621094
 height = 1.1611481
 
-[node name="Citizen" type="CharacterBody3D"]
+[node name="Citizen" type="CharacterBody3D" groups=["enemy"]]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_n55g4")

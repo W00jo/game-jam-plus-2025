@@ -1,9 +1,17 @@
 extends CharacterBody3D
 
+# Signals
+signal citizen_killed
+
+# Constants
+const SPEED: int = 1
+
+# Regular variables
+var gate: bool = true
+
+# Onready variables
 @onready var npc_animation: Node3D = $NPCAnimation
 @onready var animation_player: AnimationPlayer = $NPCAnimation/AnimationPlayer
-const SPEED : int = 1
-var gate : bool = true
 func _ready() -> void:
 	pass
 
@@ -27,7 +35,13 @@ func wander():
 	velocity = Vector3(rand_x, 0, rand_z) * SPEED * randf_range(0.5,0.8)
 	$WanderTimer.wait_time = randi_range(2,5) #Losowy czas po którym zmieni kierunek
 	$WanderTimer.start()
-	look_at(Vector3(rand_x,0,rand_z) * -360)
-	
+	look_at(Vector3(rand_x, 0, rand_z) * -360)
+
 func _on_wander_timer_timeout() -> void:
 	gate = true
+
+## Called when citizen is killed by player
+func hit() -> void:
+	emit_signal("citizen_killed")
+	print("[REDACTED] is angry...")
+	queue_free()

@@ -19,6 +19,9 @@ var menu_music_stream = preload("res://assets/audio/soundtrack/music_1_cut.mp3")
 var music_volume: float = 0.5
 var sfx_volume: float = 1.0
 
+# Track previous scene for options menu navigation
+var previous_scene: String = ""
+
 func _ready() -> void:
 	# Domyślny język = English
 	TranslationServer.set_locale("en")

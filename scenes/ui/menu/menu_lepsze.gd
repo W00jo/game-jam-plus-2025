@@ -12,6 +12,8 @@ func _on_how_to_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/ui/menu/how_to_play.tscn")
 
 func _on_opcje_pressed() -> void:
+	# Coming from main menu, so options should return here
+	GameManager.previous_scene = "res://scenes/ui/menu/menu_lepsze.tscn"
 	get_tree().change_scene_to_file("res://scenes/ui/menu/options.tscn")
 
 func _on_credits_pressed() -> void:
