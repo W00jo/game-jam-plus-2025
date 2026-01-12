@@ -12,15 +12,13 @@ extends Control
 func _ready():
 	GameManager.play_menu_music()
 	ButtonSoundManager.connect_buttons_in_tree(self)
-	# Start volume = 100%
-	var current_volume = db_to_linear(AudioServer.get_bus_volume_db(0))
-	volume_slider.value = current_volume * 100
+	
+	# Load music volume
+	volume_slider.value = GameManager.music_volume * 100
 	volume_label.text = str(int(volume_slider.value)) + "%"
 	
-	# Initialize SFX volume
-	var sfx_bus_index = AudioServer.get_bus_index("SFX")
-	var current_sfx_volume = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus_index))
-	sfx_slider.value = current_sfx_volume * 100
+	# Load SFX volume  
+	sfx_slider.value = GameManager.sfx_volume * 100
 	sfx_label.text = str(int(sfx_slider.value)) + "%"
 	
 	# Highlight current language
@@ -30,19 +28,14 @@ func _on_x_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/ui/menu/menu_lepsze.tscn")
 
 func _on_volume_value_changed(value: float) -> void:
-	var db_value = linear_to_db(value / 100.0)
-	AudioServer.set_bus_volume_db(0, db_value)
+	GameManager.music_volume = value / 100.0
 	volume_label.text = str(int(value)) + "%"
 	GameManager.save_settings()
 
-
 func _on_sfx_volume_changed(value: float) -> void:
-	var sfx_bus_index = AudioServer.get_bus_index("SFX")
-	var db_value = linear_to_db(value / 100.0)
-	AudioServer.set_bus_volume_db(sfx_bus_index, db_value)
+	GameManager.sfx_volume = value / 100.0
 	sfx_label.text = str(int(value)) + "%"
 	GameManager.save_settings()
-
 
 func _on_language_selected(language_code: String) -> void:
 	print("Język: ", language_code)
@@ -50,7 +43,6 @@ func _on_language_selected(language_code: String) -> void:
 	_update_translations(get_tree().root)
 	_update_language_selection(language_code)
 	GameManager.save_settings()
-
 
 func _update_language_selection(locale: String) -> void:
 	flag_pl.modulate = Color(1, 1, 1, 0.5)
@@ -68,7 +60,6 @@ func _update_language_selection(locale: String) -> void:
 			flag_es.modulate = Color(1, 1, 1, 1)
 		"pt":
 			flag_pt.modulate = Color(1, 1, 1, 1)
-
 
 func _update_translations(node: Node) -> void:
 	if node is Label or node is Button or node is RichTextLabel:

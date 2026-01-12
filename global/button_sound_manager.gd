@@ -13,10 +13,12 @@ var return_sound = preload("res://assets/audio/sfx/return.ogg")
 func play_click_sound():
 	var random_click = click_sounds[randi() % click_sounds.size()]
 	audio_player.stream = random_click
+	audio_player.volume_db = linear_to_db(GameManager.sfx_volume)
 	audio_player.play()
 
 func play_return_sound():
 	audio_player.stream = return_sound
+	audio_player.volume_db = linear_to_db(GameManager.sfx_volume)
 	audio_player.play()
 
 func connect_buttons_in_tree(node: Node):

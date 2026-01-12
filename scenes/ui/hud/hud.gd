@@ -23,7 +23,7 @@ func _ready():
 	_update_loot_display()
 	
 	var viewport_size = get_viewport().get_visible_rect().size
-
+	
 	match player_hud_type:
 		PlayerType.PLAYER_1:
 			got_hit.visible = false
@@ -35,7 +35,7 @@ func _ready():
 			crosshair.position.y = viewport_size.y / 2 - crosshair.size.y / 2
 			crosshair_hit.position.x = viewport_size.x / 2 - crosshair.size.x / 2
 			crosshair_hit.position.y = viewport_size.y / 2 - crosshair.size.y / 2
-
+	
 		PlayerType.PLAYER_2:
 			got_hit.visible = false
 			crosshair.visible = false
@@ -53,7 +53,7 @@ func _update_loot_display():
 	var current = GameManager.collectibles_gathered
 	var total = GameManager.collectibles_to_win
 	loot_indicator_label.text = "[b]" + tr("LOOT") + "[/b][color=#6b8c96]" + str(current) + "/" + str(total) + "[/color]"
-
+	
 func _on_collectible_gathered(_count: int):
 	_update_loot_display()
 	
@@ -62,7 +62,7 @@ func _on_enemy_hit():
 	crosshair_hit.visible = true
 	await get_tree().create_timer(0.35).timeout
 	crosshair_hit.visible = false
-
+	
 func _on_player_1_player_hit() -> void:
 	got_hit.visible = true
 	await get_tree().create_timer(0.2).timeout

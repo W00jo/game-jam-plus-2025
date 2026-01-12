@@ -35,7 +35,7 @@ func _ready() -> void:
 	
 	# Material reference for color changes during stun
 	material = stalker_model.get_surface_override_material(0)
-	
+
 func _process(_delta: float) -> void:
 	if player == null:
 		return
@@ -60,7 +60,7 @@ func _process(_delta: float) -> void:
 		_attack_player()
 	
 	move_and_slide()
-	
+
 func _target_in_range() -> bool:
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 
@@ -77,13 +77,13 @@ func _attack_player() -> void:
 	# Attack cooldown
 	can_attack = false
 	get_tree().create_timer(ATTACK_COOLDOWN).timeout.connect(func(): can_attack = true)
-
+	
 func _flash_attack() -> void:
 	# Visual feedback przy ataku
 	material.albedo_color = Color(1.0, 1.0, 1.0, 1.0)
 	await get_tree().create_timer(0.2).timeout
 	material.albedo_color = Color(1.0, 0.45882353, 1.0, 1.0)  # Back to magenta
-	
+
 ## Mechanika stunu - zatrzymuje przeciwnika na czas
 func stun() -> void:
 	if is_stunned:
