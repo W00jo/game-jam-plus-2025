@@ -58,19 +58,19 @@ A hidden scoring mechanic that rewards skilled and fast gameplay.
 **Score formula:**
 
 $$
-Final score = base score - time penalty + enemy bonus + treasure bonuse - citizen penalty - damage penalty
+FinalScore = BaseScore - TimePenalty + EnemyBonus + TreasureBonus - CitizenPenalty - DamagePenalty
 $$
 
 **Components:**
 
 | Component | Value | Description |
 |-----------|-------|-------------|
-| **Base Score** | 10000 | Starting points for all players |
-| **Time Penalty** | -10 per second | Faster completion = higher score |
-| **Enemy Bonus** | +100 per kill | Reward for combat efficiency |
-| **Treasure Bonus** | +500 per treasure | Optional collectibles boost score significantly |
-| **Citizen Penalty** | -300 per citizen | Heavy penalty for shooting civilians |
-| **Damage Penalty** | -150 per hit | Reward for avoiding damage |
+| **Base score** | 10000 | Starting points for all players |
+| **Time penalty** | -10 per second | Faster completion = higher score |
+| **Enemy bonus** | +100 per kill | Reward for combat efficiency |
+| **Treasure bonus** | +500 per treasure | Optional collectibles boost score significantly |
+| **Citizen penalty** | -300 per citizen | Heavy penalty for shooting civilians |
+| **Damage penalty** | -150 per hit | Reward for avoiding damage |
 
 **Notes:**
 
