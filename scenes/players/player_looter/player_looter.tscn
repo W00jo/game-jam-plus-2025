@@ -1,7 +1,8 @@
-[gd_scene load_steps=49 format=4 uid="uid://8kdpemwib222"]
+[gd_scene load_steps=51 format=4 uid="uid://8kdpemwib222"]
 
 [ext_resource type="Script" uid="uid://dr3gyeesj80ac" path="res://scenes/players/player_looter/player_looter.gd" id="1_wms8c"]
 [ext_resource type="Texture2D" uid="uid://dpov3cbscrl7d" path="res://assets/models/player_looter/player_looter_DefaultMaterial_BaseColor.1001-DefaultMaterial_Alpha.png" id="2_0j4j2"]
+[ext_resource type="Script" uid="uid://fw41fs7trw72" path="res://scenes/players/enemy_proximity_sound.gd" id="2_enemy_proximity"]
 [ext_resource type="Texture2D" uid="uid://clc1uoy8cdwk8" path="res://assets/models/player_looter/player_looter_DefaultMaterial_Emission.png" id="3_o4pbw"]
 [ext_resource type="Texture2D" uid="uid://dqmt841cncp7w" path="res://assets/models/player_looter/player_looter_DefaultMaterial_Metallic.1001-DefaultMaterial_Roughness.png" id="4_7ivg4"]
 [ext_resource type="Texture2D" uid="uid://bybaf0uw3rgob" path="res://assets/models/player_looter/player_looter_DefaultMaterial_Normal.png" id="5_j5cqv"]
@@ -4446,6 +4447,9 @@ _data = {
 radius = 0.22363281
 height = 1.0805664
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_proximity"]
+radius = 5.0
+
 [node name="PlayerLooter" type="CharacterBody3D" groups=["player"]]
 collision_mask = 7
 script = ExtResource("1_wms8c")
@@ -4802,10 +4806,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_an075")
 
 [node name="Physical Bone mixamorig_LeftForeArm" type="PhysicalBone3D" parent="Model/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(0.14323391, -0.26031289, -0.95484096, -0.39455345, 0.86978585, -0.29631105, 0.90764076, 0.41917753, 0.021875467, 72.56737, 6.212785, -184.48381)
+transform = Transform3D(0.14323391, -0.26031289, -0.95484096, -0.39455345, 0.86978585, -0.29631105, 0.90764076, 0.41917753, 0.02187548, 72.56737, 6.212785, -184.48381)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.816789e-05, -0.00015279735, 16.59815)
-body_offset = Transform3D(1, -2.3841858e-07, 1.4156103e-07, 9.685755e-08, -4.172325e-07, -0.99999994, 1.4901161e-07, 0.9999999, -4.4703484e-07, -3.0517578e-05, 16.598148, 0.00016021729)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.816789e-05, -0.00015329201, 16.598152)
+body_offset = Transform3D(1, -2.3841858e-07, 1.4156103e-07, 9.685755e-08, -4.172325e-07, -0.99999976, 1.4901161e-07, 0.9999999, -4.172325e-07, -3.0517578e-05, 16.598148, 0.00016021729)
 bone_name = "mixamorig_LeftForeArm"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -5091,6 +5095,17 @@ libraries = {
 [node name="LooterCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.083740234, 0)
 shape = SubResource("CapsuleShape3D_jad7f")
+
+[node name="EnemyProximityDetector" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("2_enemy_proximity")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyProximityDetector"]
+shape = SubResource("SphereShape3D_proximity")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="EnemyProximityDetector"]
+volume_db = -4.0
 
 [node name="LooterHead" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.251)

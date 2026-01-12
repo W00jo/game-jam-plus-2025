@@ -17,16 +17,9 @@ var health = 1
 var is_active = false
 var can_attack = true
 
-# Ambient sounds
-var spotted_sounds = [
-	preload("res://assets/audio/sfx/ambient_1.mp3"),
-	preload("res://assets/audio/sfx/ambient_2.mp3")
-]
-
 # Onready variables
 @onready var nav_agent = $NavigationAgent3D
 @onready var anim_tree = $AnimationTree
-@onready var spotted_sound_player = $SpottedSound
 
 func _ready() -> void:
 	player = get_node(player_path)
@@ -72,10 +65,6 @@ func _on_detection_zone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player") and not is_active:
 		print("Player detected!")
 		is_active = true
-		# Play random ambient sound
-		var random_ambient = spotted_sounds[randi() % spotted_sounds.size()]
-		spotted_sound_player.stream = random_ambient
-		spotted_sound_player.play()
 
 func _target_in_range() -> bool:
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
