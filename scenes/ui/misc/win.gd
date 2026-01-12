@@ -21,9 +21,9 @@ func _display_score() -> void:
 	# Display full score breakdown on ScoreLabel with formatting
 	var score_text = "[center]"
 	score_text += "[b]" + tr("SHOW_SCORE") % score_data["final_score"] + "[/b]\n"
-	score_text += "[color=#8fde5d]Time:[/color] %d:%02d | " % [time_minutes, time_seconds]
-	score_text += "[color=#d4af37]Enemies:[/color] %d | " % score_data["enemies_killed"]
-	score_text += "[color=#5d9cde]Treasures:[/color] %d" % score_data["treasures_collected"]
+	score_text += "[color=#6b8c96]Time:[/color] %d:%02d | " % [time_minutes, time_seconds]
+	score_text += "[color=#a65e5e]Enemies:[/color] %d | " % score_data["enemies_killed"]
+	score_text += "[color=#eec35e]Treasures:[/color] %d" % score_data["treasures_collected"]
 	
 	# Show penalties if any
 	if score_data["citizens_shot"] > 0 or score_data["player_hits_taken"] > 0:

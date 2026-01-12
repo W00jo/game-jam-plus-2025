@@ -55,32 +55,25 @@ Local Co-op survival-horror game.
 
 A hidden scoring mechanic that rewards skilled and fast gameplay.
 
-**Score Formula:**
-```
-Final Score = Base Score - Time Penalty + Enemy Bonus + Treasure Bonus - Citizen Penalty - Damage Penalty
-```
+**Score formula:**
+
+$$
+Final score = base score - time penalty + enemy bonus + treasure bonuse - citizen penalty - damage penalty
+$$
 
 **Components:**
 
 | Component | Value | Description |
 |-----------|-------|-------------|
-| **Base Score** | 10,000 | Starting points for all players |
+| **Base Score** | 10000 | Starting points for all players |
 | **Time Penalty** | -10 per second | Faster completion = higher score |
 | **Enemy Bonus** | +100 per kill | Reward for combat efficiency |
 | **Treasure Bonus** | +500 per treasure | Optional collectibles boost score significantly |
 | **Citizen Penalty** | -300 per citizen | Heavy penalty for shooting civilians |
 | **Damage Penalty** | -150 per hit | Reward for avoiding damage |
 
-**Example Calculation:**
-- Base: 10,000
-- Time: 180 seconds → -1,800
-- Enemies: 8 killed → +800
-- Treasures: 2 collected → +1,000
-- Citizens: 1 shot → -300
-- Damage: 3 hits → -450
-- **Final Score: 9,250**
-
 **Notes:**
+
 - Treasures are **optional** (not required to win) but provide the highest score boost
 - Regular collectibles are required to win but don't affect the score
 - The score is displayed on the victory screen
