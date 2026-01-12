@@ -30,6 +30,9 @@ func _on_x_pressed() -> void:
 func _on_volume_value_changed(value: float) -> void:
 	GameManager.music_volume = value / 100.0
 	volume_label.text = str(int(value)) + "%"
+	# Update currently playing menu music volume
+	if GameManager.menu_music_player and GameManager.menu_music_player.playing:
+		GameManager.menu_music_player.volume_db = linear_to_db(GameManager.music_volume)
 	GameManager.save_settings()
 
 func _on_sfx_volume_changed(value: float) -> void:
