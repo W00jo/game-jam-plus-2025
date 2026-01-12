@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://i0affb3o03ye"]
+[gd_scene load_steps=12 format=3 uid="uid://i0affb3o03ye"]
 
 [ext_resource type="Script" uid="uid://dt1o7y4gf7vv" path="res://scenes/ui/misc/win.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://bxir1vlcrrirx" path="res://assets/models/godot_head/head.glb" id="2_head"]
 [ext_resource type="Texture2D" uid="uid://d1n82yu5manko" path="res://assets/ui/background_universal.png" id="2_lr2oc"]
 [ext_resource type="FontFile" uid="uid://duuyngdqmewol" path="res://assets/fonts/Graffiti City.otf" id="3_title_font"]
 [ext_resource type="FontFile" uid="uid://d1xc1k0ctatww" path="res://assets/fonts/Rajdhani-Medium.ttf" id="4_button_font"]
+[ext_resource type="FontFile" uid="uid://11gh8lqb8wfj" path="res://assets/fonts/Rajdhani-Bold.ttf" id="6_t5nfe"]
 
 [sub_resource type="Environment" id="Environment_godot_head"]
 background_mode = 1
@@ -150,6 +151,17 @@ theme_override_fonts/font = ExtResource("4_button_font")
 theme_override_font_sizes/font_size = 32
 text = "WIN_SUBMESSAGE"
 horizontal_alignment = 1
+
+[node name="ScoreLabel" type="RichTextLabel" parent="MainContainer/ContentVBox"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_button_font")
+theme_override_fonts/bold_font = ExtResource("6_t5nfe")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "SHOW_SCORE"
+fit_content = true
+scroll_active = false
 
 [node name="Buttons" type="VBoxContainer" parent="MainContainer/ContentVBox"]
 layout_mode = 2

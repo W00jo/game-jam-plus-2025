@@ -30,4 +30,5 @@ FEEDBACK_BUTTON,Opinia? (link do itch.io),Feedback (link to itch.io),Opinión (e
 EXIT_BUTTON_FUNNY,Mam dość,I'm done,Ya basta,Desisto
 LOOT,Znalezione części: ,Loot collected: ,Piezas encontradas: ,Peças encontradas: 
 RETRY_BUTTON,Spróbujcie ponownie,Retry,Reintentar,Tentar novamente
+SHOW_SCORE,Wynik: %d,Score: %d,Puntuación: %d,Pontuação: %d
 ITCHIO_BUTTON,Sprawdź naszą stronę na itchu!,Check our itch.io,Visita nuestro itch.io,Confira nosso itch.io

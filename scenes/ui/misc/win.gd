@@ -2,6 +2,7 @@ extends Control
 
 @onready var godot_head = $GodotHead3D/SubViewport/Head
 @onready var sub_label = $MainContainer/ContentVBox/SubLabel
+@onready var score_label = $MainContainer/ContentVBox/ScoreLabel
 var time_passed = 0.0
 var score_data: Dictionary
 
@@ -17,22 +18,23 @@ func _display_score() -> void:
 	var time_minutes = int(score_data["time_taken"]) / 60
 	var time_seconds = int(score_data["time_taken"]) % 60
 	
-	var score_text = "HIGH-SCORE: %d\n" % score_data["final_score"]
-	score_text += "Time: %d:%02d | Enemies: %d | Treasures: %d\n" % [
-		time_minutes,
-		time_seconds,
-		score_data["enemies_killed"],
-		score_data["treasures_collected"]
-	]
+	# Display full score breakdown on ScoreLabel with formatting
+	var score_text = "[center]"
+	score_text += "[b]" + tr("SHOW_SCORE") % score_data["final_score"] + "[/b]\n"
+	score_text += "[color=#8fde5d]Time:[/color] %d:%02d | " % [time_minutes, time_seconds]
+	score_text += "[color=#d4af37]Enemies:[/color] %d | " % score_data["enemies_killed"]
+	score_text += "[color=#5d9cde]Treasures:[/color] %d" % score_data["treasures_collected"]
 	
 	# Show penalties if any
 	if score_data["citizens_shot"] > 0 or score_data["player_hits_taken"] > 0:
-		score_text += "Citizens Shot: %d | Damage Taken: %d" % [
-			score_data["citizens_shot"],
-			score_data["player_hits_taken"]
-		]
+		score_text += "\n[color=#de5d5d]Citizens Shot:[/color] %d | " % score_data["citizens_shot"]
+		score_text += "[color=#de5d5d]Damage Taken:[/color] %d" % score_data["player_hits_taken"]
 	
-	sub_label.text = score_text
+	score_text += "[/center]"
+	score_label.text = score_text
+	
+	# Display victory message on SubLabel
+	sub_label.text = tr("WIN_SUBMESSAGE")
 
 func _process(delta: float) -> void:
 	if godot_head:
