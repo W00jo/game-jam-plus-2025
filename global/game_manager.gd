@@ -86,52 +86,38 @@ func start_game_session() -> void:
 	citizens_shot = 0
 	player_hits_taken = 0
 	treasures_collected = 0
-	print("=== GAME SESSION STARTED ===")
-	print("Start time: ", game_start_time)
-	print("Tracking is now ACTIVE (is_game_active = true)")
 
 ## Record enemy kill
 func record_enemy_kill() -> void:
 	if is_game_active:
 		enemies_killed += 1
-		print("Enemy killed! Total: ", enemies_killed)
 		emit_signal("enemy_hit")
 	else:
-		print("WARNING: Enemy kill not recorded - game session not active!")
+		print("Game session not active")
 
 ## Record citizen shot (penalty)
 func record_citizen_shot() -> void:
 	if is_game_active:
 		citizens_shot += 1
-		print("Citizen shot! Total: ", citizens_shot)
 		emit_signal("citizen_shot")
 
 ## Record player damage (penalty)
 func record_player_hit() -> void:
 	if is_game_active:
 		player_hits_taken += 1
-		print("Player hit! Total: ", player_hits_taken)
 
 ## Record treasure collected (bonus)
 func record_treasure_collected() -> void:
 	if is_game_active:
 		treasures_collected += 1
-		print("Treasure collected! Total: ", treasures_collected)
 	else:
-		print("WARNING: Treasure not recorded - game session not active!")
+		print("Game session not active!")
 
 ## Calculate final high-score
 func calculate_high_score() -> Dictionary:
 	game_end_time = Time.get_ticks_msec() / 1000.0
 	var time_taken = game_end_time - game_start_time
 	is_game_active = false
-	
-	print("=== FINAL SCORE CALCULATION ===")
-	print("Time taken: ", time_taken, " seconds")
-	print("Enemies killed: ", enemies_killed)
-	print("Treasures collected: ", treasures_collected)
-	print("Citizens shot: ", citizens_shot)
-	print("Player hits taken: ", player_hits_taken)
 	
 	# Base score: 10000 points
 	var base_score = 10000

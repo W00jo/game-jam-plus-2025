@@ -46,31 +46,31 @@ Local Co-op survival-horror game.
 
 ## Global Systems
 
-### GameManager
+### `game_manager.gd`
 
 - Handles languages & main menu music.
-- Saves/Loads settings.
+- Saves/Loads settings (Music/SFX volumes and languages).
 
-### High-Score System
+### High-score system
 
 A hidden scoring mechanic that rewards skilled and fast gameplay.
 
 **Score formula:**
 
 $$
-FinalScore = BaseScore - TimePenalty + EnemyBonus + TreasureBonus - CitizenPenalty - DamagePenalty
+\text{Final Score} = 10000 - (\text{Seconds Elapsed} \times 10) + (\text{Enemies Killed} \times 100) + (\text{Treasures Collected} \times 500) - (\text{Citizens Killed} \times 300) - (\text{Damage Received} \times 150)
 $$
 
 **Components:**
 
 | Component | Value | Description |
 |-----------|-------|-------------|
-| **Base score** | 10000 | Starting points for all players |
-| **Time penalty** | -10 per second | Faster completion = higher score |
-| **Enemy bonus** | +100 per kill | Reward for combat efficiency |
-| **Treasure bonus** | +500 per treasure | Optional collectibles boost score significantly |
-| **Citizen penalty** | -300 per citizen | Heavy penalty for shooting civilians |
-| **Damage penalty** | -150 per hit | Reward for avoiding damage |
+| **Base score** | 10000 | Starting points |
+| **Time penalty** | (-10) per second | Faster completion = higher score |
+| **Enemy bonus** | +100 per kill | Reward for killing enemies |
+| **Treasure bonus** | +500 per treasure | Optional collectibles boost score |
+| **Citizen penalty** | (-300) per citizen | Heavy-ish penalty for shooting civilians |
+| **Damage penalty** | (-150) per hit | Reward for avoiding damage |
 
 **Notes:**
 
