@@ -17,7 +17,7 @@ const AIM_FOV = 50.0
 @export var MAX_HP = 3
 @export var WALK_SPEED = 5.0
 @export var SPRINT_SPEED = 8.0
-@export var JUMP_VELOCITY = 4.5
+@export var JUMP_VELOCITY = 10.
 @export var HIT_STAGGER = 8.0
 @export var MAX_AMMO = 4
 @export var RELOAD_TIME = 2.0
@@ -62,7 +62,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		camera_controller.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

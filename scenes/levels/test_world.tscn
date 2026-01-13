@@ -1,17 +1,21 @@
-[gd_scene load_steps=19 format=3 uid="uid://dy4q4lk1onlnd"]
+[gd_scene load_steps=27 format=3 uid="uid://dy4q4lk1onlnd"]
 
 [ext_resource type="PackedScene" uid="uid://batnu0uma6vhk" path="res://scenes/npc/enemies/gostek.tscn" id="1_7c366"]
 [ext_resource type="AudioStream" uid="uid://cbfsfmd23r580" path="res://assets/audio/soundtrack/ambient_music_2_cut.mp3" id="1_ambient"]
 [ext_resource type="Script" uid="uid://7rbaav7jdsgw" path="res://scenes/levels/ambient_music.gd" id="1_music_script"]
-[ext_resource type="Script" path="res://scenes/levels/viewport_container_player_1.gd" id="2_ho4vq"]
+[ext_resource type="Script" uid="uid://bbmyu72cy2f4r" path="res://scenes/levels/viewport_container_player_1.gd" id="2_ho4vq"]
 [ext_resource type="PackedScene" uid="uid://cnmr4bnng8r7b" path="res://scenes/npc/enemies/stalker.tscn" id="3_35d48"]
 [ext_resource type="PackedScene" uid="uid://dwullwuqebjtc" path="res://scenes/players/player_shooter/player_shooter.tscn" id="3_dubqp"]
+[ext_resource type="Texture2D" uid="uid://it25bsj4cxdf" path="res://assets/greybox_textures/greybox_light_solid.png" id="3_xqv85"]
 [ext_resource type="PackedScene" uid="uid://dmrwwjnwxvabd" path="res://scenes/ui/hud/hud.tscn" id="4_35d48"]
+[ext_resource type="Texture2D" uid="uid://bkgc7r3a2tlq6" path="res://assets/greybox_textures/greybox_grey_grid.png" id="4_86hmu"]
 [ext_resource type="PackedScene" uid="uid://bhw4djmtivvo2" path="res://scenes/npc/passive/citizen.tscn" id="4_ho4vq"]
 [ext_resource type="PackedScene" uid="uid://8kdpemwib222" path="res://scenes/players/player_looter/player_looter.tscn" id="5_m2j1u"]
+[ext_resource type="Texture2D" uid="uid://xtodvqlvaa2u" path="res://assets/greybox_textures/greybox_dark_grid.png" id="5_x0avm"]
 [ext_resource type="PackedScene" uid="uid://cendlct4ehhly" path="res://scenes/enviroment/landmine/landmine.tscn" id="6_k4tkr"]
 [ext_resource type="PackedScene" uid="uid://bft4ip0s201gd" path="res://scenes/enviroment/collectible/collectible.tscn" id="7_junah"]
 [ext_resource type="PackedScene" uid="uid://14ts8ibs7115" path="res://scenes/ui/menu/pause_menu.tscn" id="8_kqya4"]
+[ext_resource type="Texture2D" uid="uid://bkfvf0mc7y106" path="res://assets/greybox_textures/greybox_blue_solid.png" id="9_86hmu"]
 [ext_resource type="PackedScene" uid="uid://bpkb8h3ux012k" path="res://scenes/enviroment/collectible/treasure.tscn" id="13_k4tkr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqnsq"]
@@ -28,9 +32,18 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_0lift"]
-vertices = PackedVector3Array(-6, 0.5, -14, -5.5, 0.5, -14.25, -5.5, 0.5, -15.5, -15.5, 0.5, -15.5, -5.5, 0.5, -13, -6, 0.5, -13.25, -15.5, 0.5, 4.5, -5.5, 0.5, 3, -5.5, 0.5, 4.5, -1.75, 0.5, 2.75, -1.5, 0.5, 3.25, -1.25, 0.5, 3.25, -0.5, 0.5, -11.75, -4.75, 0.5, -14, -1, 0.5, -13.75, 0, 0.5, -14, 0, 0.5, -15.5, -4.75, 0.5, -13.25, -1, 0.5, -12, 1, 0.5, -13.75, 10.5, 0.5, -14.75, 11.5, 0.5, -15, 10.75, 0.5, -13.75, 1, 0.5, -12, 15.5, 0.5, 3.25, 11.75, 0.5, -14, 15.5, 0.5, -15.5, -1.5, 0.5, 6, -3.5, 0.5, 6.25, -3.5, 0.5, 15.5, 15.5, 0.5, 15.5, -4.5, 1.75, 3.75, -4.5, 1.75, 5.25, -2.5, 1.75, 5.25, -2.5, 1.75, 3.75, -5.25, 0.5, 6.25, -15.5, 0.5, 15.5)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 3), PackedInt32Array(3, 4, 7), PackedInt32Array(3, 7, 6), PackedInt32Array(3, 0, 5), PackedInt32Array(7, 8, 6), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(1, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(14, 2, 15), PackedInt32Array(15, 2, 16), PackedInt32Array(13, 14, 17), PackedInt32Array(17, 14, 18), PackedInt32Array(18, 12, 17), PackedInt32Array(17, 12, 4), PackedInt32Array(4, 12, 9), PackedInt32Array(4, 9, 7), PackedInt32Array(15, 16, 19), PackedInt32Array(19, 16, 20), PackedInt32Array(20, 16, 21), PackedInt32Array(20, 22, 19), PackedInt32Array(19, 22, 23), PackedInt32Array(22, 25, 24), PackedInt32Array(24, 25, 26), PackedInt32Array(23, 22, 11), PackedInt32Array(11, 22, 24), PackedInt32Array(21, 16, 26), PackedInt32Array(25, 21, 26), PackedInt32Array(23, 11, 12), PackedInt32Array(27, 10, 11), PackedInt32Array(29, 28, 27), PackedInt32Array(27, 11, 24), PackedInt32Array(29, 27, 30), PackedInt32Array(30, 27, 24), PackedInt32Array(34, 33, 31), PackedInt32Array(31, 33, 32), PackedInt32Array(35, 28, 29), PackedInt32Array(6, 8, 35), PackedInt32Array(6, 35, 36), PackedInt32Array(36, 35, 29)]
+vertices = PackedVector3Array(10.5, 0.4995, -13.5, 10.75, 0.4995, -13.75, 10.5, 0.4995, -14.75, -5, 0.4995, -14.25, -4.75, 0.4995, -13.25, 8.5, 0.4995, -13.25, 11.75, 0.4995, -14, 10.75, 0.4995, -11.75, -15.5, 0.4995, 10.5, -14.25, 0.4995, 10.75, -5.5, 0.4995, 12, -0.75, 0.4995, 6.75, -12.5, 0.4995, -14.25, -15.5, 0.4995, -15.5, -14.25, 0.4995, 12, -0.25, 0.4995, 10.5, -0.5, 0.4995, 7.75, -5.25, 0.4995, 15.5, -0.5, 0.4995, 15.5, 0.75, 0.4995, 7.5, 5.5, 0.4995, 10.5, 5.75, 0.4995, 9, -12.5, 0.4995, -15.5, 8.75, 0.4995, -11.5, -5.75, 0.4995, -13, 0.5, 0.4995, 6.5, 15.5, 0.4995, -15.5, 11.5, 0.4995, -15, -6, 0.4995, -14, -11.25, 0.4995, -14.5, -11.5, 0.4995, -15.5, 15.5, 0.4995, 9, 6.5, 15.4995, 10, 6.5, 15.4995, 24, 20.5, 15.4995, 24, 20.5, 15.4995, 10, 6.75, 0.4995, 10.25, 6.75, 0.4995, 15.5, 15.5, 0.4995, 15.5, 15.5, 0.4995, 10.25, -26.5, 12.4995, 11.5, -26.5, 12.4995, 22.5, -15.5, 12.4995, 22.5, -15.5, 12.4995, 11.5, 0.25, 12.4995, 17.5, -5.5, 12.4995, 17.5, -5.5, 12.4995, 22.5, 5.5, 12.4995, 22.5, 5.5, 12.4995, 11.5, 0.5, 12.4995, 11.5, 0.75, 0.4995, 11.75, 0.75, 0.4995, 15.5, 5.5, 0.4995, 15.5, 5.5, 0.4995, 11.75, -14.25, 9.4995, 13, -14.25, 9.4995, 21, -6.5, 9.4995, 21, -6.5, 9.4995, 13, -14.25, 0.4995, 13.25, -14.25, 0.4995, 15.5, -6.5, 0.4995, 15.5, -6.5, 0.4995, 13.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(1, 6, 0), PackedInt32Array(0, 6, 7), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 12), PackedInt32Array(12, 8, 13), PackedInt32Array(10, 14, 9), PackedInt32Array(16, 15, 11), PackedInt32Array(11, 15, 10), PackedInt32Array(10, 15, 17), PackedInt32Array(17, 15, 18), PackedInt32Array(16, 19, 15), PackedInt32Array(15, 19, 20), PackedInt32Array(20, 19, 21), PackedInt32Array(13, 22, 12), PackedInt32Array(4, 5, 24), PackedInt32Array(24, 5, 23), PackedInt32Array(24, 23, 25), PackedInt32Array(24, 25, 11), PackedInt32Array(6, 27, 26), PackedInt32Array(29, 28, 24), PackedInt32Array(29, 30, 28), PackedInt32Array(28, 30, 3), PackedInt32Array(19, 25, 21), PackedInt32Array(21, 25, 31), PackedInt32Array(31, 25, 7), PackedInt32Array(31, 7, 26), PackedInt32Array(23, 7, 25), PackedInt32Array(27, 3, 26), PackedInt32Array(26, 3, 30), PackedInt32Array(26, 7, 6), PackedInt32Array(29, 24, 12), PackedInt32Array(12, 24, 11), PackedInt32Array(27, 2, 3), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 41), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(49, 48, 44), PackedInt32Array(44, 48, 47), PackedInt32Array(53, 52, 50), PackedInt32Array(50, 52, 51), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55), PackedInt32Array(61, 60, 58), PackedInt32Array(58, 60, 59)]
 agent_radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2venh"]
+albedo_texture = ExtResource("3_xqv85")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ler"]
+albedo_texture = ExtResource("4_86hmu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ve2c"]
+albedo_texture = ExtResource("5_x0avm")
 
 [sub_resource type="GDScript" id="GDScript_m2j1u"]
 script/source = "extends \"res://scenes/npc/enemies/enemy_damage_taking.gd\"
@@ -43,6 +56,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 "
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0avm"]
+albedo_texture = ExtResource("9_86hmu")
 
 [node name="TestWorld" type="Node3D"]
 
@@ -66,132 +82,182 @@ use_collision = true
 collision_layer = 2
 size = Vector3(32, 0.001, 32)
 
+[node name="TestBuildingThreeFloors" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 4.5, 17)
+material_override = SubResource("StandardMaterial3D_2venh")
+use_collision = true
+collision_layer = 2
+collision_mask = 5
+size = Vector3(9, 9, 9)
+
+[node name="TestBuildingFourFloors" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 6, 17)
+material_override = SubResource("StandardMaterial3D_x6ler")
+use_collision = true
+collision_layer = 2
+collision_mask = 5
+size = Vector3(12, 12, 12)
+
+[node name="TestBuildingFourFloors2" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0645905, 6, 17)
+material_override = SubResource("StandardMaterial3D_x6ler")
+use_collision = true
+collision_layer = 2
+collision_mask = 5
+size = Vector3(6, 12, 12)
+
+[node name="TestBuildingFourFloors3" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9354095, 6, 20)
+material_override = SubResource("StandardMaterial3D_x6ler")
+use_collision = true
+collision_layer = 2
+collision_mask = 5
+size = Vector3(6, 12, 6)
+
+[node name="TestBuildingFiveFloors" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.513098, 7.5, 17)
+material_override = SubResource("StandardMaterial3D_0ve2c")
+use_collision = true
+collision_layer = 2
+collision_mask = 5
+size = Vector3(15, 15, 15)
+
+[node name="Citizen" parent="NavigationRegion3D" instance=ExtResource("4_ho4vq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.402817, 1.4587977, -13.740158)
+
+[node name="Stalker" parent="NavigationRegion3D" instance=ExtResource("3_35d48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5864525, 2.283595, -12.49882)
+player_path = NodePath("../../GridContainer/Viewport_container_player1/Viewport_player1/Player1")
+
 [node name="Gostek" parent="NavigationRegion3D" instance=ExtResource("1_7c366")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.072009, 1.2014427, -14.306542)
 player_path = NodePath("../../GridContainer/Viewport_container_player2/Viewport_player2/Player2")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002" index="0"]
-bones/1/rotation = Quaternion(-0.04648042, -0.0026393575, 0.0011158716, 0.99891514)
-bones/2/rotation = Quaternion(-0.00083106844, -0.024238575, 0.0019526295, 0.999704)
-bones/3/rotation = Quaternion(-0.0009738521, -0.024192376, 0.0020868762, 0.9997048)
-bones/4/rotation = Quaternion(0.026194703, 0.01658935, -0.029759984, 0.9990761)
-bones/5/rotation = Quaternion(0.068138756, -0.015158549, 0.017735798, 0.997403)
-bones/7/rotation = Quaternion(-0.46814328, -0.5163922, 0.564039, -0.44276515)
-bones/8/rotation = Quaternion(0.55228966, 0.10261213, 0.046519075, 0.8260042)
-bones/9/rotation = Quaternion(0.034395386, 0.00058779505, 0.26308623, 0.96415883)
-bones/10/rotation = Quaternion(0.11496379, 0.9252014, 0.12950385, -0.3376603)
-bones/11/rotation = Quaternion(-0.049344756, -0.13008285, -0.44024423, 0.8870337)
-bones/12/rotation = Quaternion(-0.05039721, 0.0059295157, 0.49121925, 0.86955667)
-bones/13/rotation = Quaternion(0.01466117, -0.016541928, -0.022316355, 0.99950665)
-bones/15/rotation = Quaternion(-0.186045, -0.12265155, -0.08621712, 0.9710358)
-bones/16/rotation = Quaternion(-0.25223106, -0.009954129, 0.041631695, 0.9667198)
-bones/17/rotation = Quaternion(-0.14267601, 0.008273698, 0.00045588028, 0.9897348)
-bones/19/rotation = Quaternion(0.4865755, -0.5133855, 0.50417686, 0.49546483)
-bones/20/rotation = Quaternion(0.57271415, -0.1354275, -0.13709137, 0.7967834)
-bones/21/rotation = Quaternion(0.029923487, -0.00061138096, -0.22950594, 0.97284704)
-bones/22/rotation = Quaternion(-0.11885219, 0.90068156, 0.047224097, 0.41523105)
-bones/23/rotation = Quaternion(-0.12504734, 0.007696352, 0.3786601, 0.9170172)
-bones/24/rotation = Quaternion(-0.034508955, -0.018991018, -0.3293594, 0.9433827)
-bones/25/rotation = Quaternion(0.024507765, 0.02336515, -0.009984412, 0.99937665)
-bones/27/rotation = Quaternion(-0.09347705, 0.06217419, -0.011630545, 0.9936102)
-bones/28/rotation = Quaternion(-0.28200725, -0.009527129, 0.18478656, 0.9414007)
-bones/29/rotation = Quaternion(-0.07439511, 0.0064395396, 0.056609552, 0.9956)
-bones/31/rotation = Quaternion(0.046146125, 0.04246282, 0.9972516, -0.03945668)
-bones/32/rotation = Quaternion(-0.14352997, -0.06902577, 0.008973492, 0.98719513)
-bones/33/rotation = Quaternion(0.508392, 0.05701952, -0.08508288, 0.855013)
-bones/34/rotation = Quaternion(0.3350355, 0.07669538, -0.024826853, 0.9387506)
-bones/36/rotation = Quaternion(-0.12729871, 0.06759631, 0.9887906, 0.0389758)
-bones/37/rotation = Quaternion(-0.18692677, 0.036835544, -0.0020379033, 0.981681)
-bones/38/rotation = Quaternion(0.5283622, -0.0095574735, 0.030006317, 0.84843487)
-bones/39/rotation = Quaternion(0.32635665, -0.074639775, 0.025824826, 0.9419412)
+bones/1/rotation = Quaternion(-0.03898356, 0.00040254853, -0.0009058142, 0.9992394)
+bones/2/rotation = Quaternion(0.012948994, -0.018665405, -0.0033984098, 0.9997362)
+bones/3/rotation = Quaternion(0.01300572, -0.018689824, -0.0029039255, 0.99973655)
+bones/4/rotation = Quaternion(0.037523985, 0.0061399834, -0.0074598733, 0.99924904)
+bones/5/rotation = Quaternion(0.051171828, -0.016110284, 0.03382962, 0.9979868)
+bones/7/rotation = Quaternion(-0.49396467, -0.49812657, 0.55003625, -0.4531326)
+bones/8/rotation = Quaternion(0.5445939, 0.12758753, 0.077995665, 0.82526106)
+bones/9/rotation = Quaternion(0.03225049, 0.0005904484, 0.24667789, 0.9685606)
+bones/10/rotation = Quaternion(0.117048234, 0.93030345, 0.13022925, -0.32229733)
+bones/11/rotation = Quaternion(-0.04671795, -0.12982193, -0.44371304, 0.88548434)
+bones/12/rotation = Quaternion(-0.053567372, 0.009195867, 0.49426854, 0.86760855)
+bones/13/rotation = Quaternion(0.01167969, -0.016113916, -0.017024338, 0.999657)
+bones/15/rotation = Quaternion(-0.1564962, -0.12285876, -0.087022245, 0.97613627)
+bones/16/rotation = Quaternion(-0.30765516, -0.0109883975, 0.03763561, 0.9506898)
+bones/17/rotation = Quaternion(-0.15223199, 0.008704542, -5.4039334e-05, 0.9883065)
+bones/19/rotation = Quaternion(0.5394354, -0.4713416, 0.49571514, 0.4910326)
+bones/20/rotation = Quaternion(0.55971885, -0.120539024, -0.11590169, 0.8116355)
+bones/21/rotation = Quaternion(0.031177994, -0.00060982746, -0.23912695, 0.9704875)
+bones/22/rotation = Quaternion(-0.113723546, 0.91106546, 0.037954316, 0.3944443)
+bones/23/rotation = Quaternion(-0.124279335, 0.006705923, 0.377649, 0.9175462)
+bones/24/rotation = Quaternion(-0.03315809, -0.017940657, -0.3282389, 0.9438421)
+bones/25/rotation = Quaternion(0.02501743, 0.023447797, -0.00930022, 0.9993688)
+bones/27/rotation = Quaternion(-0.10466153, 0.061254762, -0.0072882716, 0.99259293)
+bones/28/rotation = Quaternion(-0.30374262, -0.009882466, 0.19605514, 0.93231183)
+bones/29/rotation = Quaternion(-0.06673869, 0.006174184, 0.052529056, 0.9963677)
+bones/31/rotation = Quaternion(0.02517445, 0.09234201, 0.99502367, -0.027695434)
+bones/32/rotation = Quaternion(-0.24948817, -0.08473419, 0.010305097, 0.96460855)
+bones/33/rotation = Quaternion(0.55885637, 0.044039074, -0.040007595, 0.8271273)
+bones/34/rotation = Quaternion(0.32951933, 0.075643204, -0.025542973, 0.9407671)
+bones/36/rotation = Quaternion(-0.12565972, 0.08379426, 0.98727447, 0.04977423)
+bones/37/rotation = Quaternion(-0.19932868, 0.034910124, -0.013207019, 0.9792217)
+bones/38/rotation = Quaternion(0.5133024, -0.016913906, 0.076742455, 0.85460234)
+bones/39/rotation = Quaternion(0.32629445, -0.07462793, 0.025832776, 0.94196355)
 
 [node name="Head" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="2"]
-transform = Transform3D(0.99466586, -0.002274151, -0.10312441, 0.102888286, 0.092977546, 0.9903377, 0.007336091, -0.9956656, 0.09271559, 0.063622355, -2.5974884, -82.98184)
+transform = Transform3D(0.99416226, -0.053366512, -0.09377311, 0.10067661, 0.1462717, 0.98410803, -0.038802054, -0.9878037, 0.15079056, 0.2481343, -1.0746622, -82.97036)
 
 [node name="Torso" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="3"]
-transform = Transform3D(0.99998355, -0.0019839646, -0.00537672, 0.005169255, -0.09286587, 0.99566513, -0.0024746787, -0.9956766, -0.09285408, 0, -1.1473308, -55.17752)
+transform = Transform3D(0.99999803, 0.0017788644, 0.00087510824, -0.0007338609, -0.07790853, 0.99696016, 0.0018416357, -0.99695885, -0.07790707, 0, -1.1473308, -55.17752)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/Torso" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="LeftArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="4"]
-transform = Transform3D(0.13064541, 0.32290688, -0.93737006, -0.9914057, 0.04901319, -0.12129261, 0.006777324, 0.9451605, 0.326535, 10.785177, -3.3068957, -75.88854)
+transform = Transform3D(0.25321847, 0.29531386, -0.9212329, -0.9651424, 0.011972334, -0.2614499, -0.06618056, 0.9553249, 0.28805155, 11.074276, -2.190746, -75.588875)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/LeftArm" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="LeftForeArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="5"]
-transform = Transform3D(0.26048642, 0.14870909, -0.95395595, -0.83135664, 0.53694373, -0.14330727, 0.4909098, 0.8304072, 0.2634968, 16.154793, -2.4918551, -60.171467)
+transform = Transform3D(0.3499231, 0.07994971, -0.93336046, -0.84582347, 0.45523223, -0.27811056, 0.40266094, 0.8867754, 0.22691962, 15.985048, -1.9916582, -59.702778)
 
 [node name="LeftHand" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="6"]
-transform = Transform3D(-0.80001754, 0.063446626, 0.59661186, 0.59326535, 0.23196313, 0.7708621, -0.089483604, 0.97065246, -0.22321539, 19.332855, 8.983187, -42.424812)
+transform = Transform3D(-0.84509957, 0.024890542, 0.53402907, 0.5326003, 0.12570597, 0.83697915, -0.04629785, 0.9917544, -0.11949085, 17.693651, 7.7371244, -40.75148)
 
 [node name="RightArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="7"]
-transform = Transform3D(0.24240372, -0.31987137, 0.91592723, 0.9696816, 0.10999812, -0.21821514, -0.030949477, 0.9410541, 0.33683735, -10.990014, -4.6339087, -76.233635)
+transform = Transform3D(0.31681588, -0.28908992, 0.9033576, 0.94755125, 0.054170392, -0.31497967, 0.042122062, 0.955768, 0.29108948, -10.763417, -2.6574924, -75.99745)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/RightArm" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="RightForeArm" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="8"]
-transform = Transform3D(0.34822604, -0.12378119, 0.9292022, 0.8211429, 0.51842135, -0.23866993, -0.45217535, 0.84611917, 0.28216988, -16.305107, -2.806141, -60.59675)
+transform = Transform3D(0.40237173, -0.05350112, 0.91391176, 0.8183644, 0.4684767, -0.33287993, -0.4103369, 0.8818543, 0.2322852, -15.567036, -1.757378, -60.116074)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/RightForeArm" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="RightHand" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="9"]
-transform = Transform3D(-0.9021187, -0.22061169, -0.37082714, -0.42424726, 0.2967101, 0.8555567, -0.07871778, 0.9291359, -0.36126152, -18.949352, 8.26851, -42.521725)
+transform = Transform3D(-0.9220168, -0.16617766, -0.3496716, -0.38347027, 0.26776847, 0.8838837, -0.053250715, 0.9490441, -0.3106112, -16.70994, 8.250342, -41.277664)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/RightHand" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="LeftUpLeg" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="10"]
-transform = Transform3D(-0.9926275, 0.08261546, 0.088687696, 0.09538948, 0.08105067, 0.99213487, 0.074777484, 0.99328005, -0.08833376, 5.9848366, -0.46329382, -46.648655)
+transform = Transform3D(-0.9971986, 0.05976455, 0.044983447, 0.055213265, 0.18237056, 0.9816784, 0.05046592, 0.98141193, -0.18515943, 5.9848366, -0.46329382, -46.648655)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/LeftUpLeg" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="LeftLeg" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="11"]
-transform = Transform3D(-0.96805, 0.051873796, 0.24533406, 0.23016337, -0.20448607, 0.9514254, 0.099521466, 0.97749376, 0.18601325, 8.390945, 1.8972421, -17.720171)
+transform = Transform3D(-0.9718302, 0.008245159, 0.23553917, 0.22117288, -0.31334722, 0.9235238, 0.08142016, 0.9496028, 0.30269665, 7.7254305, 4.8481026, -18.06582)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/LeftLeg" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="LeftFoot" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="12"]
-transform = Transform3D(-0.9974248, 0.03824237, 0.060676314, 0.06815319, 0.7689128, 0.6357105, -0.022343654, 0.63820845, -0.7695385, 9.937465, -4.199122, 11.421949)
+transform = Transform3D(-0.9927814, 0.10783744, 0.05250422, 0.11634362, 0.75944465, 0.6400841, 0.029151015, 0.641572, -0.7665084, 7.971245, -4.4937496, 10.244783)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/LeftFoot" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="BoneAttachment3D4" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="13"]
-transform = Transform3D(-0.9645519, -0.09428764, -0.24647425, -0.25701275, 0.12375403, 0.95845157, -0.059867963, 0.98782325, -0.14360031, -5.9848366, -0.35910308, -46.648655)
+transform = Transform3D(-0.9634644, -0.11934075, -0.23977962, -0.2564628, 0.15294659, 0.95437634, -0.07722252, 0.981002, -0.17796504, -5.9848366, -0.35910308, -46.648655)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/BoneAttachment3D4" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="BoneAttachment3D5" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="14"]
-transform = Transform3D(-0.9426132, 0.012220137, -0.33366358, -0.32709903, -0.23428458, 0.91548747, -0.066984855, 0.97209126, 0.22483687, -8.730925, 3.2451806, -17.878723)
+transform = Transform3D(-0.9409012, -0.027502537, -0.33756316, -0.32205823, -0.23576832, 0.91689265, -0.10480356, 0.97141993, 0.21297723, -9.460586, 4.0954013, -18.07739)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/BoneAttachment3D5" index="0"]
 script = SubResource("GDScript_m2j1u")
 
 [node name="BoneAttachment3D6" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D" index="15"]
-transform = Transform3D(-0.9562359, -0.23606847, -0.17287192, -0.29213724, 0.73717046, 0.6092911, -0.016398378, 0.63312817, -0.77387303, -8.366535, -3.7408834, 11.107784)
+transform = Transform3D(-0.9687633, -0.16821243, -0.182215, -0.24616864, 0.74113023, 0.62460154, 0.02997924, 0.6499465, -0.7593881, -10.280676, -2.934906, 10.889099)
 
 [node name="Area3D" parent="NavigationRegion3D/Gostek/MonsterAnimation/Armature_002/Skeleton3D/BoneAttachment3D6" index="0"]
 script = SubResource("GDScript_m2j1u")
 
-[node name="Citizen" parent="NavigationRegion3D" instance=ExtResource("4_ho4vq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.402817, 1.4587977, -13.740158)
+[node name="Gostek2" parent="NavigationRegion3D" instance=ExtResource("1_7c366")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 7)
+player_path = NodePath("../../GridContainer/Viewport_container_player2/Viewport_player2/Player2")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4371958, 0.43066406, 4.4706244)
+[node name="Gostek3" parent="NavigationRegion3D" instance=ExtResource("1_7c366")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, -15)
+player_path = NodePath("../../GridContainer/Viewport_container_player2/Viewport_player2/Player2")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 12.505589, 10.910229)
+material_override = SubResource("StandardMaterial3D_x0avm")
 use_collision = true
 collision_layer = 2
-size = Vector3(2.819336, 1.8613281, 2.4384766)
-
-[node name="Stalker" parent="NavigationRegion3D" instance=ExtResource("3_35d48")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.355558, 2.283595, -12.875873)
-player_path = NodePath("../../GridContainer/Viewport_container_player1/Viewport_player1/Player1")
+collision_mask = 5
+size = Vector3(6, 0.2, 0.01)
 
 [node name="GridContainer" type="GridContainer" parent="."]
 anchors_preset = 15
@@ -214,7 +280,7 @@ size = Vector2i(958, 1080)
 render_target_update_mode = 4
 
 [node name="Player1" parent="GridContainer/Viewport_container_player1/Viewport_player1" instance=ExtResource("3_dubqp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4905853, 1.4881334, -9.479806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4905853, 13.488133, 18.520195)
 
 [node name="player_shooter" parent="GridContainer/Viewport_container_player1/Viewport_player1/Player1" index="0"]
 transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 0, 0.039340854, -0.5550003)
@@ -280,8 +346,8 @@ bones/31/position = Vector3(-9.536743e-07, 25.171446, -1.2874603e-05)
 bones/31/rotation = Quaternion(0.41435564, 0.1406045, -0.06496073, 0.89683884)
 bones/32/position = Vector3(-4.7683716e-06, 10.606727, 2.7418137e-05)
 
-[node name="ShootSound" parent="GridContainer/Viewport_container_player1/Viewport_player1/Player1" index="3"]
-bus = &"Master"
+[node name="ShooterCollision" parent="GridContainer/Viewport_container_player1/Viewport_player1/Player1" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08125305, -0.49103928)
 
 [node name="HUD" parent="GridContainer/Viewport_container_player1/Viewport_player1/Player1" instance=ExtResource("4_35d48")]
 
@@ -298,6 +364,7 @@ render_target_update_mode = 4
 
 [node name="Player2" parent="GridContainer/Viewport_container_player2/Viewport_player2" instance=ExtResource("5_m2j1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9127426, 1.4844105, 4.693651)
+visible = false
 
 [node name="HUD" parent="GridContainer/Viewport_container_player2/Viewport_player2/Player2" instance=ExtResource("4_35d48")]
 player_hud_type = 1
@@ -319,8 +386,8 @@ visible = false
 [node name="Treasure" parent="." instance=ExtResource("13_k4tkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5876212, -0.3388598, -5.7420845)
 
-[connection signal="enemy_hit" from="NavigationRegion3D/Gostek" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_enemy_hit"]
 [connection signal="enemy_hit" from="NavigationRegion3D/Stalker" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_enemy_hit"]
+[connection signal="enemy_hit" from="NavigationRegion3D/Gostek" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_enemy_hit"]
 [connection signal="player_hit" from="GridContainer/Viewport_container_player1/Viewport_player1/Player1" to="GridContainer/Viewport_container_player1/Viewport_player1/Player1/HUD" method="_on_player_1_player_hit"]
 [connection signal="player_hit" from="GridContainer/Viewport_container_player2/Viewport_player2/Player2" to="GridContainer/Viewport_container_player2/Viewport_player2/Player2/HUD" method="_on_player_2_player_hit"]
 
